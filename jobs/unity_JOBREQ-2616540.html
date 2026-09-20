@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Staff Quality Engineering Lead, Gaming AI &mdash; Unity Technologies | Open Indeed</title>
+  <meta name="description" content="Staff Quality Engineering Lead, Gaming AI at Unity Technologies in Mountain View, CA, USA.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">Staff Quality Engineering Lead, Gaming AI</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">Unity Technologies</strong> &bull;
+          <span>Mountain View, CA, USA</span> &bull;
+          
+          <span>2026-09-09</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://unitytech.wd1.myworkdayjobs.com/en-US/Unity/job/Mountain-View-CA-USA/Staff-Quality-Engineering-Lead--Gaming-AI_JOBREQ-2616540"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on Unity Technologies &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>Staff Quality Engineering Lead, Gaming AI</h1>
+<ul>
+<li><strong>Company</strong>: Unity Technologies</li>
+<li><strong>Requisition ID</strong>: <code>JOBREQ-2616540</code></li>
+<li><strong>Location</strong>: Mountain View, CA, USA</li>
+<li><strong>Official Posting</strong>: <a href="https://unitytech.wd1.myworkdayjobs.com/en-US/Unity/job/Mountain-View-CA-USA/Staff-Quality-Engineering-Lead--Gaming-AI_JOBREQ-2616540">Apply on Unity Technologies Careers</a></li>
+<li><strong>Time Type</strong>: Full time</li>
+<li><strong>Posted Date</strong>: Posted 8 Days Ago</li>
+</ul>
+<h2>Job Description</h2>
+<h2>The opportunity</h2>
+<p>At Unity, we're shaping the future of real-time 3D technology by building AI to transform how games are created and experienced. From intelligent authoring tools to new ways of interacting with content, we're engineering the next generation of pipelines that make 3D game development faster, more immersive, and more efficient.</p>
+<p>We build AI products, and we use AI to build them. Both halves of that sentence are moving fast: new models, new harnesses, new benchmarks, and new expectations arrive continuously, and requirements change underneath us as they do. AI has made our teams dramatically quicker at designing and writing software — which means the pressure has moved downstream, onto quality. Traditional QA cannot absorb that pressure, and hiring an army of manual testers would not either.</p>
+<p>We're looking for a Staff Quality Engineering Lead to own the quality bar for the entire Gaming AI organization and to solve this the way the problem demands: with AI. You will design the systems that let us ship confidently — AI-assisted code review and remediation, automatically generated tests that stay honest as requirements change, change-aware test selection, and defect intelligence that tells the organization what actually broke and who should care.</p>
+<p>You will also take on a problem the industry has not settled: how do you judge a product whose output is non-deterministic? Our products generate code, find and fix bugs, and produce art and design. There is often no single correct answer, so correctness has to be established across repeated runs, multiple judges, and several dimensions at once. And correctness is only half of it — speed, cost, and consistency are quality attributes here, not separate concerns. A generation that is right but slow or expensive fails the creator just as surely as one that is wrong.</p>
+<p>Above all of those sits an outcome rather than an output. What ultimately matters is whether a developer can build a game faster and more cheaply than they could without us, and whether the game they build excites the people who play it. A test suite proving our models emit valid code has measured very little if creators are not shipping better games sooner. Designing the measurement chain that runs from a single generation up to that outcome is the central intellectual problem of this role, and the reason it sits at Staff level.</p>
+<p>This is a leadership role without a large team behind it. You will not test everything yourself — that does not scale, and it is not the job. You will build the processes, tooling, and methodology that raise the bar across an organization of engineers, artists, and product managers, from requirements and design through unit, feature, regression, and performance testing. You will be the gatekeeper for the quality of our AI Authoring products end to end: frontend, backend, and the upstream and downstream systems we depend on, both internal and external.</p>
+<p>Being that gatekeeper takes ownership and backbone. We move fast and we feel time-to-market pressure constantly, which means you will regularly be asked to approve something before you are comfortable with it. The job is to make the risk explicit, say no when no is the right answer even to people more senior than you, and be able to defend the call with evidence rather than instinct. It is equally the job to recognize when a risk is worth taking, say so plainly, and commit fully once the organization decides. A gate that never closes is not a gate — and one that never opens is not a partner.</p>
+<h2>What you'll be doing</h2>
+<ul>
+<li>Own the quality strategy for Gaming AI. Define the quality bar, the standards, and the release criteria for our AI Authoring products, and hold the organization to them across frontend, backend, and dependent systems.</li>
+<li>Build AI-native quality systems. Establish AI-assisted code review and automated remediation; drive meaningful coverage through automatically generated unit tests; generate and maintain end-to-end feature tests that track changing requirements and code; and implement change-aware test selection so that every run tests what actually matters.</li>
+<li>Solve evaluation for non-deterministic output. Design and operate our AI-as-a-judge methodology — rubrics, multi-run sampling, multi-judge agreement, and calibration against human judgment — across generated code, bug detection and repair, art, and design. Judge quality and performance together: correctness, latency, cost per generation, and consistency across runs are one measurement problem, not four.</li>
+<li>Tie quality to creator outcomes. Build the measurement chain that connects an individual generation to the things that actually matter — whether creators ship faster and at lower cost with our tools, and whether the games they make land with players. Keep that chain visible enough that teams can act on it and honest enough that it survives scrutiny.</li>
+<li>Turn defects into intelligence. Build the triage, grouping, deduplication, and prioritization systems that route developers to the most customer-impactful bugs first; attribute regressions to their cause; and give teams and leadership clear visibility into incoming, outgoing, and outstanding defects, with trends, baselines, targets, timelines, and ownership.</li>
+<li>Shift quality upstream. Embed quality practices at the requirements and design stage, where defects are cheapest to prevent, rather than treating quality as a gate at the end of the cycle.</li>
+<li>Drive adoption across disciplines. Partner with engineers, artists, and product managers to make the quality bar something the organization owns collectively — through tooling and process that people adopt because it helps them, not because they were told to.</li>
+<li>Own the release decision. Hold the quality gate under real time-to-market pressure: quantify the risk of shipping, make the tradeoff explicit to the people who own the deadline, and be willing to say no and defend it. Recognize the times when the risk is worth taking, say so, and commit without relitigating.</li>
+<li>Represent quality in technical strategy. Contribute to architectural and roadmap decisions for Unity AI, and work with owners of upstream and downstream systems, internal and external, to keep integration quality high.</li>
+</ul>
+<h2>What we're looking for</h2>
+<ul>
+<li>Extensive experience in software quality engineering, SDET, or quality leadership, including recent ownership of the quality bar for a multi-team organization</li>
+<li>A track record of building quality systems — frameworks, platforms, processes, and tooling that other teams adopt — rather than primarily executing test plans</li>
+<li>Hands-on, current use of AI and agent tooling in the software development lifecycle: AI-assisted code review, test generation, agentic workflows. We are looking for genuine daily practice, not familiarity with the concepts</li>
+<li>Experience designing evaluation methodology for systems without a single correct answer — LLM-as-judge, rubric design, inter-rater and multi-run agreement, calibration against human judgment, and the statistics needed to tell signal from noise</li>
+<li>Treats performance and cost as quality attributes rather than someone else's problem: latency, throughput, cost per operation, and run-to-run consistency, measured and regression-tested alongside correctness</li>
+<li>A habit of connecting quality work to product outcomes — able to point to a quality investment that measurably changed user behavior or business results, not just a dashboard that turned green</li>
+<li>Depth in test automation architecture across the pyramid — unit, integration, end-to-end — including CI/CD quality gates, test impact analysis and selection, and disciplined management of flaky tests</li>
+<li>Experience building defect analytics and quality metrics that change behavior: triage and prioritization frameworks, regression attribution, and reporting that leadership actually acts on</li>
+<li>Demonstrated ability to lead through influence rather than headcount, setting standards adopted by teams you do not manage and aligning stakeholders across engineering, art, and product</li>
+<li>Strong ownership and backbone: a track record of holding a quality line under schedule pressure, disagreeing with senior stakeholders when the evidence warrants it, and owning the outcome either way — paired with the judgment to know which risks are worth accepting and the discipline to commit once a decision is made</li>
+<li>Strong written and verbal communication, with the ability to make quality legible to executives and actionable for individual contributors</li>
+</ul>
+<h2>You might also have</h2>
+<ul>
+<li>Game development or game QA experience, in a studio or on an engine team</li>
+<li>Familiarity with Unity, Unreal, or a comparable real-time 3D engine</li>
+<li>Experience validating content and asset pipelines, or evaluating generated art and design output</li>
+<li>Performance, load, and latency testing for real-time or interactive systems</li>
+<li>Experience standing up a quality function or practice from scratch</li>
+<li>Familiarity with C#/.NET or Python, and with cloud backends on Azure or Google Cloud</li>
+<li>Exposure to security, privacy, or compliance testing in a product context</li>
+</ul>
+<h2></h2>
+<h2>Additional information</h2>
+<p>Base Salary Range: We determine the base salary range for this role based on your primary work location:Zone A: $244,500 - $317,800Zone B: $217,500 - $282,700Zone C: $192,600 - $250,300</p>
+<h2></h2>
+<p><em>This range reflects the anticipated base salary for this position. Beyond base salary, this role may be eligible for equity awards and participation in our company incentive plans (such as annual discretionary bonuses or sales commissions). The final offer amount will depend on several factors, including geographic location and the candidate’s relevant experience, professional background, and skill set.</em></p>
+<p><strong>Benefits</strong></p>
+<p>At Unity, we want our team members to thrive. We offer a wide range of benefits designed to support well-being and work-life balance.</p>
+<p>Please note: Benefits eligibility, specific offerings, and coverage vary based on the country and employment status.</p>
+<p>While specific benefits vary, here are some of the ways we strive to take care of our eligible team members globally: Comprehensive health, life, and disability insurance | Commute subsidy | Employee stock ownership | Competitive retirement/pension plans | Generous vacation and personal days | Support for new parents through leave and family-care programs | Office food snacks | Mental Health and Wellbeing programs and support | Employee Resource Groups | Global Employee Assistance Program | Training and development programs | Volunteering and donation matching program</p>
+<p><strong>Life at Unity</strong></p>
+<p>Unity [NYSE: U] is the world’s leading game engine, powering play for more than 3 billion consumers each month. The top mobile games in the world, the most played PC indie titles, the most innovative console games, and virtually all of the top XR and Web Games are developed, deployed, and grown in Unity. Unity also enables teams across industries like automotive, manufacturing, and healthcare to design, simulate, and collaborate in 3D — closing the gap between ideas and reality. For more information, please visit www.unity.com.</p>
+<p><em>Unity is a proud equal opportunity employer. We are committed to fostering an inclusive, innovative environment and celebrate our employees across age, race, color, ancestry, national origin, religion, disability, sex, gender identity or expression, sexual orientation, or any other protected status in accordance with applicable law. Our differences are strengths that enable us to support the growing and evolving needs of our customers, partners, and collaborators.</em>  <em>If you have a disability that means there are preparations or accommodations we can make to help ensure you have a comfortable and positive interview experience, please fill out</em>  <em>this form</em>  <em>to let us know.</em></p>
+<p><em>This position requires the incumbent to have a sufficient knowledge of English to have professional verbal and written exchanges in this language since the performance of the duties related to this position requires frequent and regular communication with colleagues and partners located worldwide and whose common language is English.This posting is intended to fill an existing vacancy, and we are committed to providing applicants with updates throughout the hiring process in accordance with applicable law.</em></p>
+<p><em>Headhunters and recruitment agencies may not submit resumes/CVs through this website or directly to managers. Unity does not accept unsolicited headhunter and agency resumes. Unity will not pay fees to any third-party agency or company that does not have a signed agreement with Unity.Your privacy is important to us. Please take a moment to review our</em>   <em>Prospect</em>  <em>and</em>   <em>Applicant</em>  <em>Privacy Policies. Should you have any concerns about your privacy, please contact us at DPO@unity.com.</em></p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://unitytech.wd1.myworkdayjobs.com/en-US/Unity/job/Mountain-View-CA-USA/Staff-Quality-Engineering-Lead--Gaming-AI_JOBREQ-2616540"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on Unity Technologies &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

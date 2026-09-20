@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AML Senior Analyst &mdash; Scotiabank | Open Indeed</title>
+  <meta name="description" content="AML Senior Analyst at Scotiabank in Bogota, DC, CO.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">AML Senior Analyst</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">Scotiabank</strong> &bull;
+          <span>Bogota, DC, CO</span> &bull;
+          
+          <span class="pill pill-onsite">On-site</span> &bull;
+          
+          <span>Recent</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://jobs.scotiabank.com/job/Bogota-AML-Senior-Analyst-DC/605679217/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on Scotiabank &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>AML Senior Analyst</h1>
+<ul>
+<li><strong>Company</strong>: Scotiabank</li>
+<li><strong>Requisition ID</strong>: <code>605679217</code></li>
+<li><strong>Location</strong>: Bogota, DC, CO</li>
+<li><strong>Official Posting</strong>: <a href="https://jobs.scotiabank.com/job/Bogota-AML-Senior-Analyst-DC/605679217/">Apply on Scotiabank Careers</a></li>
+<li><strong>Application Deadline</strong>: 2026-10-18</li>
+</ul>
+<h2>Job Description</h2>
+<p>ID de la solicitud: 271412</p>
+<p>Gracias por tu interés en ScotiaGBS, el mejor campus de Bogotá.</p>
+<p>Únete a un equipo ganador con un propósito claro, comprometido con el logro de resultados en un entorno inclusivo y de alto desempeño.</p>
+<p><strong>Propósito</strong>
+Contribuir al éxito general de la Unidad de Operaciones de AML en Bogotá, Colombia asegurando la ejecución de metas individuales específicas, planes e iniciativas en apoyo a las estrategias y objetivos del equipo.  Garantizar que todas las actividades realizadas siguen las normas, políticas internas y procedimientos.</p>
+<p>El Analista Senior investigará y evaluará la relación con el cliente para identificar posibles riesgos financieros, reputacionales, operativos y/o de cumplimiento, además de las actividades que posean riesgos de lavado de activos o financiación del terrorismo.</p>
+<p>De acuerdo con las necesidades y asignación de Operaciones Globales, y con una cultura centrada en el cliente, el  Analista Senior puede cubrir, para banca canadiense y/o internacional, una o más de las actividades aquí descritas en áreas como SWAT – Quality Control de Transaction Monitoring,  Enhanced Due Diligence Unit, ,  Payment Screening, Name Screening y Demarket entre otros.</p>
+<p><strong>Responsabilidades generales</strong>
+•    Perseguir activamente operaciones eficaces y eficientes, al tiempo que garantizar la adecuación, adherencia y eficacia de los controles empresariales diarios para cumplir con las obligaciones con respecto al riesgo operativo, de cumplimiento normativo, de Lavado de Activos/Financiación del Terrorismo (LA/FT) y de conducta, incluyendo pero no limitado a las responsabilidades bajo el Marco de Gestión de Riesgos Operacionales, el Marco de Gestión de Riesgos de Cumplimiento Regulatorio, el Manual Global de Prevención de LA/FT y las Directrices para la Conducta Empresaria
+•    Investigar y analizar transacciones, o identificar patrones inusuales de actividad de pago internacional y/o actividad de financiación del comercio mediante la aplicación de conocimientos expertos para evaluar las exposiciones al riesgo operacional y de Lavado de Activos
+•    Ayudar a garantizar que el Banco cumpla con las obligaciones reglamentarias de Prevención del Lavado de Activos para detectar y reportar actividades sospechosas
+•    Preparar informes u hojas de cálculo de evaluación de riesgos para la revisión de la Gerencia del área que describa la tipología de Lavado de Activos sospechosa, el alcance de la investigación, la evaluación de riesgos y las acciones de corrección recomendadas
+•    Realizar análisis exhaustivos para apoyar una evaluación razonada, precisa y coherente con la calificación de riesgo asignada por caso
+•    Desarrollar y mantener un conocimiento y comprensión sólido de las políticas y procedimientos de Prevención de LA/FT del Banco, el lavado de activos y la financiación del terrorismo, regulaciones, mejores prácticas de la industria, tipologías criminales y desarrollo de tendencias
+•    Ayudar a mitigar el riesgo financiero y reputacional relacionado con el Banco
+•    Apoyar a los colegas de la línea de negocio y responder con prontitud a la solicitud y las preocupaciones de los socios y las partes interesadas (incluyendo Seguridad e Investigaciones, y Servicios Compartidos) en la evaluación y resolución de casos iniciados por esos grupos o cualquier otra tarea asignada
+•    Mantener los estándares de productividad y calidad esperados definidos a través de métricas de rendimiento
+•    Preparar informes escritos de evaluación de riesgos y memorandos de casos para auditorias ejecutivas y/o de prueba (internas y/o externas). Recomendar un plan de remediación.
+•    Comprender cómo se debe considerar el apetito de riesgo y la cultura de riesgo del Banco en las actividades y decisiones diarias
+•    Mantenerse al día con las tendencias, actuales y emergentes, las tipologías y los cambios en la legislación participando en sesiones de capacitación de Prevención de Lavado de Activos y accediendo a los recursos de la industria
+•    Contribuir al desarrollo de tipologías y/o su identificación basada en casos significativos
+•    Asegurar que todas las correcciones de alertas se completen dentro de los tiempos establecidos
+•    Identificar activamente las oportunidades de mejora de procesos, tecnología y sistemas, y participar según corresponda en el proceso de implementación
+•    Realizar revisiones de control de calidad en la adjudicación de casos y la preparación de estos, incluida la garantía que toda la documentación pertinente y de apoyo se incluye en el sistema de gestión de casos
+•    Llevar a cabo la adjudicación de casos para cerrar o escalarlos para posterior revisión. Supervisar las solicitudes de información de los analistas según sea necesario de las unidades de negocio; mantener registros y documentación relacionada de acuerdo con los requisitos reglamentarios y departamentales en el sistema de gestión de casos
+•    Supervisar los niveles de servicio de casos y escala al Gerente según sea necesario</p>
+<p>Responsabilidades específicas
+Transaction Monitoring
+•    Realizar la revisión de las alertas de mayor SLA, complejidad y &quot;Risk Scored&quot;, para cerrarlas o escalarlas para una revisión adicional. Cuando sea necesario, solicita información de otra unidad de negocio y trabaja en colaboración cuando se solicite información
+•    Realizar revisiones de Control de Calidad (QC por sus siglas en inglés) sobre la adjudicación de alertas y la preparación de alertas, incluyendo que toda la documentación relevante y de respaldo esté incluida en el sistema de administración de casos, así como completar las remediaciones sugeridas por los revisores de calidad cuando se requiera
+•    Contribuir al desempeño general del equipo de Triage asegurándose que el equipo cumpla con los SLA según se define en los SOP y los objetivos de productividad y calidad de Intake / Triage en asociación con FIU y AML Risk
+•    Participar en tareas ad hoc o administrativas para apoyar a los Gerentes
+•    Brindar soporte y conocimientos especializados sobre investigaciones con alerta de clientes y procedimientos SOP mediante sesiones de capacitación. Actúa como punto de contacto cuando los Analistas planteen inquietudes o preguntas
+•    Identificar oportunidades de eficiencia dentro de Triage y mejoras del sistema y participa en el proceso de implementación
+•    Fomentar un ambiente inclusivo y de alto desempeño que retenga, desarrolle y motive a los analistas. Liderazgo y capacidad demostrados para motivar a otros
+•    Asegurar que se mantengan todas las obligaciones derivadas del PCMLTFA, incluida la identificación y la presentación oportuna de informes de personas designadas, así como de personas políticamente expuestas.
+•    Asegurar la obtención de información relevante para las alertas generadas desde el sistema automatizado de supervisión de transacciones, incluidos los informes de transacciones inusuales.
+•    Investigar y evaluar la actividad alertada por el cliente, generada a partir del sistema automatizado de monitoreo de transacciones y a partir de informes de transacciones inusuales para identificar posibles casos de lavado de activos o financiación del terrorismo.
+•    Adjudicar alertas para cerrar o escalar para su posterior revisión por la FIU. Solicitar información según sea necesario a las unidades de negocio; mantener registros y documentación relacionada de acuerdo con los requisitos reglamentarios y las normas del departamento en el sistema de gestión de casos
+•    Ayudar en la función de admisión cuando sea necesario debido a altos volúmenes de alerta o necesidades empresariales
+Ayudar en la función de revisión de control de calidad cuando sea necesario debido a grandes volúmenes de alertas o necesidades empresariales</p>
+<p>Enhanced Due Diligence.
+•    Brindar un servicio y soporte al Equipo como experto en la materia PLA mediante la realización de revisiones de Control de Calidad (QC por sus siglas en inglés) sobre las investigaciones realizadas en la EDDU.
+•
+•    Proporcionar orientación y aportes a los equipos de debida diligencia mejorada con respecto a casos específicos según sea necesario
+•    Aplicar habilidades avanzadas de investigación para desarrollar inteligencia empresarial en industrias específicas, para apoyar la investigación experta y en profundidad contra el lavado de dinero de las relaciones con los clientes. Lo anterior, haciendo uso de la definición de procedimiento de la EDDU
+•    Aplicar habilidades de investigación para desarrollar inteligencia a Personas Políticamente Expuestas (PEP por sus siglas en inglés) y exposición a sanciones para apoyar a expertos y procurar una investigación en profundidad contra el lavado de dinero, el financiamiento del terrorismo y la exposición a Sanciones.
+•    Lograr niveles de servicio óptimos gestionando rápidamente los casos asignados y asegurando que la amplitud y profundidad de las actividades de revisión de casos sean proporcionales al perfil de riesgo del cliente y de acuerdo con la Política PLA/PFT y los procedimientos asociados escritos
+•    Mantener registros adecuados y realiza un seguimiento de auditoría de la actividad de debida diligencia y las acciones de disposición para todos los casos
+•    Priorizar todas las solicitudes de información, establece los tiempos de respuesta y escala las solicitudes según sea necesario
+•    Preparar y escalar casos de clientes PEP, aquellosrelacionados con exposición a sanciones y/o en general de cualquier linea de negocio y tipo de riesgo que le sea asignado. Lo anterior, haciendo uso de los documentos de apoyo aplicables a cada tipo de caso.
+•    Trabajar en colaboración con otras líneas de negocio y grupos de interesados corporativos para implementar los pasos adecuados de debida diligencia y corrección del cliente para minimizar el riesgo regulatorio y reputacional para Scotiabank
+•    Preparación y elaboración de informes que dé cuenta de la gestión a cargo o del área</p>
+<p>Enhanced Due Diligence (Sanctions)
+•    Defender una cultura centrada en el cliente para profundizar las relaciones con los mismos y aprovechar relaciones, sistemas y conocimientos más amplios del Banco.
+•    Mantener un conocimiento fuerte y sólido en las leyes y reglamentos de sanciones, incluyendo la OFAC, regulaciones canadienses y otras directrices reglamentarias pertinentes para evaluar los riesgos de las sanciones y las alertas de sanciones de decisiones.
+•    Investigar y resolver casos identificados con posibles infracciones de sanciones, AML o violaciones de políticas en transacciones, entidades, informes de listas de vigilancia o personas SDN.
+•    Supervisar tendencias y patrones en todas las plataformas internas para identificar el riesgo potencial y tomar las medidas adecuadas para mitigar dichos riesgos.
+•    Identificar y escalar las cuestiones que no se abordan en las políticas o normas actuales; realizar recomendaciones de posibles soluciones.
+•    Implementar varios controles de sanciones en cada caso y escalar a la Oficina Global de Sanciones (GSO por sus siglas en inglés) y al gerente de equipo todas las recomendaciones que puedan ser aplicables y apropiadas de acuerdo con la evaluación del riesgo.
+•    Reportar todos los controles aprobados de cada caso a HotScan, si aplica.
+•    Lograr a través de procedimientos y procesos, garantizar el cumplimiento de las políticas que permiten que las unidades de líneas de negocio cumplan con los estándares requeridos.
+•    Interactuar con varias partes interesadas para crear conciencia sobre las violaciones de las sanciones, las cuestiones emergentes o las acciones correctivas.
+•    Ayudar a garantizar que el Banco cumpla con las obligaciones reglamentarias de AML para detectar e informar actividades sospechosas:
+    Realizar un análisis exhaustivo para apoyar una evaluación razonable y precisa, coherente con la Calificación de Riesgo del Cliente asignada por caso
+    Investigar y analizar transacciones o identificar patrones inusuales de actividad de pago internacional y/o actividad de financiación del comercio mediante la aplicación de conocimientos expertos para evaluar las exposiciones al riesgo operacional y AML
+    Aplicar habilidades avanzadas de investigación para desarrollar inteligencia sobre personas políticamente expuestas (PEP por sus siglas en inglés) para apoyar investigaciones expertas y en profundidad contra el lavado de dinero
+    Preparar y escalar las actividades consideradas como &quot;transacciones Inusuales&quot; a GAMLU garantizando que los documentos justificativos adecuados y precisos se presenten para validar la escalación
+    Priorizar todas las solicitudes de información, establecer tiempos de respuesta y aumentar las solicitudes según sea necesario
+    Preparar y escalar relaciones PEP y relacionadas con las sanciones con documentos de apoyo a GAMLU
+    Proporcionar un servicio y soporte superior a las unidades de negocio como experto en la materia de AML
+    Identificar y compartir los factores y tendencias de riesgo emergentes que pueden afectar la exposición a AML, Fraude y Riesgo de Crédito
+    Identificar tendencias para mejorar el servicio a los clientes</p>
+<p>Payment Screening</p>
+<p>•    Asegurarse de que el banco está en cumplimiento de las regulaciones relacionadas a las obligaciones sancionatoria. Identificar y escalar pagos/mensajes alertados teniendo en cuenta las siguientes actividades:
+o    Revisar y analizar los pagos/mensajes que surgen del escaneo contra sanciones y determinar si son un falso positivo, o si, por el contrario, es una coincidencia verdadera. En caso de la segunda, debe ser escalada al nivel 2 de la unidad de Payment Screening.
+o    Revisar, analizar y capturar el detalle de los pagos/detalles dentro de la herramienta Case Management Tool (CMT)
+o    Revisar y accionar los casos de la herramienta CMT, según corresponda, accionados y dispuestos por el nivel 2.
+o    Obtener y mantener un conocimiento actualizado de programas, leyes, regulaciones y requerimientos relacionados al programa de sanciones.
+o    El nivel 1 de la operación de Payment Screening opera 24 horas 5 días a la semana. El analista deberá tener disponibilidad y flexibilidad horaria para trabajar en diferentes jornadas dependiendo de las necesidades de la unidad.
+•    Asistir al banco mitigando el riesgo de las siguientes formas:
+o    Preparando la alerta y analizándola con los correspondientes informes escritos.
+o    Proveer un servicio superior y soporte a la línea de negocio, incluyendo al Sr manager de la operación.
+o    Desarrollar y mantener el conocimiento y entendimiento de las leyes, regulaciones, requerimientos y mejores prácticas del negocio relacionadas a los programas de sanciones.
+o    Mantenerse informado de las tendencias de la industria y las diferentes tipologías participando en las sesiones de entrenamiento de sanciones accediendo a los recursos provistos por la industria.
+•    Alcanzar las expectativas de productividad de la unidad incluyendo:
+o    Manteniendo altos estándares de servicio manejando apropiadamente las alertas/casos dentro del SLA, asegurándose de que las decisiones y el análisis están en línea con el apetito del riesgo del banco y los procedimientos y políticas aplicables.
+o    Identificar activamente las oportunidades de mejora del sistema y el proceso. Participar activamente de implementaciones de nuevos proyectos de la unidad.
+o    Responder dentro del tiempo establecido las solicitudes y requerimientos de los stakeholders.
+o    Adherirse a las guías y procedimientos del banco y código de conducta.
+•    Construir relaciones fuertes con todas las partes interesadas en el proceso de Payment screening. Nivel 1, nivel 2 y nivel 3 (GSO, Global OFAC, London UK, Ireland, APAC) y colaborar con el cumplimiento de objetivos.
+•    Revisar y analizar coincidencias verdaderas de individuos/entidades sancionadas, jurisdicciones sancionadas y clientes de alto riesgo para asegurar consistencia con los procedimientos internos.
+•    Activamente estar persiguiendo el cumplimiento de sus responsabilidades de manera efectiva y eficiente de su área de acuerdo con los valores del banco, el código de conducta, principios de ventas globales, asegurando la adecuada adherencia a los controles de la actividad diaria permitiendo el cumplimiento de las obligaciones relacionadas al riesgo operacional, de cumplimiento y de prevención de lavado de dinero y financiación de terrorismo.
+•    Contribuir con la generación de un ambiente de trabajo inclusivo.</p>
+<p><strong>Relaciones de reportes (solo títulos de trabajo)</strong>
+Gerente Principal:
+(incluya el Gerente secundario si corresponde)    •    Gerente AML
+Reportes directos:    N/A
+Reportes compartidos (directos/indirectos si procede):    N/A</p>
+<p><strong>Dimensiones</strong>
+Los Analistas Senior son parte de la unidad de Operaciones AML, ubicada en Bogotá, Colombia, agregando valor e impulsando eficiencias proporcionando servicios de enrutamiento para actividades de alerta de gran volumen.
+Los Senior Analistas son responsables de procesar el trabajo de manera eficiente y efectiva y se espera que trabajen de forma independiente con supervisión limitada. La dirección general es proporcionada por el líder de equipo cuando sea necesario.</p>
+<p>Criterio de Medición
+•    Capacidad para gestionar solicitudes de gran volumen
+•    Acuerdos de nivel de servicio (SLA por sus siglas en inglés)
+•    Flexibilidad en un entorno en constante cambio (sistemas procedimentales y automatizados)
+•    Cumplir las expectativas de uso de la calidad y las automatizaciones
+•    Capacidad para investigar y analizar las actividades de los clientes para identificar transacciones inusuales.</p>
+<p>Decisiones
+•    Trabaja de forma independiente en el día a día.
+•    Utiliza un juicio sólido en la interpretación de los datos y escala con recomendaciones/excepciones al Gerente.
+•    Capacidad para resolver eficazmente los problemas según sea necesario.</p>
+<p><strong>Educación / Experiencia</strong>
+Título en Administración de Empresas, Ingeniería Industrial, leyes o carreras afines con un</p>
+<ul>
+<li><p>Min 2 años de experiencia relevante en AML  o su equivalente en una institución financiera, en cumplimiento, en el área comercial o red minorista.</p>
+</li>
+<li><p>Nivel de inglés conversacional B2</p>
+</li>
+<li><p>Además:•    Fuertes habilidades analíticas para hacer deducciones racionales y lógicas, a veces con información limitada•    Capacidad para recopilar, analizar, organizar, documentar y presentar información de una manera sucinta y organizada•    Capacidad probada de búsqueda de hechos con una clara comprensión de los puntos clave y sondeo al realizar conversaciones correspondientes•    Excelentes habilidades de comunicación escrita y verbal•    Sólida comprensión de los productos, procesos, políticas y prácticas de banca corporativa, comercial y de pequeñas empresas•    Uso probado de la lógica y el razonamiento para identificar las fortalezas y debilidades de soluciones alternativas, conclusiones o enfoques a los problemas•    Conocimiento exhaustivo de los requisitos regulatorios y de cumplimiento del Banco en relación con la incorporación de clientes•    Habilidades de investigación para desarrollar inteligencia empresarial en industrias y modelos de negocio específicos•    Comprensión de los productos, procesos, políticas y prácticas bancarias•    Algunos conocimientos de las políticas y procedimientos contra el lavado de activos y KYC.•    Competencia con aplicaciones informáticas, incluyendo Word, Excel y motores de búsqueda en Internet•    La certificación ACAMS/CAMS y la certificación ManchesterCF son un activo•    Conocimiento de trabajo de los Ingresos del Delito (Lavado de Dinero) y la Ley de Financiamiento del Terrorismo y las regulaciones de apoyo•    Fuerte comunicación y capacidad para trabajar con las partes interesadas.•    Fuerte planificación del tiempo y habilidades organizativas.•    Los idiomas inglés y español son obligatorios.                        Condiciones de trabajo•    Trabajo en un entorno estándar basado en la oficina, el horario comercial estándar y no estándar es frecuente.  Computadora, monitor y/o Laptop y sistema auxiliar se utilizan para las actividades diarias y la comunicación con socios comerciales, reguladores y clientes.  No se requiere viaje.</p>
+</li>
+</ul>
+<p>Ubicación(s):  Colombia : Bogota : Bogota</p>
+<p>ScotiaGBS forma parte del grupo de empresas de Scotiabank ubicado en Bogotá, Colombia, y fue creado para apoyar diversos procesos del Banco y el desarrollo y ejecución de su estrategia global de servicios en 15 países de las Américas. Está compuesto por 7 unidades de servicio. Ofrecemos un ambiente de trabajo inclusivo y positivo, además de ventajas competitivas.</p>
+<p>En ScotiaGBS, valoramos las habilidades y experiencias únicas que cada persona aporta al Banco y nos hemos comprometido a crear y mantener un entorno inclusivo y accesible para todos. Los candidatos deben postularse directamente en línea si desean ser tomados en cuenta para este puesto. Agradecemos a todos los candidatos por su interés en esta oportunidad profesional en ScotiaGBS; sin embargo, solo contactaremos a quienes hayan sido seleccionados para una entrevista.</p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://jobs.scotiabank.com/job/Bogota-AML-Senior-Analyst-DC/605679217/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on Scotiabank &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

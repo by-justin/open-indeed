@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FSQR Associate -May 2027 &mdash; Cargill Limited | Open Indeed</title>
+  <meta name="description" content="FSQR Associate -May 2027 at Cargill Limited in Unspecified.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">FSQR Associate -May 2027</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">Cargill Limited</strong> &bull;
+          <span>Unspecified</span> &bull;
+          
+          <span>Recent</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://campusbridge.ualberta.ca/myAccount/careercentre/student-alumni-postings.htm?postingId=146220"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on Cargill Limited &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>FSQR Associate -May 2027</h1>
+<p><strong>Company / Organization</strong>: Cargill Limited
+<strong>Division</strong>: Main
+<strong>Job ID</strong>: 146220
+<strong>Source</strong>: University of Alberta CampusBridge - General (<code>campusbridge_general</code>)
+<strong>Work Term</strong>: Current
+<strong>Position Type</strong>: Full Time
+<strong>Application Deadline</strong>: Dec 31, 2026
+<strong>Portal URL</strong>: <a href="https://campusbridge.ualberta.ca/myAccount/careercentre/student-alumni-postings.htm?postingId=146220">https://campusbridge.ualberta.ca/myAccount/careercentre/student-alumni-postings.htm?postingId=146220</a>
+<strong>External Application URL</strong>: <a href="http://careers.cargill.com/ca-fsqr-associate-may2027">http://careers.cargill.com/ca-fsqr-associate-may2027</a></p>
+<h2>Job Description</h2>
+<h2>Food Safety, Quality and Regulatory Intern</h2>
+<p>All candidates must complete Cargill's online application prior to interviewing.?Below you will find a link that will direct you to complete the application for this position.?To be considered for employment with Cargill, you?must?apply online and complete the entire application process, along with an e-signature. Please complete your application as soon as possible.</p>
+<p>Please note, applications will be reviewed on an ongoing basis with the possibility of filling the role before the application deadline. Please submit your application as soon as possible, so it may be reviewed to be considered for the position.</p>
+<p><a href="http://careers.cargill.com/ca-fsqr-associate-may2027">http://careers.cargill.com/ca-fsqr-associate-may2027</a></p>
+<h2>Your Role</h2>
+<p><strong>Connect to meaningful work. Feed the world. Achieve your higher purpose.</strong></p>
+<p>What if your ideas could nourish the world? As an associate, we transfer your knowledge and skills into profound experiences that positively impact our global community. From food to transportation, your innovative solutions, collaboration and dedication will evolve industries to take on tomorrow's greatest challenges. And that's just the beginning. Because when your skills meet our unrivaled network and breadth of opportunity, your career is without bounds. Join our community to realize the impact of your work, help people around the world and connect with something greater.</p>
+<h2>Your Work</h2>
+<ul>
+<li>Complete training per training program. Write weekly report of takeaways and submit to manager using the FSQR Associate training guide.</li>
+<li>Identify and resolve product quality problems and work with team members from various departments to ensure quality, food safety, and microbiological requirements are met. Complete specific projects designated by the FSQR leadership team. Write FSQR/Micro procedures as needed. Complete facility and Processing Area FSQR Assessments, Sanitation Assessments, Support and coordinate corrective action teams, as needed. Participate in a committee and engagement activities.</li>
+<li>Provide back-up assistance for FSQR Supervisor, Food Safety Specialist, or Microbiology Supervisor. Complete pre-shipment review and product clearances as needed. Effectively communicate FSQR and Micro results, including timely reporting of all quality assurance activities.</li>
+<li>Maintain all manufacturing, safety, FSQR, Pre-requisite Programs (PRPs), and HACCP policies in production of products. Organize and maintain accurate and pertinent information to assure that processes and products are food safe.</li>
+<li>Coordinate and supervise FSQR audits/reviews of operational systems to include the following: FSQR/Microbiology Technician, as needed, duties to include operation/calibration of equipment, aseptic technique when sampling and completing microbiological testing, information management (SPC, Computer Data Entry into spreadsheets/databases). Candidates will cross train in both FSQR and Micro functions. Must know technician duties well enough to assist in training needs and plant training programs for new FSQR /Micro employees to assure that employees performing tasks are capable and the requirements are being met. As well as any other duties that are assigned.</li>
+</ul>
+<h2>Food Safety, Quality and Regulatory Associate</h2>
+<p>The purpose of this position is to develop and train recent graduates from university to prepare them to tackle a higher level role within the Food Safety, Quality, and Regulatory (FSQR) department. In the FSQR Management program, Associates will go through an extensive training program that enables the individual to become familiar with plant operations, and to develop knowledge of meat processing production, including good manufacturing practices, Hazard Analysis Critical Control Points (HACCP), food safety, quality, process control and regulatory compliance. Throughout the training (and after training is complete), the individual will be assigned key projects and will be responsible for supervising and handling several food safety and quality programs at the plant.</p>
+<p>As an Associate, you will gain an understanding of protein processing production with primary emphasis on monitoring the processing activities of the various departments within the facility. You will be trained in a number of areas to learn skills and gain knowledge necessary to succeed in leadership role. As a FSQR Management Associate, you will be exposed to all facets of business operations through an in-depth general orientation. The training is crafted to cover varying aspects of the business prior to placement in a role that aligns the candidate with business needs.</p>
+<h2>Our Benefits</h2>
+<p>No matter who you are or where you are, we've designed our plans and programs to meet your needs. We want to help you take care of what's needed for today and offer protection to help with tomorrow's what-ifs. You'll have access to a wide variety of flexible and inclusive programs to meet your health, financial, and work/life needs to support you and help you <em>thrive</em> . Eligible programs and incentives include:</p>
+<ul>
+<li>Paid holidays and floating holidays</li>
+<li>Paid time off</li>
+<li>Supplementary health, dental, disability and life benefits package. Short term and long-term incentives</li>
+<li>Competitive retirement plans and registration assistance.</li>
+<li>Mental Health and Wellbeing program</li>
+<li>Digital Learning Library</li>
+<li>Access to volunteer and community outreach opportunities and paid time off to participate in volunteer activities</li>
+<li>Tuition reimbursement benefits are offered to those who wish to continue their education in their career field.</li>
+<li>Relocation benefits for those that qualify</li>
+</ul>
+<h2>Our Vibrant Community</h2>
+<p>At Cargill, you will be a part of our vibrant global community with a culture that celebrates diversity. This is a reflection of the clients we serve and generates an intellectually diverse set of employees. Business Resource Groups (BRGs) help us embrace our diversity, make our culture more inclusive and enhance our employees' outstanding talents and perspectives to benefit our organization and employees.</p>
+<h2>Job Locations</h2>
+<ul>
+<li>High River, Alberta</li>
+<li>Plant Setting</li>
+</ul>
+<h2>Required Qualifications</h2>
+<ul>
+<li>Pursuing a bachelor's degree in a technical science program (i.e. Animal Science, Food Science, Microbiology, Biology or related technical science degree) and graduating between December 2026 and August 2027</li>
+<li>Willingness to work 1st, 2nd and 3rd shifts</li>
+<li>Must be legally entitled to work for Cargill in Canada</li>
+<li>Ability to work effectively with individuals from diverse backgrounds</li>
+<li>Willing and able to relocate</li>
+</ul>
+<p>At Cargill, we are committed to building a workplace where individuals from all backgrounds feel respected, valued, and able to contribute fully. We believe that bringing together different perspectives strengthens our teams and drives better outcomes.</p>
+<p>Cargill is an equal opportunity employer and is committed to providing an accessible recruitment experience. If you require accommodation at any stage of the hiring process, please let us know so we can work with you to meet your needs.</p>
+<h2>Targeted Degrees and Disciplines</h2>
+<p>View Targeted Programs</p>
+<p>Accounting</p>
+<p>Agriculture</p>
+<p>Agriculture/Food Business Management</p>
+<p>Animal Health</p>
+<p>Business Economics and Law</p>
+<p>Business Studies</p>
+<p>Civil Engineering</p>
+<p>Entrepreneurship and Family Enterprise</p>
+<p>Environmental and Conservation Sciences</p>
+<p>Environmental Engineering</p>
+<p>Environmental Studies</p>
+<p>Fashion Business Management</p>
+<p>Finance</p>
+<p>Forest Business Management</p>
+<p>Forestry</p>
+<p>Health Promotions</p>
+<p>Human Dimensions of Environmental Management</p>
+<p>Human Ecology</p>
+<p>Human Resources Management</p>
+<p>International Business</p>
+<p>Marketing</p>
+<p>Natural Resources, Energy and the Environment</p>
+<p>Nutrition and Food Science</p>
+<p>Operations, Organization and Information Management</p>
+<p>Recreation, Sport and Tourism</p>
+<p>Retailing and Services</p>
+<h2>Application Documents Required</h2>
+<p>Cover Letter, Resume</p>
+<h2>Application Method</h2>
+<p>Apply through Employer website</p>
+<p><a href="http://careers.cargill.com/ca-fsqr-associate-may2027">http://careers.cargill.com/ca-fsqr-associate-may2027</a></p>
+<h2>Other Application Information</h2>
+<p><a href="http://careers.cargill.com/ca-fsqr-associate-may2027">http://careers.cargill.com/ca-fsqr-associate-may2027</a></p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://campusbridge.ualberta.ca/myAccount/careercentre/student-alumni-postings.htm?postingId=146220"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on Cargill Limited &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

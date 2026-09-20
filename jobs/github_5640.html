@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Staff Developer Advocate, GitHub Security Lab &mdash; GitHub | Open Indeed</title>
+  <meta name="description" content="Staff Developer Advocate, GitHub Security Lab at GitHub in United States.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">Staff Developer Advocate, GitHub Security Lab</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">GitHub</strong> &bull;
+          <span>United States</span> &bull;
+          
+          <span class="pill pill-remote">Remote</span> &bull;
+          
+          <span>2026-07-31</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://githubinc.jibeapply.com/jobs/5640?lang=en-us"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on GitHub &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>Staff Developer Advocate, GitHub Security Lab</h1>
+<ul>
+<li><strong>Company</strong>: GitHub</li>
+<li><strong>Requisition ID</strong>: <code>5640</code></li>
+<li><strong>Location</strong>: United States</li>
+<li><strong>Employment Type</strong>: full_time</li>
+<li><strong>Workplace Type</strong>: remote</li>
+<li><strong>Category</strong>: Security</li>
+<li><strong>Date Posted</strong>: 2026-07-31</li>
+<li><strong>Compensation</strong>: $121,800.00</li>
+<li><strong>Official Posting</strong>: <a href="https://githubinc.jibeapply.com/jobs/5640?lang=en-us">Apply on GitHub</a></li>
+<li><strong>Direct Apply</strong>: <a href="https://careers-githubinc.icims.com/jobs/5640/login">Direct Application</a></li>
+</ul>
+<h2>Job Description</h2>
+<p><strong>About GitHub</strong></p>
+<p>GitHub is the world’s leading platform for agentic software development — powered by Copilot to build, scale, and deliver secure software. Over 180 million developers, including more than 90% of the Fortune 100 companies, use GitHub to collaborate, and more than 77,000 organisations have adopted GitHub Copilot.</p>
+<p><strong>Locations</strong></p>
+<p>In this role you can work from Remote, United States</p>
+<p><strong>Overview</strong></p>
+<p>GitHub is seeking a Staff Developer Advocate to join the GitHub Security Lab. The mission of the Security Lab is to inspire and enable the community to secure the open source software we all depend on. We create a home for security researchers where they can collaborate and share, with the common goal of making security easy for developers.</p>
+<p>In this role, you will act as a known subject matter expert and trusted ambassador who engages with security researchers, open source maintainers, and enterprise developers and encourages them to get the most out of GitHub Security Lab's security tools and resources — including CodeQL, Dependabot, secret scanning, code scanning, Copilot Autofix, AI-powered vulnerability detection, and the GitHub Advisory Database.</p>
+<p>You will define the vision and strategy for the Security Lab's developer advocacy program, producing high-quality technical content (blog posts, tutorials, training, videos, CTFs, conference talks), leading community events, and driving social media campaigns. You will grow our community from a dedicated group of security enthusiasts to everyone who cares about software security. You will also help the security community understand and navigate the evolving intersection of AI and security — from securing AI-generated code to leveraging AI for vulnerability discovery.</p>
+<p>As a Staff-level advocate, you bring cross-team influence and deep technical expertise across multiple areas. You don't just execute — you set direction, establish frameworks that help others produce great security content, and proactively identify highly impactful unaddressed issues, mobilizing resources to resolve them before they affect the community. You mentor and sponsor others within the team, and you use data and business outcomes to inform decisions and influence stakeholders across GitHub.</p>
+<p><strong>Responsibilities</strong></p>
+<h3>Understanding the Security Community</h3>
+<p>Acts as a known subject matter expert of the security research and open source developer communities — their common experiences, goals, industry trends, and key developments — by meeting with community members, attending security and developer conferences, and engaging on social media. Possesses expert knowledge of GitHub's security products and services (CodeQL, code scanning, secret scanning, Dependabot, advisory database) and their potential impact on the broader security ecosystem. Strategically seeks out influencers in the security and open source spaces to understand business drivers and community objectives. Anticipates future changes in the application security landscape, including the impact of AI on security research workflows and the emerging challenges of securing AI-generated code.</p>
+<h3>Building Trusted Relationships</h3>
+<p>Acts as a trusted and influential ambassador between the security community and GitHub's product, engineering, and marketing teams. Builds and maintains a broad, diverse network across security researchers, open source maintainers, and enterprise security teams. Utilizes deep understanding of community needs to share valuable insights, best practices, and technical know-how, maintaining thought leadership within the security community.</p>
+<h3>Internal Advocacy and Impact</h3>
+<p>Collects and seeks out feedback from the security community and stakeholders regarding product usage, user experience, and technical issues. Communicates clearly and effectively to relevant product groups, advocating for and influencing urgent and long-term improvements to GitHub's security features. Proactively builds and manages networks of key stakeholders and leads engagement through established and informal channels to provide feedback on priorities and emerging security scenarios. Incorporates data and key metrics into findings regarding value-add and impact of advocacy initiatives. Ensures the feedback loop between community members, the Security Lab, and the GitHub product team is effective.</p>
+<h3>Supporting Key Internal Initiatives</h3>
+<p>Builds and enhances trust with internal teams through networking and engagement regarding security product improvement plans. Acts as a subject matter expert for internal stakeholders on application security and the security researcher community. Regularly engages in retrospective evaluations to inform future work.</p>
+<h3>Content Development</h3>
+<p>Defines, creates, and leads the technical content strategy for the Security Lab — blog posts, tutorials, training courses, videos, CTFs, puzzles, and conference talks — covering topics from traditional vulnerability research to AI-assisted security analysis and secure AI development practices. Drives interactions across technical forums, social media, and community channels to promote awareness and provide best practices. Represents the GitHub Security Lab at high-visibility security and developer conferences, hackathons, and meetups. Sets the standard for content quality and measures impact to continuously improve how we communicate with the security community.</p>
+<h3>Community Impact</h3>
+<p>Actively seeks out feedback and listens to the needs of the security community, responding with relevant information and upskilling others to make a substantial impact on community growth. Designs the community member journey — from first engagement to active contributor — measuring retention and engagement along the way. Proposes strategic improvements to the community experience. Manages the Security Lab's social media presence and public forums. Applies deep knowledge of GitHub's security products, stakeholders, and strategic objectives to influence and inspire the audience.</p>
+<h3>Technical Expertise</h3>
+<p>Possesses deep technical expertise in application security, secure code practices, vulnerability research, AI-assisted code analysis, and static analysis. Constantly seeks out learning and teaching opportunities and engages in conversations with key security researchers and developers to understand current developments and issues. Applies and practices technical expertise via sample code, CodeQL queries, security advisories, and demonstrations. Builds processes and systems to share technical expertise at scale and works within the industry to help inform future security developments. Understands the security implications of AI-generated code and AI-powered development tools, and can communicate best practices for secure AI adoption to both security researchers and developers. Gains broader knowledge of adjacent technologies and incorporates them into current areas of expertise.</p>
+<p><strong>Qualifications</strong></p>
+<p>Required Qualifications</p>
+<ul>
+<li><p>10+ years experience in community/audience engagement, information technology, software development, or related workOR Bachelor's Degree AND 8+ years experience in community/audience engagement, information technology, software development, or related workOR equivalent experience</p>
+</li>
+<li><p>Delivered at least one technical keynote on a security topic at a developer conference with 1,000+ attendeesOR delivered a session at a major security conference (Black Hat, DEF CON, etc)OR published regular content (blog, podcast) on security and open source topics</p>
+</li>
+<li><p>2+ years of experience in application security, secure code practices, or vulnerability researchOR 2+ years of experience in a Developer Advocacy function on application security, secure code practices, or vulnerability research topicsOR contributions to open source security projects or security-focused open source tools</p>
+</li>
+<li><p>4+ years of experience working with Git, GitHub, and software development practices</p>
+</li>
+</ul>
+<p>Preferred Qualifications</p>
+<ul>
+<li><p>13+ years experience in community/audience engagement, information technology, software development, public speaking, technical writing, or related workOR Bachelor's Degree AND 11+ years experience in community/audience engagement, information technology, software development, public speaking, technical writing, or related workOR equivalent experience</p>
+</li>
+<li><p>2+ years of experience with static analysis tools like CodeQL</p>
+</li>
+<li><p>2+ years of active participation in security communitiesOR 2+ years of active participation in open source maintainer communities with a focus on securityOR 2+ years of mentoring or teaching application security, secure code practices, or vulnerability research</p>
+</li>
+<li><p>At least one public contribution (content, open source tooling) on AI/ML security topics — such as securing AI-generated code, AI-assisted vulnerability discovery, or red-teaming LLM-based tools</p>
+</li>
+</ul>
+<p><strong>Compensation Range</strong></p>
+<p>The base salary range for this job is USD $121,800.00 - USD $323,200.00 /Yr.</p>
+<p>These pay ranges are intended to cover roles based across the United States. An individual's base pay depends on various factors including geographical location and review of experience, knowledge, skills, abilities of the applicant. At GitHub certain roles are eligible for benefits and additional rewards, including annual bonus and stock. These rewards are allocated based on individual impact in role. In addition, certain roles also have the opportunity to earn sales incentives based on revenue or utilization, depending on the terms of the plan and the employee's role.</p>
+<p>This position will be open for a minimum of 3 days, with applications accepted on an ongoing basis until the position is filled.</p>
+<p><strong>GitHub values</strong></p>
+<ul>
+<li><p>Customer-obsessed</p>
+</li>
+<li><p>Ship to learn</p>
+</li>
+<li><p>Growth mindset</p>
+</li>
+<li><p>Own the outcome</p>
+</li>
+<li><p>Better together</p>
+</li>
+<li><p>Diverse and inclusive</p>
+</li>
+</ul>
+<p><strong>Manager fundamentals</strong></p>
+<ul>
+<li><p>Model</p>
+</li>
+<li><p>Coach</p>
+</li>
+<li><p>Care</p>
+</li>
+</ul>
+<p><strong>Leadership principles</strong></p>
+<ul>
+<li><p>Create clarity</p>
+</li>
+<li><p>Generate energy</p>
+</li>
+<li><p>Deliver success</p>
+</li>
+</ul>
+<p><strong>Who We Are</strong></p>
+<p>GitHub is the world’s leading AI-powered developer platform with 150 million developers and counting. We’re also home to the biggest open-source community on earth (and 99% of the world’s software has open-source code in its DNA). Many of the apps and programs you use every day are built on GitHub.</p>
+<p>Our teams are dreamers, doers, and pioneers, leading the way in AI, driving humanitarian efforts around the globe, and even sending open source to Mars (and beyond!).
+At GitHub, our goal is to create the space you need to do your best work. We’re remote-first and offer competitive pay, generous learning and growth opportunities, and excellent benefits to support you, wherever you are—because we know that people flourish when they can work on their own terms.</p>
+<p>Join us, and let’s change the world, together.</p>
+<p><strong>EEO Statement</strong></p>
+<p>GitHub is made up of people from a wide variety of backgrounds and lifestyles. We embrace diversity and invite applications from people of all walks of life. We don't discriminate against employees or applicants based on gender identity or expression, sexual orientation, race, religion, age, national origin, citizenship, disability, pregnancy status, veteran status, or any other differences. Also, if you have a disability, please let us know if there's any way we can make the interview process better for you; we're happy to accommodate!</p>
+<h3>Qualifications</h3>
+<p>Required Qualifications</p>
+<ul>
+<li><p>10+ years experience in community/audience engagement, information technology, software development, or related workOR Bachelor's Degree AND 8+ years experience in community/audience engagement, information technology, software development, or related workOR equivalent experience</p>
+</li>
+<li><p>Delivered at least one technical keynote on a security topic at a developer conference with 1,000+ attendeesOR delivered a session at a major security conference (Black Hat, DEF CON, etc)OR published regular content (blog, podcast) on security and open source topics</p>
+</li>
+<li><p>2+ years of experience in application security, secure code practices, or vulnerability researchOR 2+ years of experience in a Developer Advocacy function on application security, secure code practices, or vulnerability research topicsOR contributions to open source security projects or security-focused open source tools</p>
+</li>
+<li><p>4+ years of experience working with Git, GitHub, and software development practices</p>
+</li>
+</ul>
+<p>Preferred Qualifications</p>
+<ul>
+<li><p>13+ years experience in community/audience engagement, information technology, software development, public speaking, technical writing, or related workOR Bachelor's Degree AND 11+ years experience in community/audience engagement, information technology, software development, public speaking, technical writing, or related workOR equivalent experience</p>
+</li>
+<li><p>2+ years of experience with static analysis tools like CodeQL</p>
+</li>
+<li><p>2+ years of active participation in security communitiesOR 2+ years of active participation in open source maintainer communities with a focus on securityOR 2+ years of mentoring or teaching application security, secure code practices, or vulnerability research</p>
+</li>
+<li><p>At least one public contribution (content, open source tooling) on AI/ML security topics — such as securing AI-generated code, AI-assisted vulnerability discovery, or red-teaming LLM-based tools</p>
+</li>
+</ul>
+<h3>Responsibilities</h3>
+<h3>Understanding the Security Community</h3>
+<p>Acts as a known subject matter expert of the security research and open source developer communities — their common experiences, goals, industry trends, and key developments — by meeting with community members, attending security and developer conferences, and engaging on social media. Possesses expert knowledge of GitHub's security products and services (CodeQL, code scanning, secret scanning, Dependabot, advisory database) and their potential impact on the broader security ecosystem. Strategically seeks out influencers in the security and open source spaces to understand business drivers and community objectives. Anticipates future changes in the application security landscape, including the impact of AI on security research workflows and the emerging challenges of securing AI-generated code.</p>
+<h3>Building Trusted Relationships</h3>
+<p>Acts as a trusted and influential ambassador between the security community and GitHub's product, engineering, and marketing teams. Builds and maintains a broad, diverse network across security researchers, open source maintainers, and enterprise security teams. Utilizes deep understanding of community needs to share valuable insights, best practices, and technical know-how, maintaining thought leadership within the security community.</p>
+<h3>Internal Advocacy and Impact</h3>
+<p>Collects and seeks out feedback from the security community and stakeholders regarding product usage, user experience, and technical issues. Communicates clearly and effectively to relevant product groups, advocating for and influencing urgent and long-term improvements to GitHub's security features. Proactively builds and manages networks of key stakeholders and leads engagement through established and informal channels to provide feedback on priorities and emerging security scenarios. Incorporates data and key metrics into findings regarding value-add and impact of advocacy initiatives. Ensures the feedback loop between community members, the Security Lab, and the GitHub product team is effective.</p>
+<h3>Supporting Key Internal Initiatives</h3>
+<p>Builds and enhances trust with internal teams through networking and engagement regarding security product improvement plans. Acts as a subject matter expert for internal stakeholders on application security and the security researcher community. Regularly engages in retrospective evaluations to inform future work.</p>
+<h3>Content Development</h3>
+<p>Defines, creates, and leads the technical content strategy for the Security Lab — blog posts, tutorials, training courses, videos, CTFs, puzzles, and conference talks — covering topics from traditional vulnerability research to AI-assisted security analysis and secure AI development practices. Drives interactions across technical forums, social media, and community channels to promote awareness and provide best practices. Represents the GitHub Security Lab at high-visibility security and developer conferences, hackathons, and meetups. Sets the standard for content quality and measures impact to continuously improve how we communicate with the security community.</p>
+<h3>Community Impact</h3>
+<p>Actively seeks out feedback and listens to the needs of the security community, responding with relevant information and upskilling others to make a substantial impact on community growth. Designs the community member journey — from first engagement to active contributor — measuring retention and engagement along the way. Proposes strategic improvements to the community experience. Manages the Security Lab's social media presence and public forums. Applies deep knowledge of GitHub's security products, stakeholders, and strategic objectives to influence and inspire the audience.</p>
+<h3>Technical Expertise</h3>
+<p>Possesses deep technical expertise in application security, secure code practices, vulnerability research, AI-assisted code analysis, and static analysis. Constantly seeks out learning and teaching opportunities and engages in conversations with key security researchers and developers to understand current developments and issues. Applies and practices technical expertise via sample code, CodeQL queries, security advisories, and demonstrations. Builds processes and systems to share technical expertise at scale and works within the industry to help inform future security developments. Understands the security implications of AI-generated code and AI-powered development tools, and can communicate best practices for secure AI adoption to both security researchers and developers. Gains broader knowledge of adjacent technologies and incorporates them into current areas of expertise.</p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://githubinc.jibeapply.com/jobs/5640?lang=en-us"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on GitHub &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technicien d’exploitation de centre de données (ETO) / Engineering and Operations Technician (EOT), DCEO &mdash; Amazon | Open Indeed</title>
+  <meta name="description" content="Technicien d’exploitation de centre de données (ETO) / Engineering and Operations Technician (EOT), DCEO at Amazon in Pointe-Claire, Quebec, CAN.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">Technicien d’exploitation de centre de données (ETO) / Engineering and Operations Technician (EOT), DCEO</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">Amazon</strong> &bull;
+          <span>Pointe-Claire, Quebec, CAN</span> &bull;
+          
+          <span class="pill pill-onsite">On-site</span> &bull;
+          
+          <span>2026-09-04</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://amazon.jobs/en/jobs/10529848/technicien-d-exploitation-de-centre-de-donnees-eto-engineering-and-operations-technician-eot-dceo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on Amazon &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>Technicien d’exploitation de centre de données (ETO) / Engineering and Operations Technician (EOT), DCEO</h1>
+<p><strong>Company</strong>: Amazon
+<strong>Location</strong>: Pointe-Claire, Quebec, CAN</p>
+<p><strong>Job ID</strong>: <code>10529848</code></p>
+<p><strong>Team</strong>: team-support</p>
+<p><strong>Category</strong>: Operations, IT, &amp; Support Engineering</p>
+<h2>Description</h2>
+<p>Technicien d’exploitation de centres de données (ETO)</p>
+<p>Description du poste:
+Amazon Web Services (AWS) est en forte croissance et est à la recherche d’un technicien d’exploitation de centre de données pour rejoindre son équipe d’exploitation des infrastructures de centre de données en pleine expansion.</p>
+<p>Amazon Web Services (AWS) est une entreprise de technologie très dynamique et leader mondial dans le domaine des centres de données. Le technicien d’exploitation de centres de données est responsable des entretiens des équipements électriques, mécaniques et de protection incendie dans le centre de données. Le technicien d’exploitation de centres de données sert de personne-ressource technique auprès d’Amazon dans ses centres de données. Les équipements du centre de données qui supportent les serveurs critiques doivent être opérationnels 99.9 999 % du temps. Le technicien d’exploitation de centres de données a également la responsabilité de réduire les coûts d’exploitation des installations grâce à des solutions innovatrices.  Le technicien d’exploitation de centres de données est le premier intervenant dans les cas de problèmes électriques et mécaniques touchant la disponibilité des services Amazon. Ces équipements comprennent, sans toutefois s’y limiter, les génératrices de secours et les systèmes de carburant connexes, les armoires de distribution électrique et de commutation, les systèmes d’alimentation sans coupure (UPS), les panneaux de distribution électrique (PDU), les unités de ventilation et de climatisation (AHU, CRAH, CRAC), les pompes, les moteurs, les variateurs de fréquence (VFD) et les systèmes immotiques.</p>
+<p>Ce poste exige que le candidat sélectionné obtienne et conserve une cote de sécurité active du statut de fiabilité auprès du gouvernement du Canada.</p>
+<p>Engineering and Operations Technician (EOT)</p>
+<p>Job Description:
+Amazon Web Services (AWS) is growing rapidly, and we are looking for an Engineering and Operations Technician to join our expanding Infrastructure Operations team.</p>
+<p>Amazon Web Services (AWS) is a fast paced technology company and a leader in the world of data centers. The Engineering and Operations Technician is responsible for overseeing the maintenance of all electrical, mechanical, and fire/life safety equipment within the data center. The Engineering and Operations Technician serves as a technical resource to support Amazon within its data centers. Data center equipment that supports mission-critical servers must maintain better than 99.999% uptime. Engineering and Operations Technician’s are also tasked with driving innovation while reducing operational costs in the facilities.  Engineering and Operations Technician’s are Amazon’s front line respondents for electrical and mechanical issued affecting Amazon's availability. This equipment includes, but is not limited to, stand-by diesel generators and related fuel systems, switchboards/switch-gears, UPS’s, PDU’s, AHU’s, CRAHUs, CRAC's, pumps, motors, VFD’s, and building automation systems.</p>
+<p>This position requires that the candidate selected obtain and maintain an active Reliability Status security clearance with the Government of Canada.</p>
+<p>Key job responsibilities
+Principales responsabilités du poste</p>
+<p>• Agir à titre de principal point de contact d’affaires avec les équipes techniques et d’installations du fournisseur de colocation afin de répondre aux besoins opérationnels quotidiens au sein de la zone de disponibilité (AZ);
+• Superviser les fournisseurs de colocation sur site ainsi que leurs entrepreneurs afin de s’assurer que tous les travaux effectués respectent les pratiques établies, les procédures en vigueur et la législation locale;
+• Gérer les fournisseurs de colocation pour assurer l’entretien préventif et correctif, ainsi que la réponse aux situations d’urgence touchant les systèmes critiques, incluant les appareillages de commutation, les génératrices, les systèmes UPS, les équipements de distribution électrique, les refroidisseurs (chillers), les tours de refroidissement, les unités de traitement d’air des salles informatiques (CRAH), les systèmes de surveillance du bâtiment, etc.;
+• Créer et gérer les demandes de gestion de changements ainsi que les billets de gestion d’incidents pour les installations du centre de données;
+• Assurer une disponibilité sur appel à l’extérieur des heures de bureau et intervenir rapidement lors de situations d’urgence ou d’incidents (pannes électriques, catastrophes naturelles, etc.), et réviser les procédures d’opérations d’urgence afin d’en améliorer l’efficacité;
+• Collaborer étroitement avec le fournisseur de colocation et les entrepreneurs afin de résoudre les enjeux d’ingénierie d’infrastructure et réaliser des analyses de causes fondamentales lors d’incidents opérationnels;
+• Élaborer et maintenir une documentation complète en anglais relative aux opérations d’affaires et d’installations, en partenariat avec le fournisseur de colocation;
+• Identifier et recommander de façon continue des améliorations visant à accroître la sécurité, la sûreté et la disponibilité du centre de données;
+• Maintenir un inventaire exact et à jour de l’infrastructure du centre de données au moyen des matrices et tableaux de bord internes;
+• Prendre en charge l’installation des baies (racks) et effectuer les évaluations d’espace, de capacité électrique et de refroidissement;
+• Diriger les projets de nouvelles constructions et d’expansion afin d’améliorer l’efficacité opérationnelle, incluant les phases de conception, d’implantation et de mise en service;
+• Participer aux processus de recrutement internes, incluant la conduite d’entrevues et le soutien à l’intégration des nouveaux employés.</p>
+<hr />
+<p>Key job responsibilities
+• Serve as the primary business interface with the Colocation provider’s technical and facility teams to address day-to-day operational requirements within the Availability Zone (AZ);
+• Supervise the on-site Colocation providers and respective contractors, to ensure all works performed is complied with established practices, procedures &amp; local legislation;
+• Manage Colocation suppliers to conduct routine maintenance, and respond to emergency services for critical systems including switchgear, generators, UPS systems, power distribution equipment, chillers, cooling towers, computer room air handlers, building monitoring systems, etc.;
+• Generate change management requests &amp; incident management tickets for Data Center facility;
+• Engage in non-office on-call responsibilities and respond promptly to emergency situations or incident, such as power failures or natural disasters, and review to refine the established Emergency Operations Procedures to effectively handle these situations;
+• Deeply involve with Colocation provider and contractors to resolve infrastructure engineering issues and conduct root cause analysis for operational issues;
+• Establish comprehensive English documentation to business &amp; facility operations in partnership with the Colocation provider;
+• Constantly explore and recommend improvements to enhance the data center safety, security and availability;
+• Maintain accurate and up-to-date Data Center infrastructure inventory through related matrices and internal dashboards
+• Take charge of the installation of the racks and conduct the rack space, power/cooling assessment;
+• Lead new build and expansion projects to improve the operations efficiency, including the design, implementation, and commissioning phases;
+• Assist in internal recruitment including conducting interviews and assisting with onboarding.</p>
+<h2>Basic Qualifications</h2>
+<ul>
+<li>Connaissance des systèmes électriques utilisés dans les opérations critiques de centres de données, incluant notamment, sans s’y limiter : les alimentations provenant de postes électriques (utility), les transformateurs, les appareillages de commutation (switchgear), les systèmes UPS de classe VFI, les DRUPS, les unités de distribution d’alimentation (PDU), les commutateurs de transfert automatique (ATS), les commutateurs de transfert statique (STS), les batteries SLA/VRLA et leurs systèmes connexes, les génératrices diesel ou à turbine à gaz ainsi que leurs systèmes d’alimentation en carburant, les dispositifs de protection contre les surtensions, les systèmes de filtration harmonique active, les systèmes de surveillance des batteries, les systèmes de surveillance des circuits dérivés (branch circuit monitoring) ou les systèmes SCADA.</li>
+<li>Minimum de 3 ans d’expérience pertinente en gestion d’installations, ainsi qu’en exploitation et en maintenance d’équipements d’infrastructure au sein d’installations critiques telles que des centres de données, des usines d’exploitation, des postes électriques, des hôpitaux, etc.; expérience en gestion d’incidents majeurs liés aux installations.</li>
+<li>Puisque ce rôle nécessite que l’employé interagisse avec d’autres entités d’Amazon à l’échelle mondiale ainsi qu’avec des employés et intervenants dans d’autres provinces canadiennes, la connaissance du français et de l’anglais est exigée pour ce poste. .</li>
+<li><ul>
+<li><hr />
+</li>
+</ul>
+</li>
+<li>Knowledge of electrical systems in critical Data Center operations that include but are not limited to utility substation feeds, transformers, switchgear, VFI Class UPS, DRUPS, PDUs, ATS, STS, SLA/VRLA batteries and associated systems, diesel/gas turbine generators and related fuel systems, Surge Suppression, Active Harmonic Filtering, battery monitoring systems, branch circuit monitoring systems or SCADA systems.</li>
+<li>Minimum 3 years of relevant work experience with facility management, and operating and maintaining infrastructure equipment in critical facilities such as data centers, operation factories, substations, hospitals, etc.; experience in major facilities incident management.</li>
+<li>Due to the nature of the role that requires interaction with other Amazon entities globally and with Amazon employees and stakeholders in other provinces in Canada, bilingualism French and English is required for this position</li>
+</ul>
+<h2>Preferred Qualifications</h2>
+<ul>
+<li>Excellente attitude de travail et forte volonté d’apprendre, avec un grand souci du détail et de la précision; solides compétences en résolution de problèmes et grande capacité à travailler de façon autonome et à faire preuve d’initiative, tout en étant un joueur d’équipe collaboratif capable de travailler efficacement avec les autres / Good work attitude and eagerness to learn, with deep attention to details and accuracy; also possess strong problem-solving skills and strong ability to work independently and take initiative, while also being a collaborative team player who can work effectively with others</li>
+<li>Baccalauréat en génie électrique, en génie mécanique ou dans un domaine connexe / Bachelor's degree in Electrical Engineering, Mechanical Engineering, or a related field</li>
+</ul>
+<p>Amazon est un employeur garantissant l'égalité des chances et ne fait aucune discrimination sur la base du statut d'ancien combattant protégé, d'un handicap ou de tout autre statut protégé par la loi.</p>
+<p>Notre culture inclusive permet aux Amazoniens d'offrir les meilleurs résultats à nos clients. Si vous avez un handicap et que vous avez besoin de mesures d'adaptation ou d'adaptation en milieu de travail pendant le processus de candidature et d'embauche, y compris du soutien pour l'entrevue ou le processus d'intégration, veuillez visiter https://amazon.jobs/content/en/how-we-hire/accommodations pour plus d'informations. Si le pays ou la région dans lequel vous postulez ne figure pas dans la liste, veuillez communiquer avec votre partenaire de recrutement.</p>
+<p>Amazon is an equal opportunity employer and does not discriminate on the basis of protected veteran status, disability, or other legally protected status.</p>
+<p>Our inclusive culture empowers Amazonians to deliver the best results for our customers. If you have a disability and need a workplace accommodation or adjustment during the application and hiring process, including support for the interview or onboarding process, please visit https://amazon.jobs/content/en/how-we-hire/accommodations for more information. If the country/region you’re applying in isn’t listed, please contact your Recruiting Partner.</p>
+<p>L'échelle salariale de base pour ce poste est indiquée ci-dessous. En tantqu'entreprise offrant une rémunération globale, Amazon peut inclure d'autres éléments dans son offre, tels que des primes à la signature et des unités d'actions restreintes (UAR). La rémunération finale sera déterminée en fonction de facteurs tels que l'expérience, les qualifications et le lieu de travail. Amazon offre des avantages sociaux complets, notamment une assurance maladie (soins médicaux, dentaires, vision, ordonnance, assurance-vie de base et assurance DMA), un régime enregistré d'épargne-retraite (REER), un régime de participation différée aux bénéfices (RPDB), des congés payés et d'autres ressources visant à améliorer la santé et le bien-être. Nous remercions tous les candidats de leur intérêt, mais seuls ceux retenus pour un entretien seront informés du résultat du processus de recrutement.</p>
+<p>CAN, QC, Pointe-Claire - 91,700.00 - 118,300.00 CAD annually</p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://amazon.jobs/en/jobs/10529848/technicien-d-exploitation-de-centre-de-donnees-eto-engineering-and-operations-technician-eot-dceo"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on Amazon &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

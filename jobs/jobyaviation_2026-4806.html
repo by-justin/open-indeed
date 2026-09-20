@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>General Manager, Japan &mdash; Joby Aviation | Open Indeed</title>
+  <meta name="description" content="General Manager, Japan at Joby Aviation in Tokyo, 13, JP.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">General Manager, Japan</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">Joby Aviation</strong> &bull;
+          <span>Tokyo, 13, JP</span> &bull;
+          
+          <span class="pill pill-onsite">On-site</span> &bull;
+          
+          <span>2024-09-18</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://careers-jobyaviation.icims.com/jobs/4806/general-manager%2c-japan/job"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on Joby Aviation &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>General Manager, Japan</h1>
+<ul>
+<li><strong>Company</strong>: Joby Aviation</li>
+<li><strong>Requisition ID</strong>: <code>2026-4806</code></li>
+<li><strong>Location</strong>: Tokyo, 13, JP</li>
+<li><strong>Employment Type</strong>: full_time</li>
+<li><strong>Workplace Type</strong>: on_site</li>
+<li><strong>Date Posted</strong>: 2024-09-18</li>
+<li><strong>Official Posting</strong>: <a href="https://careers-jobyaviation.icims.com/jobs/4806/general-manager%2c-japan/job">Apply on Joby Aviation</a></li>
+</ul>
+<h2>Job Description</h2>
+<h2>Company Overview</h2>
+<p>Imagine a piloted air taxi that takes off vertically, then quietly carries you and your fellow passengers over the congested city streets below, enabling you to spend more time with the people and places that matter most. At Joby, we've been working to make that dream a reality since 2009 and we're now in the final stages of certifying our aircraft with the FAA. With plans to launch our aircraft in the US and Dubai, we're now scaling manufacturing and preparing for the launch of our commercial service.</p>
+<h2>Overview</h2>
+<p>Joby Aviation is seeking an experienced and entrepreneurial leader to serve as the General Manager (GM) for Japan. As the leader of Joby’s operational footprint in the region, you will report to the President of Operations to build the business from the ground up. You will be responsible for establishing foundational relationships, designing a localized operating model, and executing a multi-year strategy to launch a safe, compliant, and scalable aerial ridesharing service alongside our joint venture (JV) partners.</p>
+<p>Working closely with Joby’s senior leadership and U.S. headquarters teams, you will drive government and municipal engagement, develop strategic partnerships, support deal execution, and lead operational execution. As the face of Joby in Japan, you will elevate brand awareness with stakeholders and media, translate complex market insights into decisive action, and provide critical performance updates to executive leadership and the Board of Directors.</p>
+<p><strong>職務概要</strong> Joby Aviationは、日本におけるゼネラルマネージャー（GM）として、経験豊富で起業家精神を有するリーダーを募集しています。本ポジションは、日本におけるJobyの事業展開の責任者として、オペレーション担当プレジデントに直接報告し、ゼロから事業を構築していただきます。</p>
+<p>本職務では、基盤となる関係構築、日本市場に適した運航事業モデルの設計、および合弁会社（JV）パートナーと連携した、安全性・コンプライアンス・拡張性を兼ね備えた「空飛ぶタクシー」サービスの立ち上げに向けた複数年戦略の実行を担っていただきます。</p>
+<p>Jobyの経営陣および米国本社チームと密接に連携し、政府・自治体対応の推進、戦略的パートナーシップの構築、案件実行の支援、ならびに運航事業の遂行を主導します。日本におけるJobyの代表として、ステークホルダーやメディアに対するブランド認知の向上を図るとともに、市場に関する複雑なインサイトを迅速かつ的確な意思決定へと転換し、経営陣および取締役会に対して重要な業績報告を行っていただきます。</p>
+<h2>Responsibilities</h2>
+<ul>
+<li><p>Policy and Partnerships: In partnership with Joby’s government affairs team and corporate development team, build on existing government relations and partnerships in Japan, and identify new partnership opportunities, whilst maintaining strong relationships with local government entities, municipalities, and strategic partners to build trust and credibility, thereby strengthening Joby’s position in Japan</p>
+</li>
+<li><p>Drive Strategic Execution: Implement a vision and multi-year business strategy that balances execution through joint ventures and core business functions across marketing, government relations, corporate development, business development, product, infrastructure, operations, finance, legal, and people teams.</p>
+</li>
+<li><p>Maintain Market Awareness: stay apprised of local trends, infrastructure opportunities, consumer mobility preferences, etc., within Japan, and build action plans to exploit opportunities for Joby</p>
+</li>
+<li><p>Collaborate with US Team: Work cross-functionally with Joby’s US-based headquarters functions to support global strategic initiatives and to launch a successful, safe, and compliant service in Japan</p>
+</li>
+<li><p>Collaborate with Joint-Venture partners: play an integral role in current and future joint ventures in Japan.</p>
+</li>
+<li><p>Build the Business Foundation: Lay the foundation for the future Japanese market for Joby</p>
+</li>
+<li><p>Execute the Operational Plan: In collaboration with our JV partners, launch Joby operations in Japan</p>
+</li>
+<li><p>Establish the Joby Brand Locally: Gather market insights and work closely with Joby’s marketing, business development, and communications teams to build a highly recognizable brand within Japan</p>
+</li>
+<li><p>Be the Local Face of Joby: Serve as the primary local representative of Joby at Japan-based events and with local press to drive awareness and early adoption</p>
+</li>
+<li><p>Report to Joby Leadership: Provide regular updates on business performance and identify areas requiring support from the executive team and board of directors</p>
+</li>
+</ul>
+<p><strong>主な業務内容</strong></p>
+<p><strong>政策対応およびパートナーシップ構築</strong> 政府渉外チームおよびコーポレートディベロップメントチームと連携し、日本における既存の政府関係およびパートナーシップを強化するとともに、新たな提携機会を特定します。また、地方自治体や、行政機関、戦略的パートナー等との強固な関係を構築・維持することで、日本市場におけるJobyの地位を強化します。</p>
+<p><strong>戦略実行の推進</strong> JVを通じた事業推進および、マーケティング、政府渉外、コーポレートディベロップメント、事業開発、プロダクト、インフラ、オペレーション、財務、法務、人事などの各機能を横断的に統合し、ビジョンおよび複数年の事業戦略を実行します。</p>
+<p><strong>市場動向の把握</strong> 日本における市場トレンド、離発着場を含むインフラの開拓、消費者のモビリティに関する指向等を常に把握し、Jobyにとっての機会を最大化するためのアクションプランを策定します。</p>
+<p><strong>米国チームとの連携</strong> 米国本社の各部門と連携し、グローバル戦略の推進を支援するとともに、日本における安全かつコンプライアンスに準拠したサービスの立ち上げを実現します。</p>
+<p><strong>JVパートナーとの協働</strong> 日本企業との既存および将来の協業事業において、重要な役割を担います。</p>
+<p><strong>事業基盤の構築</strong> 日本市場におけるJobyの将来的な成長を支える基盤を構築します。</p>
+<p><strong>運航事業計画の実行</strong> JVパートナーと協働し、日本におけるJobyの運航事業を立ち上げます。</p>
+<p><strong>日本市場におけるブランド構築</strong> 市場インサイトを収集し、マーケティング、事業開発、広報チームと密接に連携して、日本国内における高い認知度を有するブランドを構築します。</p>
+<p><strong>日本における代表者としての役割</strong> 日本国内のイベントやメディア対応における主要な代表として活動し、認知向上および早期導入を推進します。</p>
+<p><strong>経営層への報告</strong> 事業成績に関する定期的な報告を行うとともに、経営陣および取締役会の支援が必要な領域を特定します。</p>
+<h2>Required</h2>
+<ul>
+<li><p>Bachelor’s degree or equivalent experience</p>
+</li>
+<li><p>10+ years of experience in M&amp;A, Corporate Development, Operations, Program Management, Business Development, Government Relations, and/or Strategy</p>
+</li>
+<li><p>5+ years of demonstrated success in leading and managing large, high-performing teams within a fast-paced and dynamic entrepreneurial and/or operational environment.</p>
+</li>
+<li><p>Experience in the aviation or aerospace industry.</p>
+</li>
+<li><p>Extensive professional network within Japan, and proven ability to develop and maintain relationships with experience navigating Japanese corporate culture and decision-making processes.</p>
+</li>
+<li><p>Fluent in both Japanese and English, in both written and verbal communication.</p>
+</li>
+<li><p>Strategic thinker with strong business acumen and structured problem-solving skills demonstrated through the delivery of large complex projects/programs.</p>
+</li>
+<li><p>Excellent communication and presentation skills with the ability to influence at all levels, inspire teams, collaborate cross-functionally, and represent the organization with external stakeholders.</p>
+</li>
+<li><p>An entrepreneurial mindset suited for launching and scaling a new entity.</p>
+</li>
+<li><p>Willing to be based full-time in Tokyo, Japan and able to travel up to 30% of the time, including to the United States.</p>
+</li>
+<li><p>Legally able to work in Japan, or have the ability to be sponsored for a work visa.</p>
+</li>
+</ul>
+<p><strong>応募要件（必須）</strong></p>
+<ul>
+<li><p>学士号、または同等の実務経験</p>
+</li>
+<li><p>M&amp;A、コーポレートディベロップメント、オペレーション、プログラムマネジメント、事業開発、政府渉外、戦略等の分野における10年以上の実務経験</p>
+</li>
+<li><p>スピード感と変化の著しい起業・事業環境において、高い成果を上げる大規模チームを率いた5年以上のマネジメント経験</p>
+</li>
+<li><p>航空・宇宙産業での経験</p>
+</li>
+<li><p>日本国内における広範なプロフェッショナルネットワーク、および日本企業文化や意思決定プロセスへの深い理解と関係構築能力</p>
+</li>
+<li><p>ビジネスレベル以上の日本語および英語の読み書き・会話</p>
+</li>
+<li><p>優れたビジネス感覚と構造的な問題解決能力を備え、大規模かつ複雑なプロジェクトの遂行実績を有する戦略的思考力</p>
+</li>
+<li><p>あらゆる階層に影響力を発揮し、チームを鼓舞し、部門横断で協働し、対外的に組織を代表できる優れたコミュニケーション能力およびプレゼンテーション能力</p>
+</li>
+<li><p>新規事業の立ち上げおよび拡大に適した起業家マインド</p>
+</li>
+<li><p>日本（東京）に常駐可能であり、最大30%程度の出張（米国を含む）が可能であること</p>
+</li>
+<li><p>日本での就労資格を有する、または就労ビザのスポンサー取得が可能であること</p>
+</li>
+</ul>
+<h2>Desired</h2>
+<ul>
+<li><p>MBA or advanced degree in a relevant industry.</p>
+</li>
+<li><p>Deep policy exposure and knowledge of regulatory frameworks (JCAB, FAA, and/or EASA).</p>
+</li>
+<li><p>Proven track record of P&amp;L management.</p>
+</li>
+<li><p>Previously launched and scaled a business or business unit.</p>
+</li>
+<li><p>Broad business experience in Japan and across Asia.</p>
+</li>
+<li><p>Japanese resident currently living in the Tokyo area.</p>
+</li>
+</ul>
+<p><strong>望ましい経験・スキル</strong></p>
+<ul>
+<li><p>MBAまたは関連分野の上級学位</p>
+</li>
+<li><p>規制・政策（国土交通省航空局、米国連邦航空局、欧州航空安全機関等）に関する深い知見および実務経験</p>
+</li>
+<li><p>損益管理（P&amp;L）の実績</p>
+</li>
+<li><p>事業または事業部の立ち上げおよびスケールの実績</p>
+</li>
+<li><p>日本およびアジア全域における幅広いビジネス経験</p>
+</li>
+<li><p>現在東京エリア在住の方</p>
+</li>
+</ul>
+<h2>Additional Information</h2>
+<p><strong>Employment Type</strong></p>
+<ul>
+<li><p>Full-time employee employee</p>
+</li>
+<li><p>Probationary period: Yes (3-6 months)</p>
+</li>
+</ul>
+<p><strong>Wages</strong></p>
+<ul>
+<li>Compensation at Joby is commensurate with education and experience</li>
+</ul>
+<p><strong>Work Location</strong></p>
+<ul>
+<li><p>Telework from home</p>
+</li>
+<li><p>Business travel may will be required up to 30%</p>
+</li>
+<li><p>Scope of Change: Company-designated locations (including telework locations)</p>
+</li>
+<li><p>Smoking: Prohibited in and around all Joby Offices</p>
+</li>
+</ul>
+<p><strong>Working Hours &amp; Holidays</strong></p>
+<ul>
+<li><p>Flextime System</p>
+</li>
+<li><p>Working Hours: You will serve as the primary bridge to our California Headquarters, which involves strategic synchronization across time zones (typically Tokyo morning/California afternoon)</p>
+</li>
+<li><p>Annual Holiday: Public holidays &amp; New Years holiday</p>
+</li>
+</ul>
+<p><strong>Benefits &amp; Insurance</strong></p>
+<ul>
+<li>Comprehensive benefits package with paid Annual Leave days</li>
+</ul>
+<p><strong>Name of Organization Recruiting</strong></p>
+<ul>
+<li>Joby Aviation</li>
+</ul>
+<h4>雇用条件：</h4>
+<ul>
+<li><p><strong>雇用形態</strong> : 正社員（試用期間：3〜6ヶ月）</p>
+</li>
+<li><p><strong>賃金</strong> : 推定年収：報酬委員会による規定範囲内</p>
+</li>
+<li><p><strong>勤務地</strong> : 在宅テレワーク、および最大30%の出張が必要となる場合あり</p>
+</li>
+<li><p><strong>変更の範囲</strong> : 会社が指定する勤務場所（テレワーク先を含む）</p>
+</li>
+<li><p><strong>喫煙</strong> : Jobyのすべてのオフィス内および周辺は禁煙</p>
+</li>
+<li><p><strong>勤務時間および休日</strong> : フレックスタイム制 土曜日と日曜日休日 。</p>
+</li>
+<li><p>ただし、業務の適切な遂行のために必要な時間の勤務が求められる場合あり。また本社が米国にあるため異なるタイムゾーンへの対応が必要になる場合あり</p>
+</li>
+<li><p>年間休日：祝日および年末年始休暇 。</p>
+</li>
+<li><p><strong>福利厚生および保険</strong> : 有給休暇を含む包括的な福利厚生パッケージ</p>
+</li>
+</ul>
+<p><strong>採用組織名</strong> : Joby Aviation</p>
+<p><strong>Joby is an Equal Opportunity Employer</strong></p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://careers-jobyaviation.icims.com/jobs/4806/general-manager%2c-japan/job"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on Joby Aviation &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

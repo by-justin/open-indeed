@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Développeur(se) principal(e), Opérations de sécurité et intervention en cas d’incident / Senior Security Operations and Incident Response Engineer &mdash; Unity Technologies | Open Indeed</title>
+  <meta name="description" content="Développeur(se) principal(e), Opérations de sécurité et intervention en cas d’incident / Senior Security Operations and Incident Response Engineer at Unity Technologies in 2 Locations.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">Développeur(se) principal(e), Opérations de sécurité et intervention en cas d’incident / Senior Security Operations and Incident Response Engineer</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">Unity Technologies</strong> &bull;
+          <span>2 Locations</span> &bull;
+          
+          <span>2026-08-19</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://unitytech.wd1.myworkdayjobs.com/en-US/Unity/job/Remote-Texas-USA/Dveloppeur-se--principal-e---Oprations-de-scurit-et-intervention-en-cas-d-incident---Senior-Security-Operations-and-Incident-Response-Engineer_JOBREQ-2616344"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on Unity Technologies &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>Développeur(se) principal(e), Opérations de sécurité et intervention en cas d’incident / Senior Security Operations and Incident Response Engineer</h1>
+<ul>
+<li><strong>Company</strong>: Unity Technologies</li>
+<li><strong>Requisition ID</strong>: <code>JOBREQ-2616344</code></li>
+<li><strong>Location</strong>: 2 Locations</li>
+<li><strong>Official Posting</strong>: <a href="https://unitytech.wd1.myworkdayjobs.com/en-US/Unity/job/Remote-Texas-USA/Dveloppeur-se--principal-e---Oprations-de-scurit-et-intervention-en-cas-d-incident---Senior-Security-Operations-and-Incident-Response-Engineer_JOBREQ-2616344">Apply on Unity Technologies Careers</a></li>
+<li><strong>Time Type</strong>: Full time</li>
+<li><strong>Posted Date</strong>: Posted 30+ Days Ago</li>
+</ul>
+<h2>Job Description</h2>
+<h2>L'opportunité</h2>
+<p>Notre équipe des opérations de sécurité (SecOps) est à la recherche d’un(e) développeur(se) principal(e) en sécurité, à l’aise dans un rôle pratique, pour agir à titre de responsable technique de l’équipe pendant les heures de travail des Amériques.</p>
+<p>Vous dirigerez des enquêtes complexes et la gestion d’incidents majeurs, offrirez des conseils techniques aux analystes et représenterez les opérations de sécurité dans le cadre de collaborations avec d’autres équipes de l’organisation. En étroite collaboration avec le/la gestionnaire des opérations de sécurité et le/la responsable technique pour la région EMOA, vous contribuerez à harmoniser les priorités, les normes techniques et les méthodes de travail au sein de notre équipe répartie à l’échelle mondiale.</p>
+<p>L’un des principaux objectifs de ce poste consiste à accroître la maturité de nos capacités en matière d’opérations de sécurité et d’intervention en cas d’incident, notamment en ce qui concerne la détection, la surveillance, les enquêtes et les interventions. Vous aiderez également l’équipe à renforcer ses compétences techniques et à adopter à grande échelle l’automatisation ainsi que des processus assistés par l’IA.</p>
+<h2>Ce que vous allez faire</h2>
+<ul>
+<li>Diriger et soutenir des enquêtes complexes et la gestion d’incidents majeurs, du triage initial et de l’évaluation des répercussions jusqu’au confinement, à la correction, au rétablissement et à l’analyse après incident.</li>
+<li>Agir comme point de recours technique pendant les heures de travail des Amériques, notamment en guidant les analystes et les développeur(se)s, en examinant les méthodes d’enquête, en aidant à surmonter les difficultés techniques et en veillant à ce que l’équipe demeure alignée sur les objectifs et les priorités communs.</li>
+<li>Concevoir et mettre en œuvre des processus d’enrichissement des alertes, de triage, d’enquête, de confinement, de gestion des dossiers et de production de rapports. Cerner des possibilités concrètes d’utiliser l’automatisation et l’IA afin de réduire le travail manuel et d’améliorer la qualité des analyses.</li>
+<li>Créer et ajuster des mécanismes de détection, réduire les alertes inutiles, cerner les lacunes en matière de télémétrie et tirer parti des leçons apprises lors d’incidents pour renforcer les guides d’intervention et de surveillance.</li>
+<li>Collaborer avec les parties prenantes techniques et non techniques, communiquer clairement les risques et les décisions relatives aux interventions, et contribuer à mener à bien les initiatives de sécurité interfonctionnelles.</li>
+</ul>
+<h2>Ce que nous recherchons</h2>
+<ul>
+<li>Une expérience dans les opérations de sécurité, l’intervention en cas d’incident, le développement de mécanismes de détection, la recherche proactive de menaces ou un rôle connexe en sécurité.</li>
+<li>Une expérience de direction ou de soutien technique principal lors d’incidents complexes ayant des répercussions importantes.</li>
+<li>De solides compétences en enquête, notamment la capacité de reconstituer la chronologie d’une attaque et de mettre en corrélation des données provenant d’environnements infonuagiques, de gestion des identités, de terminaux et d’entreprise.</li>
+<li>Une expérience pratique démontrée des outils modernes d’opérations de sécurité et d’intervention en cas d’incident, y compris des plateformes de surveillance de la sécurité, d’enquête, d’intervention, d’orchestration et d’automatisation.</li>
+<li>Une expérience dans la création d’automatisations ou d’intégrations à l’aide de scripts, d’API ou de plateformes de gestion des processus.</li>
+<li>Une connaissance approfondie d’au moins une grande plateforme infonuagique : AWS, GCP ou Azure.</li>
+<li>Une expérience en mentorat auprès d’analystes et comme point de recours technique.</li>
+<li>Un excellent jugement et de solides aptitudes en communication, ainsi que la capacité de travailler efficacement sous pression et de représenter les opérations de sécurité auprès de parties prenantes de haut niveau.</li>
+<li>Une expérience de l’utilisation d’outils assistés par l’IA dans le cadre d’enquêtes, de la détection ou de processus de sécurité constitue un atout important.</li>
+</ul>
+<h2>Échelle salariale de base</h2>
+<p>Nous déterminons l’échelle salariale de base de ce poste en fonction de votre lieu de travail principal :</p>
+<p><strong>Zone A :</strong>  salaire brut de 160 300 $ USD à 240 500 $ USD</p>
+<p><strong>Zone B :</strong>  salaire brut de 181 200 $ USD à 271 800 $ USD</p>
+<p><strong>Zone C :</strong>  salaire brut de 203 600 $ USD à 305 400 $ USD</p>
+<p><strong>Zone A :</strong>  salaire brut de 135 500 $ CAD à 203 300 $ CAD</p>
+<p><strong>Zone B :</strong>  salaire brut de 146 400 $ CAD à 219 600 $ CAD</p>
+<h2>The Opportunity</h2>
+<p>Our SecOps team is seeking a senior, hands-on security engineer to serve as the team’s technical lead during Americas hours.</p>
+<p>You will lead complex investigations and major incidents, provide technical guidance to analysts, and represent SecOps when working with other teams across the org. Working closely with the SecOps Manager and EMEA Technical Lead, you will help maintain consistent priorities, technical standards, and ways of working across our globally distributed team.</p>
+<p>A key focus of this role will be raising the maturity of our SecOps and Incident Response capabilities across detection, monitoring, investigation, and response, while helping the team build stronger technical skills and adopt automation and AI-assisted workflows at scale.</p>
+<h2></h2>
+<h2>What You’ll Be Doing</h2>
+<ul>
+<li>Lead and support complex investigations and major incidents, from initial triage and impact assessment through containment, remediation, recovery, and post-incident analysis.</li>
+<li>Serve as the technical escalation point during Americas hours. Guide analysts and engineers, review investigation approaches, unblock technical challenges, and help the team stay aligned with shared goals and priorities.</li>
+<li>Design and implement workflows for alert enrichment, triage, investigation, containment, case management, and reporting. Identify practical opportunities to use automation and AI to reduce manual work and improve analytical quality.</li>
+<li>Build and tune detections, reduce noise, identify telemetry gaps, and use lessons from incidents to strengthen monitoring and response playbooks.</li>
+<li>Partner with technical and non-technical stakeholders, clearly communicate risks and response decisions, and help drive cross-functional security work to completion.</li>
+</ul>
+<h2></h2>
+<h2>What We’re Looking For</h2>
+<ul>
+<li>Experience in Security Operations, Incident Response, Detection Engineering, Threat Hunting, or a related security role.</li>
+<li>Experience leading or providing senior technical support during complex and high-impact incidents.</li>
+<li>Strong investigative skills, including reconstructing attack timelines and correlating data across cloud, identity, endpoint, and corporate environments.</li>
+<li>Demonstrated hands-on experience with modern SecOps and Incident Response tooling, including platforms for security monitoring, investigation, response, orchestration, and automation.</li>
+<li>Experience building automations or integrations using scripting, APIs, or workflow platforms.</li>
+<li>Strong knowledge of at least one major cloud platform: AWS, GCP, or Azure.</li>
+<li>Experience mentoring analysts and acting as a technical escalation point.</li>
+<li>Strong judgment and communication skills, with the ability to operate effectively under pressure and represent SecOps with senior stakeholders.</li>
+<li>Experience applying AI-assisted tools to investigations, detection, or security workflows is highly valued.</li>
+</ul>
+<p><strong>Base Salary Range:</strong>  We determine the base salary range for this role based on your primary work location:</p>
+<p><strong>Zone A:</strong>  USD $160,300 – USD $240,500 gross</p>
+<p><strong>Zone B:</strong>  USD $181,200 – USD $271,800 gross</p>
+<p><strong>Zone C:</strong>  USD $203,600 – USD $305,400 gross</p>
+<p><strong>Zone A:</strong>  CAD $135,500 – CAD $203,300 gross</p>
+<p><strong>Zone B:</strong>  CAD $146,400 – CAD $219,600 gross</p>
+<p>Cette fourchette correspond au salaire de base prévu pour ce poste. En plus du salaire de base, ce poste peut donner droit à des attributions d’actions et à une participation à nos programmes d’incitation de l’entreprise, comme des primes annuelles discrétionnaires ou des commissions de vente. Le montant final de l’offre dépendra de plusieurs facteurs, notamment l’emplacement géographique ainsi que l’expérience pertinente, le parcours professionnel et les compétences du/de la candidat(e).</p>
+<p><em>This range reflects the anticipated base salary for this position. Beyond base salary, this role may be eligible for equity awards and participation in our company incentive plans (such as annual discretionary bonuses or sales commissions). The final offer amount will depend on several factors, including geographic location and the candidate’s relevant experience, professional background, and skill set.</em></p>
+<p><strong>Avantages</strong></p>
+<p>Chez Unity, nous voulons que nos membres d’équipe s’épanouissent. Nous offrons un large éventail d’avantages conçus pour soutenir le bien-être et l’équilibre travail-vie personnelle.</p>
+<p>Veuillez noter: L’admissibilité aux avantages, les offres spécifiques et la couverture varient selon le pays et le statut d’emploi.</p>
+<p>Bien que les avantages précis puissent varier, voici certaines des façons dont nous nous efforçons de prendre soin de nos membres d’équipe admissibles à l’échelle mondiale : assurance santé, vie et invalidité complète | Subvention pour les déplacements | Participation des employés à l’actionnariat | Régimes de retraite/pension compétitifs | Vacances et congés personnels généreux | Soutien aux nouveaux parents grâce à des congés et des programmes de soutien aux familles | Collations offertes au bureau | Programmes et soutien en matière de santé mentale et de bien-être | Groupes-ressources pour employés | Programme mondial d’aide aux employés | Programmes de formation et de perfectionnement | Programme de bénévolat et de jumelage de dons</p>
+<p><strong>La vie chez Unity</strong></p>
+<p>Unity [NYSE : U] est le premier moteur de jeu au monde, propulsant les expériences de plus de 3 milliards d’utilisateurs(rices) chaque mois. Les plus grands jeux mobiles, les titres indépendants PC les plus populaires, des jeux console parmi les plus innovants, ainsi que la quasi-totalité des principales expériences XR et jeux Web sont développés, déployés et optimisés avec Unity.</p>
+<p>Unity accompagne également des équipes dans des secteurs tels que l’automobile, l’industrie manufacturière et la santé pour concevoir, simuler et collaborer en 3D - comblant ainsi l’écart entre les idées et la réalité. Pour plus d’informations, veuillez visiter www.unity.com.</p>
+<p><em>Unity est un employeur fier de garantir l’égalité des chances. Nous nous engageons à favoriser un environnement inclusif et innovateur et à célébrer nos employés à travers l’âge, l’éthinicité, la couleur, l’ascendance, l’origine nationale, la religion, le handicap, le sexe, l’identité ou l’expression de genre, l’orientation sexuelle ou tout autre statut protégé conformément à la loi applicable.</em>  <em>Si vous êtes en situation de handicap ou avez des besoins spécifiques nécessitant des aménagements pour que votre entretien se déroule dans les meilleures conditions, nous vous invitons à remplir</em>  <em>ce formulaire</em>  <em>afin de nous en informer et que nous puissions faire le nécessaire.</em></p>
+<p><em>Ce poste exige que son ou sa titulaire possède une connaissance de l’anglais qui soit suffisante pour lui permettre d’avoir des échanges professionnels verbaux et écrits dans cette langue, puisque l’accomplissement des tâches liées à ce poste nécessite des communications fréquentes et régulières avec des collègues et partenaire situés à l’échelle mondiale et dont la langue commune est l’anglais.</em></p>
+<p><em>Les chasseurs de têtes et les agences de recrutement ne peuvent pas soumettre résumes/CV par ce site Web ou directement aux superviseurs. Unity n’accepte pas des chasseurs de têtes non sollicités et des résumés (CV) d’agence. Unity ne payera pas d’honoraires à aucune agence tierce ou entreprise qui n’a pas signé d’ententes avec Unity.</em></p>
+<p><em>La protection de votre vie privée est importante pour nous. Veuillez prendre un moment pour consulter nos politiques de confidentialité pour</em>  <em>les prospects</em>  <em>et les</em>  <em>candidats</em>  <em>. Si vous avez des questions concernant la protection de votre vie privée, veuillez nous contacter à DPO@unity.com.</em></p>
+<p><strong>Benefits</strong></p>
+<p>At Unity, we want our team members to thrive. We offer a wide range of benefits designed to support well-being and work-life balance.</p>
+<p>Please note: Benefits eligibility, specific offerings, and coverage vary based on the country and employment status.</p>
+<p>While specific benefits vary, here are some of the ways we strive to take care of our eligible team members globally: Comprehensive health, life, and disability insurance | Commute subsidy | Employee stock ownership | Competitive retirement/pension plans | Generous vacation and personal days | Support for new parents through leave and family-care programs | Office food snacks | Mental Health and Wellbeing programs and support | Employee Resource Groups | Global Employee Assistance Program | Training and development programs | Volunteering and donation matching program</p>
+<p><strong>Life at Unity</strong></p>
+<p>Unity [NYSE: U] is the world’s leading game engine, powering play for more than 3 billion consumers each month. The top mobile games in the world, the most played PC indie titles, the most innovative console games, and virtually all of the top XR and Web Games are developed, deployed, and grown in Unity. Unity also enables teams across industries like automotive, manufacturing, and healthcare to design, simulate, and collaborate in 3D — closing the gap between ideas and reality. For more information, please visit www.unity.com.</p>
+<p><em>Unity is a proud equal opportunity employer. We are committed to fostering an inclusive, innovative environment and celebrate our employees across age, race, color, ancestry, national origin, religion, disability, sex, gender identity or expression, sexual orientation, or any other protected status in accordance with applicable law. Our differences are strengths that enable us to support the growing and evolving needs of our customers, partners, and collaborators.</em>  <em>If you have a disability that means there are preparations or accommodations we can make to help ensure you have a comfortable and positive interview experience, please fill out</em>  <em>this form</em>  <em>to let us know.</em></p>
+<p><em>This position requires the incumbent to have a sufficient knowledge of English to have professional verbal and written exchanges in this language since the performance of the duties related to this position requires frequent and regular communication with colleagues and partners located worldwide and whose common language is English.</em></p>
+<p><em>Headhunters and recruitment agencies may not submit resumes/CVs through this website or directly to managers. Unity does not accept unsolicited headhunter and agency resumes. Unity will not pay fees to any third-party agency or company that does not have a signed agreement with Unity.</em></p>
+<p><em>Your privacy is important to us. Please take a moment to review our</em>   <em>Prospect</em>  <em>and</em>   <em>Applicant</em>  <em>Privacy Policies. Should you have any concerns about your privacy, please contact us at DPO@unity.com.</em></p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://unitytech.wd1.myworkdayjobs.com/en-US/Unity/job/Remote-Texas-USA/Dveloppeur-se--principal-e---Oprations-de-scurit-et-intervention-en-cas-d-incident---Senior-Security-Operations-and-Incident-Response-Engineer_JOBREQ-2616344"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on Unity Technologies &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

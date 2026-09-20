@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lead Solutions Engineer  Full Stack &mdash; Sanofi | Open Indeed</title>
+  <meta name="description" content="Lead Solutions Engineer  Full Stack at Sanofi in Hyderabad.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">Lead Solutions Engineer  Full Stack</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">Sanofi</strong> &bull;
+          <span>Hyderabad</span> &bull;
+          
+          <span class="pill pill-hybrid">Hybrid</span> &bull;
+          
+          <span>2026-09-17</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://sanofi.wd3.myworkdayjobs.com/en-US/SanofiCareers/job/Hyderabad/Lead-Solutions-Engineer--Full-Stack_R2871594-1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on Sanofi &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>Lead Solutions Engineer  Full Stack</h1>
+<ul>
+<li><strong>Company</strong>: Sanofi</li>
+<li><strong>Requisition ID</strong>: <code>R2871594</code></li>
+<li><strong>Location</strong>: Hyderabad</li>
+<li><strong>Official Posting</strong>: <a href="https://sanofi.wd3.myworkdayjobs.com/en-US/SanofiCareers/job/Hyderabad/Lead-Solutions-Engineer--Full-Stack_R2871594-1">Apply on Sanofi Careers</a></li>
+<li><strong>Time Type</strong>: Full time</li>
+<li><strong>Posted Date</strong>: Posted 2 Days Ago</li>
+<li><strong>Application Deadline</strong>: 2026-09-25</li>
+</ul>
+<h2>Job Description</h2>
+<p><strong>Job title:</strong> Lead Solutions Engineer</p>
+<p><strong>About the job</strong></p>
+<p>Ready to push the limits of what’s possible? Join Sanofi in one of our corporate functions and you can play a vital part in the performance of our entire business while helping to make an impact on millions around the world.</p>
+<p>Join Sanofi as our <strong>Lead Solutions Engineer</strong>  to shape the future of pharmaceutical technology. Reporting to the Head of Solutions Engineering, you will serve as the technical lead for our Solutions Engineering practice and collaborate with Strategic Architecture and digital partners to drive Sanofi’s transformation into an AI-powered biopharmaceutical company.</p>
+<p>This is a full-stack engineering role that combines hands-on expertise in cloud, DevOps, containers, and AI infrastructure with strategic vision-setting. You will lead solution design discussions with Digital R&amp;D, Manufacturing, and Corporate teams, and establish technical patterns and standards to guide our global technology evolution.</p>
+<p><strong>About Sanofi</strong></p>
+<p>We’re an R&amp;D-driven, AI-powered biopharma company committed to improving people’s lives and delivering compelling growth. Our deep understanding of the immune system – and innovative pipeline – enables us to invent medicines and vaccines that treat and protect millions of people around the world. Together, we chase the miracles of science to improve people’s lives.</p>
+<p>**** This is a hybrid role with 3 days a week onsite in Hyderabad - required. ****</p>
+<p><strong>Main Responsibilities:</strong></p>
+<p><strong>Hands-On Technical Implementation (70%)</strong></p>
+<p><em>Cloud-Native Architecture &amp; Implementation</em></p>
+<p>o   Design and implement hybrid cloud solutions on AWS and Azure for pharmaceutical workloads.</p>
+<p>o   Architect containerized applications using Kubernetes (EKS/AKS) with enterprise-grade reliability.</p>
+<p>o   Build Infrastructure as Code (Terraform, CloudFormation) for rapid, consistent deployments.</p>
+<p>o   Implement cloud-native patterns (microservices, serverless, and event-driven) that support pharmaceutical compliance.</p>
+<p><em>AI/ML Infrastructure Deployment</em></p>
+<p>o   Deploy and optimize AI/ML infrastructure supporting drug discovery and manufacturing automation.</p>
+<p>o   Implement AIOps platforms for intelligent infrastructure monitoring and automated operations.</p>
+<p>o   Build data pipelines and model serving infrastructure for pharmaceutical AI applications.</p>
+<p>o   Design GPU-optimized clusters and distributed computing environments for machine learning workloads.</p>
+<p><em>DevOps &amp; Automation Excellence</em></p>
+<p>o   Implement CI/CD pipelines with automated testing, security scanning, and compliance validation.</p>
+<p>o   Design observability platforms that provide comprehensive monitoring, logging, and alerting.</p>
+<p>o   Build self-service automation enabling digital teams to deploy infrastructure safely and rapidly.</p>
+<p>o   Establish GitOps practices and automated rollback mechanisms for pharmaceutical production systems.</p>
+<p><em>Hybrid Infrastructure Integration</em></p>
+<p>o   Design seamless integrations between on-premises pharmaceutical systems and cloud platforms.</p>
+<p>o   Build disaster recovery and business continuity solutions meeting pharmaceutical regulatory requirements.</p>
+<p>o   Optimize hybrid cloud costs through FinOps practices and automated resource management.</p>
+<p><strong>Lead Strategic Technology Vision (30%)</strong></p>
+<p><em>Digital Partner Solution Design</em></p>
+<p>o   Lead technical architecture discussions with Digital R&amp;D, Manufacturing, and Corporate peer organizations.</p>
+<p>o   Provide consultative guidance on cloud, AI, and infrastructure strategies for critical pharmaceutical initiatives.</p>
+<p>o   Co-design enterprise solutions that balance innovation speed with GxP compliance requirements.</p>
+<p>o   Translate business challenges into technical solutions aligned with Sanofi’s AI transformation roadmap.</p>
+<p><em>Architecture Partnership &amp; Governance</em></p>
+<p>o   Work closely with Enterprise Architecture on strategic technology initiatives and standards development.</p>
+<p>o   Provide solution-level architectural decisions in line with enterprise architectural standards.</p>
+<p>o   Contribute to architectural decision frameworks for cloud, AI, and infrastructure domains.</p>
+<p>o   Aligning foundational technology capabilities with digital innovation requirements across the organization.</p>
+<p><em>Solutions Engineering Practice Development</em></p>
+<p>o   Define technical patterns, standards, and best practices for the emerging Solutions Engineering team.</p>
+<p>o   Establish solution design methodologies that balance pharmaceutical compliance with innovation speed.</p>
+<p>o   Participate in hiring and developing additional Solutions Engineers across specialized domains.</p>
+<p>o   Create technical documentation, reference architecture, and implementation guides.</p>
+<p><em>AIOps &amp; Intelligent Operations Leadership</em></p>
+<p>o   Design and promote AIOps capabilities for infrastructure and DevOps automation.</p>
+<p>o   Oversee implementation of intelligent monitoring, predictive analytics, and automated remediation. Collaborate with the agentic AI core team to integrate AI-powered operations into the pharmaceutical technology stack.</p>
+<p>o   Drive adoption of ML-powered capacity planning, anomaly detection, and self-healing systems.</p>
+<p><strong>About You</strong></p>
+<p><strong>Required Experience:</strong></p>
+<p><strong>Cloud &amp; Infrastructure Expertise</strong></p>
+<p>o    <strong>8</strong>  <strong>+ years</strong>  in enterprise infrastructure and engineering roles with increasing technical leadership</p>
+<p>o    <strong>Deep expertise in AWS and Azure</strong>  with production-scale implementations</p>
+<p>o    <strong>Advanced Kubernetes</strong>  experience, including EKS/AKS in enterprise pharmaceutical or regulated environments.</p>
+<p>o    <strong>Hybrid cloud architecture</strong>  integrating on-premises systems with cloud-native applications.</p>
+<p>o    <strong>Infrastructure fundamentals,</strong>  including networking, storage, compute, and security at enterprise scale.</p>
+<p><strong>DevOps &amp; Automation Mastery</strong></p>
+<p>o    <strong>Infrastructure as Code experience</strong>  with Terraform, CloudFormation, or equivalent tools at scale.</p>
+<p>o    <strong>CI/CD pipeline design,</strong>  including automated testing, security scanning, and compliance validation.</p>
+<p>o    <strong>Container orchestration</strong>  with production Kubernetes implementations and cloud-native patterns</p>
+<p>o    <strong>Observability platform experience,</strong>  including monitoring, logging, alerting, and distributed tracing.</p>
+<p><strong>Strategic &amp; Consultative Leadership</strong></p>
+<p>o    <strong>Cross-functional collaboration</strong>  guiding technical decisions across diverse business and technology teams.</p>
+<p>o    <strong>Standards development,</strong>  creating technical patterns, and best practices adopted across organizations.</p>
+<p>o    <strong>Stakeholder communication,</strong>  translating technical concepts for business leaders and non-technical audiences.</p>
+<p><strong>Highly Valued Experience</strong></p>
+<p>o    <strong>Hands-on AI/ML infrastructure deployment,</strong>  including model serving, training clusters, and data pipelines.</p>
+<p>o    <strong>AIOps implementation experience</strong>  on AWS (CloudWatch Insights, Systems Manager, DevOps Guru, or equivalent)</p>
+<p>o    <strong>ML platform operations</strong>  with experience in SageMaker, Azure ML, or similar enterprise ML platforms</p>
+<p>o    <strong>Intelligent automation,</strong>  including predictive analytics, anomaly detection, and automated remediation.</p>
+<p>o    <strong>Pharmaceutical or life sciences</strong>  technology implementation with GxP compliance understanding</p>
+<p>o    <strong>Regulated industry background</strong>  (healthcare, financial services, government) with validation experience</p>
+<p>o    <strong>Large-scale digital transformations</strong>  in organizations with 10,000+ users</p>
+<p>o    <strong>Multi-cloud governance</strong>  and FinOps implementation with measurable cost optimization outcomes</p>
+<p>o    <strong>Site Reliability Engineering</strong>  practices, including error budgets, SLOs, and incident management.</p>
+<p>o    <strong>Open-source contributions</strong>  to cloud-native, Kubernetes, or AI/ML infrastructure projects</p>
+<p><strong>Essential Capabilities:</strong></p>
+<p><strong>Technical Leadership</strong></p>
+<p>o   Lead complex technical discussions with confidence and credibility across diverse stakeholder groups.</p>
+<p>o   Challenge technical assumptions constructively while respecting domain expertise.</p>
+<p>o   Balance innovation adoption with operational stability and pharmaceutical compliance.</p>
+<p>o   Make sound architectural decisions in the face of ambiguity and incomplete information.</p>
+<p><strong>Strategic Thinking</strong></p>
+<p>o   Connect technical solutions to pharmaceutical business outcomes and patient impact.</p>
+<p>o   Anticipate future technology trends and proactively prepare infrastructure capabilities.</p>
+<p>o   Design solutions that scale globally across diverse regulatory environments</p>
+<p>o   Balance short-term delivery needs with long-term architectural vision.</p>
+<p><strong>Collaborative Influence</strong></p>
+<p>o   Build trust and credibility with digital peer organizations through consistent delivery.</p>
+<p>o   Navigate matrix organizations and drive consensus without formal authority.</p>
+<p>o   Partner effectively with Enterprise Architecture while maintaining a solutions delivery focus.</p>
+<p>o   Mentor and develop engineering talent through technical guidance and knowledge sharing.</p>
+<p><strong>Communication Excellence</strong></p>
+<p>o   Articulate complex technical architectures clearly for both technical and business audiences.</p>
+<p>o   Create compelling technical documentation, reference architectures, and implementation guides.</p>
+<p>o   Facilitate productive technical discussions across distributed, global teams.</p>
+<p><strong>Education &amp; Credentials:</strong></p>
+<p><strong>Required</strong></p>
+<p>o    <strong>Bachelor’s degree</strong>  in Computer Science, Engineering, Information Technology, or related technical field</p>
+<p>o    <em>Equivalent: 8+ years of progressive cloud and technology engineering may substitute</em></p>
+<p><strong>Preferred &amp; Valued</strong></p>
+<p>o    <strong>AWS certifications:</strong>  Solutions Architect Professional, DevOps Engineer Professional, Machine Learning Specialty</p>
+<p>o    <strong>Azure certifications:</strong>  Solutions Architect Expert, DevOps Engineer Expert, AI Engineer Associate</p>
+<p>o    <strong>Kubernetes certifications:</strong>  CKA (Certified Kubernetes Administrator), CKAD (Certified Kubernetes Application Developer)</p>
+<p>o    <strong>Additional relevant certifications:</strong>  Terraform Associate, TOGAF, ITIL, Agile/DevOps</p>
+<p><strong>Reporting to:</strong></p>
+<p>o   Head of Solutions Engineering (Technology Principal)</p>
+<p><strong>Travel:</strong></p>
+<p>o   Required for digital partner engagement and strategic initiatives (10%)</p>
+<p><strong>Why This Role Is Unique</strong></p>
+<p><strong>Foundational Impact</strong></p>
+<p>o   You are not joining an established team; you will be one of the first on a team tasked to build out <strong>the Solutions Engineering practice.</strong></p>
+<p>o   Define standards, establish patterns, and create methodologies that will guide Sanofi’s technology transformation for years to come.</p>
+<p><strong>Strategic Influence</strong></p>
+<p>o   Lead solution design with digital peer organizations supporting drug discovery, manufacturing automation, and regulatory compliance. Your technical decisions directly impact pharmaceutical innovation timelines and patient outcomes.</p>
+<p><strong>AI Transformation Leadership</strong></p>
+<p>o   Work at the intersection of  <strong>cloud infrastructure and AI-powered operations</strong> . Design AIOps platforms that revolutionize how pharmaceutical technology operates while supporting our agentic AI transformation initiatives.</p>
+<p><strong>Technical &amp; Strategic Balance</strong></p>
+<p>o   This role is both hands-on and strategic. Spend 70% of your time building and implementing solutions, and 30% shaping technical vision and guiding digital partner organizations.</p>
+<p><strong>Architecture Partnership</strong></p>
+<p>o   Work directly with Enterprise Architecture on strategic initiatives while maintaining a solutions delivery focus to accelerate pharmaceutical innovation. Connect enterprise standards with practical implementation.</p>
+<p><strong>Why Choose Us?</strong></p>
+<p>o   Bring the miracles of science to life alongside a supportive, future-focused team.</p>
+<p>o   Discover endless opportunities to grow your talent and drive your career, whether it’s through a promotion or lateral move, at home or internationally.</p>
+<p>o   Enjoy a thoughtful, well-crafted rewards package that recognizes your contribution and amplifies your impact.</p>
+<p>o   Take good care of yourself and your family, with a wide range of health and wellbeing benefits including high-quality healthcare, prevention, and wellness programs and at least 14 weeks’ gender-neutral parental leave.</p>
+<p>Sanofi Inc. and its U.S. affiliates are Equal Opportunity employers committed to a culturally inclusive workforce. All qualified applicants will receive consideration for employment without regard to race; color; creed; religion; national origin; age; ancestry; nationality; marital, domestic partnership or civil union status; sex, gender, gender identity or expression; affectional or sexual orientation; disability; veteran or military status or liability for military status; domestic violence victim status; atypical cellular or blood trait; genetic information (including the refusal to submit to genetic testing) or any other characteristic protected by law.</p>
+<h1>Pursue progress, discover extraordinary</h1>
+<p>Better is out there. Better medications, better outcomes, better science. But progress doesn’t happen without people – people from different backgrounds, in different locations, doing different roles, all united by one thing: a desire to make miracles happen. So, let’s be those people.</p>
+<p>At Sanofi, we provide equal opportunities to all regardless of race, colour, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, ability or gender identity.</p>
+<p>Watch our ALL IN video and check out our Diversity Equity and Inclusion actions at sanofi.com!</p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://sanofi.wd3.myworkdayjobs.com/en-US/SanofiCareers/job/Hyderabad/Lead-Solutions-Engineer--Full-Stack_R2871594-1"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on Sanofi &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

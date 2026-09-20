@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilingual Judicial Clerk &mdash; Government of Alberta | Open Indeed</title>
+  <meta name="description" content="Bilingual Judicial Clerk at Government of Alberta in Various Locations, AB.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">Bilingual Judicial Clerk</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">Government of Alberta</strong> &bull;
+          <span>Various Locations, AB</span> &bull;
+          
+          <span>2026-09-13</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://jobpostings.alberta.ca/job/Various-Locations-Bilingual-Judicial-Clerk/592999317/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on Government of Alberta &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>Bilingual Judicial Clerk</h1>
+<ul>
+<li><strong>Location</strong>: Various Locations, AB</li>
+<li><strong>Official Posting</strong>: <a href="https://jobpostings.alberta.ca/job/Various-Locations-Bilingual-Judicial-Clerk/592999317/">Apply / View</a></li>
+</ul>
+<hr />
+<h2>Role &amp; Responsibilities</h2>
+<p>Information sur l'emploi
+Tire du poste : greffier bilingue /Greffier senior bilingue (réserve de talents ouverte)
+Demande d’emploi numéro : 72430
+Ministère: Alberta Justice (ministère de la Justice)
+Lieu : différents lieux en Alberta
+Temps plein / temps partiel : À temps plein
+Heures de travail : 36,25 heures par semaine
+permanent / temporaire : permanent, temporaire et salarial Portée : Concours ouvert
+Date de clôture : ouvert jusqu'à ce que le(s) candidat(s) adéquat(s) soit(soient) sélectionné(s). Classification: greffier / Greffier senior
+Salaire:
+Greffier :
+$2,090.70 à $2,645.40 aux deux semaines ($54,567 - $69,044 /an)
+$28.84 à $36.49 par heure
+Greffier senior:
+$2,308.09 à $2,920.47 aux deux semaines ($60,241 - $76,224/an)
+$31.84 à $40.28 par heure
+Les employés qualifiés qui vivent et travaillent dans le nord de l'Alberta peuvent bénéficier d'une compensation supplémentaire. Veuillez consulter le site
+https://myaps.alberta.ca/Pages/My-HR/Compensation-Pay/Northern-Alberta-employee-programs.aspx
+.
+À propos de nous
+Développez votre carrière avec Court and Justice Services (Services judiciaires) ! Nous offrons aux employés, du soutien, évolution de carrière, des salaires compétitifs et un ensemble complet d’avantages sociaux !
+La fonction publique de l'Alberta offre un régime complet de rémunération globale. Pour plus d'informations et pour calculer votre rémunération totale potentielle en tant que greffier, visitez le site
+Government of Alberta - Pay Benefits/Careers Research
+Curieux de rejoindre la fonction publique de l'Alberta ? Cliquez ici :
+About the Alberta Public Service | Alberta.ca
+Court and Justice Services Divison (la division des services judiciaires) offre une vaste gamme de services de résolution et de services judiciaires aux personnes impliquées dans des différends juridiques. En collaboration avec les tribunaux de l’Alberta, CJS fournit divers programmes et services y compris : éduquer et aider les Albertains à trouver des solutions aux problèmes juridiques ainsi qu’à naviguer dans le système judiciaire, offrir des programmes gratuits ou à un prix symbolique, ainsi qu'un soutien administratif à tous les tribunaux de l’Alberta. Pour en savoir plus sur les services judiciaires et de la justice, veuillez cliquer sur le lien suivant :
+Court and Justice Services | Alberta.ca
+Ce concours servira à pourvoir des postes vacants, actuels et futurs, salariaux, temporaires et permanents, dans diverses localités de la province de l'Alberta. Les postes salariaux, temporaires ou sur appel ne sont pas assortis d'heures de travail garanties.
+Les candidats retenus à l'issue du processus de sélection seront inscrits dans une réserve de talents pour le(s) lieu(x) qu'ils auront identifié(s) dans le cadre de la procédure de candidature. Le nombre de postes à pourvoir n'a pas encore été déterminé.
+Role Responsibilities
+Court and Justice Services Divison (la division des services judiciaires) est à la recherche de personnes motivées, travailleuses et fiables pour rejoindre son équipe en tant qu'officiers de justice ! Pour réussir dans cette fonction, il faut faire preuve d'un grand sens de l'intégrité, être capable de s'épanouir dans un environnement en constante évolution et avoir la passion d'aider les Albertains à s'y retrouver dans le système judiciaire. Nous sommes actuellement en train de créer un bassin de professionnels qualifiés pour ce rôle très respecté dans le système judiciaire de l'Alberta.
+Ce poste requiert une personne bilingue capable de soutenir couramment les Albertains, les services judiciaires et les parties prenantes en français, en anglais ou dans les deux langues. Le candidat retenu veillera à une communication fluide et à l'exactitude des procédures dans l'une ou l'autre langue au cours des procédures.
+Ces fonctions sont exercées à différents endroits de la province, au sein de la Cour de justice de l'Alberta et de la Cour du Banc du Roi. Pour en savoir plus sur ces deux niveaux de compétences, veuillez consulter les liens ci-dessous :
+La Cour du Banc du Roi :
+https://albertacourts.ca/qb/areas-of-law
+•    Criminel
+•    Civil
+•    Famille
+•    Divorce
+•    Testaments et successions / faillite
+La Cour de Justice de l’Alberta :
+•    Trafic
+•    Civil
+•    Criminel
+•    Famille et jeunesse
+Role Responsibilities Contd.
+Dans ce rôle essentiel, vous représenterez professionnellement l'administration des tribunaux, en veillant à ce que la justice soit rendue de manière juste et équitable. Vos fonctions impliqueront un mélange de tâches en salle d'audience, au comptoir et au bureau, notamment:
+•    Gestion des processus administratifs dans les procédures judiciaires civiles et pénales en anglais et français
+•    Maintenir les documents judiciaires et le décorum de la cour, l’opération de la plateforme numérique
+d’enregistrement
+•    Gérer les pièces à conviction, liaison avec le pouvoir judiciaire, les avocats, la police et le public
+•    Déposer des documents conformément aux Règles de procédure de la cour de l'Alberta et aux lois pertinentes.
+•    Fournir une assistance bilingue (anglais et français) au public et à la communauté juridique au comptoir et au
+téléphone
+•    La saisie de données, la production et le traitement de toute ordonnance de la Cour, et l'exécution de tâches
+•    administratives générales
+•    Agir en tant que juge de paix non présidant, en procédant à des libérations sous caution
+•    Exercer les fonctions de commissaire à l'assermentation après avoir réussi l'examen requis
+•    Gérer les bases de données et faciliter les comparutions, tant en personne qu'en ligne.
+Ce concours servira également à pourvoir des postes au sein du bureau des audiences provinciales. Le Bureau des audiences fonctionne 365 jours par an à Edmonton et Calgary. Cela inclut les jours, les nuits, les fins de semaine et les jours fériés, pour lesquels vous êtes rémunéré en conséquence avec des primes de jour férié, du temps de congé accumulé et des primes de soir et de fin de semaine. Les quarts de travail sont programmés sur une rotation de six jours de travail suivis de trois jours de congé et peuvent inclure n'importe quelle combinaison des quarts suivants : 3 jours, 3 nuits et 3 jours de congé. Les candidats intéressés par le Bureau des audiences doivent être disponibles pour tous les quarts.
+Ce poste nécessite des déplacements dans les régions pour se rendre dans les cours de circuit. Cela peut nécessiter des déplacements par mauvais temps. Certains lieux de circuit nécessitent également de voler dans de petits avions. Pour connaître l'emplacement des bases régionales et des circuits, veuillez consulter le site suivant
+https://www.albertacourts.ca/pc/court-practice-and-schedules/locations-map
+Pour visionner des vidéos et en savoir plus sur la façon de devenir un officier de justice et sur la manière dont vous pouvez soutenir le système judiciaire de l'Alberta, veuillez consulter le site suivant
+https://www.alberta.ca/become-a-judicial-clerk
+.
+Veuillez cliquer sur ce
+lien
+pour consulter la description de ce poste.
+APS Competenceis
+Les compétences sont des comportements essentiels pour atteindre nos objectifs en matière de service aux Albertains. Nous vous encourageons à bien comprendre les compétences requises pour ce poste et à vous préparer à les démontrer au cours du processus de recrutement.
+Le lien ci-dessous vous aidera à comprendre les compétences:
+APS Competency Model
+Le candidat retenu devra faire preuve des compétences suivantes:
+Créer un environnement collaboratif
+: diriger et contribuer aux conditions et aux environnements qui permettent aux gens de travailler de manière collaborative et productive et en collaboration afin de produire des résultats.
+Développer des réseaux
+: construire de manière proactive des réseaux, établir des liens et instaurer la confiance dans les relations avec les différentes parties prenantes.
+Résolution créative des problèmes
+: Une capacité à évaluer les options et les implications avec de nouvelles façons afin d’obtenir des résultats et des solutions.
+Pensée systémique
+: Le travail effectué au sein de la fonction publique de l’Alberta fait partie d'un environnement plus vaste, intégré et interconnecté. Il est important de savoir que le travail effectué dans une partie de la fonction publique de l’Alberta a une incidence sur divers autres groupes et projets à l'intérieur et à l'extérieur de la fonction publique de l’Alberta. La pensée systémique nous permet de garder en esprit les impacts et les connexions plus larges.
+Flexibilité
+: Une capacité à anticiper, évaluer et de s'adapter facilement aux priorités qui changent, de gérer la résilience en période d'incertitude et de travailler efficacement dans un environnement changeant.
+Autres caractéristiques pertinentes
+: Capacité à s'exprimer en public ; capacité à gérer une charge de travail importante et rapide ; capacité à gérer des délais serrés et simultanés.
+Qualifications
+Greffier: Diplôme d'études secondaires et expérience professionnelle d'au moins six mois.
+L'expérience connexe qui sera prise en considération est la suivante :
+•    La maîtrise du français et de l'anglais (oral et écrit) est obligatoire. Les candidats doivent faire preuve de solides
+compétences en matière de communication dans les deux langues
+•    Expérience en tant qu'officier de la cour
+•    Expérience dans une fonction administrative au sein d'un tribunal
+•    Expérience de travail dans un environnement juridique dans des rôles tels que parajuriste, assistant juridique ou
+soutien administratif
+•    Expérience en administration de bureau
+•    Expérience en support administratif
+•    Expérience dans un rôle de service à la clientèle où vous avez dû désamorcer des situations. Par exemple, dans
+une compagnie aérienne, une banque, un hôpital, une école ou en tant que secouriste
+•    Expérience avec la manipulation d’espèces ou l'acceptation de paiements en tant que caissier ou au comptoir
+d'un registre ou d'une banque.
+Greffier senior: Diplôme d’études secondaires et au moins deux ans d'expérience dans un domaine connexe, incluant 18 mois d'expérience directement liée à titre de greffier judiciaire et une réussite complète du programme de parajuristes du ministère.
+Seuls les candidats possédant une expérience de greffier peuvent être pris en considération au niveau de classification et de salaire supérieur.
+Équivalence :  Expérience ou formation connexes considérées en fonction d’une année d’expérience pour une année de formation ou d’une année de formation pour une année d’expérience.
+•    Les atouts et les préférences seront considérés comme suit :
+•    Expérience en tant que greffier ou assistant juridique/juriste souhaitée
+•    Un certificat ou un diplôme d'assistant juridique ou de parajuriste est considéré comme un atout.
+•    Expérience avec le &quot;Civil and Sheriff Entry System&quot; (CASES), le &quot;Justice On-Line Information Network&quot; (JOIN), ou avec la plateforme numérique d'enregistrement (FTR) sont des atouts.
+•    Expérience avec la manipulation d’espèces ou l'acceptation de paiements en tant que caissier ou au comptoir d'un registre ou d'une banque sont considérés des atouts.
+•    L'expérience de l'utilisation de technologies de conférence basées sur le nuage sera considérée comme un atout (par exemple les plateformes basées sur Cisco, Microsoft 365, etc.).
+•    Une expérience d'au moins six mois dans un service à la clientèle ou une fonction administrative bilingue sera considérée comme un atout.
+•    Expérience de l'utilisation de systèmes de dépôts numériques ou basés sur l'informatique en nuage.
+•    Cinq ans ou plus d'expérience dans le domaine du service à la clientèle.
+Ce poste peut nécessiter que le candidat retenu obtienne une nomination de juge de paix non présidant.
+La nationalité canadienne est obligatoire pour obtenir la nomination de juge de paix.
+La nomination de commissaire à l'assermentation peut également être requise.
+Si votre candidature est retenue pour un poste bilingue, un test de compétence linguistique en français sera passé au moment de l'entrevue afin d'évaluer la capacité du candidat à parler, lire et écrire couramment.
+Les candidats peuvent être testés pour vérifier la maîtrise et la précision des techniques de base de la dactylographie. Une vitesse de frappe minimale de 35 mots par minute avec un haut degré de précision est requise.
+Les normes minimales de recrutement définissent la formation et l'expérience minimale requise pour être nommée à une catégorie d'emploi.
+Se référer à
+https://www.alberta.ca/alberta-public-service-minimum-recruitment-standards
+Notes
+Heures de travail:
+Les postes à temps plein travaillent 36,25 heures par semaine, du lundi au vendredi. Les heures supplémentaires sont souvent exigées avec peu ou pas de préavis, car les tribunaux peuvent être en retard.
+Lieux
+: Edmonton, Calgary, Camrose, Drumheller, Fort McMurray, Fort Saskatchewan, Grande Prairie, High Level, High Prairie, Hinton, Leduc, Lethbridge, Medicine Hat, Peace River, Red Deer, Sherwood Park, St. Albert, St. Paul, Stony Plain, Vermilion and Wetaskiwin.
+Déplacement
+:
+Un permis de conduire valide (classe 5) et un véhicule fiable sont nécessaires pour les déplacements vers les cours de circuit dans nos bureaux régionaux. Un résumé de conduite peut être exigé. Il peut être nécessaire de voyager par conditions météorologiques difficiles. Dans certains lieux de circuit, le candidat doit également être à l'aise pour voler dans de petits avions.
+Autres exigences du poste:
+Ce poste demande des périodes prolongées en position assise et/ou en position debout ainsi que la capacité de soulever des dossiers/des pièces à conviction pesant jusqu'à 25lbs.
+Les candidats retenus seront invités à se soumettre à une vérification de sécurité. Tous les frais liés à l'obtention des documents/vérification requis, comme indiqué, ou les frais de déplacement pour l'entretien sont à la charge du candidat. Les candidats de l'extérieur de la province peuvent obtenir les documents/vérification requis auprès de la province dans laquelle ils résident actuellement.
+Autres informations:
+Si vous avez effectué un stage auprès de Court and Justice Services (services judiciaires), veuillez l'indiquer dans votre curriculum vitae et inclure votre superviseur/responsable de stage dans vos références lorsque cela vous est demandé.
+Les candidats internes sont encouragés à discuter de l'option d'une affectation temporaire avec leur supérieur actuel.
+Le processus de réserve de talents comprend les étapes suivantes : candidature, entrevue et recommandation. La sélection des candidats et les entrevues se dérouleront périodiquement tout au long de la publication de l'offre d'emploi. Les entretiens se dérouleront virtuellement, avec des aménagements possibles sur demande. Les candidats retenus seront placés dans une réserve de talents, ce qui leur permettra de se qualifier pour de futures opportunités. Vous pouvez être contacté pour des postes permanents, temporaires ou salariaux dans le lieu de votre choix. Votre candidature restera active pendant six mois à compter de la date de l'entrevue.
+https://www.alberta.ca/alberta-public-service-jobs.aspx
+Liens et informations sur ce que le gouvernement d'Alberta peut offrir aux futurs employés.
+Travailler pour la fonction publique de l’Alberta -
+https://www.alberta.ca/advantages-working-for-alberta-public-service.aspx
+Régime de pension de la fonction publique (Public Service Pension Plan) (PSPP) -
+https://www.pspp.ca
+Informations sur les prestations de la fonction publique de l'Alberta -
+https://www.alberta.ca/alberta-public-servicebenefits
+Apprentissage et développement professionnels -
+https://www.alberta.ca/professional-development-support-directive
+Outil de recherche sur les carrières dans la fonction publique de l'Alberta –
+https://researchapscareers.alberta.ca
+Culture de travail positive et équilibre entre vie professionnelle et vie privée
+Heures de travail:
+Les postes à temps plein travaillent 36,25 heures par semaine, du lundi au vendredi. Les heures supplémentaires sont souvent exigées avec peu ou pas de préavis, car les tribunaux peuvent être en retard.
+Lieux
+: Edmonton, Calgary, Camrose, Drumheller, Fort McMurray, Fort Saskatchewan, Grande Prairie, High Level, High Prairie, Hinton, Leduc, Lethbridge, Medicine Hat, Peace River, Red Deer, Sherwood Park, St. Albert, St. Paul, Stony Plain, Vermilion and Wetaskiwin.
+Déplacement
+:
+Un permis de conduire valide (classe 5) et un véhicule fiable sont nécessaires pour les déplacements vers les cours de circuit dans nos bureaux régionaux. Un résumé de conduite peut être exigé. Il peut être nécessaire de voyager par conditions météorologiques difficiles. Dans certains lieux de circuit, le candidat doit également être à l'aise pour voler dans de petits avions.
+Autres exigences du poste:
+Ce poste demande des périodes prolongées en position assise et/ou en position debout ainsi que la capacité de soulever des dossiers/des pièces à conviction pesant jusqu'à 25lbs.
+Les candidats retenus seront invités à se soumettre à une vérification de sécurité. Tous les frais liés à l'obtention des documents/vérification requis, comme indiqué, ou les frais de déplacement pour l'entretien sont à la charge du candidat. Les candidats de l'extérieur de la province peuvent obtenir les documents/vérification requis auprès de la province dans laquelle ils résident actuellement.
+Autres informations:
+Si vous avez effectué un stage auprès de Court and Justice Services (services judiciaires), veuillez l'indiquer dans votre curriculum vitae et inclure votre superviseur/responsable de stage dans vos références lorsque cela vous est demandé.
+Les candidats internes sont encouragés à discuter de l'option d'une affectation temporaire avec leur supérieur actuel.
+Le processus de réserve de talents comprend les étapes suivantes : candidature, entrevue et recommandation. La sélection des candidats et les entrevues se dérouleront périodiquement tout au long de la publication de l'offre d'emploi. Les entretiens se dérouleront virtuellement, avec des aménagements possibles sur demande. Les candidats retenus seront placés dans une réserve de talents, ce qui leur permettra de se qualifier pour de futures opportunités. Vous pouvez être contacté pour des postes permanents, temporaires ou salariaux dans le lieu de votre choix. Votre candidature restera active pendant six mois à compter de la date de l'entrevue.
+https://www.alberta.ca/alberta-public-service-jobs.aspx
+Liens et informations sur ce que le gouvernement d'Alberta peut offrir aux futurs employés.
+Travailler pour la fonction publique de l’Alberta -
+https://www.alberta.ca/advantages-working-for-alberta-public-service.aspx
+Régime de pension de la fonction publique (Public Service Pension Plan) (PSPP) -
+https://www.pspp.ca
+Informations sur les prestations de la fonction publique de l'Alberta -
+https://www.alberta.ca/alberta-public-servicebenefits
+Apprentissage et développement professionnels -
+https://www.alberta.ca/professional-development-support-directive
+Outil de recherche sur les carrières dans la fonction publique de l'Alberta –
+https://researchapscareers.alberta.ca
+Culture de travail positive et équilibre entre vie professionnelle et vie privée
+Comment postuler
+Cliquez sur le bouton “Apply Now”.
+Il est conseillé aux candidats de fournir des renseignements qui démontrent de manière claire et concise en quoi leurs qualifications répondent aux exigences annoncées, y compris la formation, l'expérience et des exemples pertinents de compétences requises.
+Les candidats doivent postuler à un emploi en ligne. Veuillez visiter le site
+https://www.alberta.ca/job-application-resources#before
+pour plus d’informations. Veuillez visiter
+Recruitment Principles
+, pour plus d’informations.
+Il est recommandé aux candidats qui ont obtenu des diplômes à l’extérieur du Canada d'obtenir une évaluation de leurs diplômes par l’International Qualifications Assessment Service (IQAS) (
+https://www.alberta.ca/international-qualifications-assessment.aspx
+)
+ou d'un évaluateur de diplômes canadien reconnu ; pour plus d'informations, veuillez consulter le site de l'Alliance des services d'évaluation de diplômes du Canada.
+(
+https://canalliance.org/en/default.html
+).
+Il est recommandé aux candidats de joindre à leur demande leur certificat d'évaluation IQAS ou provenant de tout autre service d'évaluation de formation.
+Exigences en matière d'application:
+Il est conseillé aux candidats de fournir des renseignements qui démontrent de manière claire et concise en quoi leurs qualifications répondent aux exigences annoncées, y compris la formation, l'expérience et des exemples pertinents de compétences requises.
+Il vous sera également demandé de répondre à des questions de présélection au moment de l'introduction de votre candidature.
+Dans votre lettre de présentation, veuillez indiquer les dates (mois et année) associées à votre formation et à votre expérience professionnelle. Veuillez également indiquer si votre expérience professionnelle était occasionnelle, à temps partiel (PT) ou à temps plein (PT).
+Ex : Assistant(e) juridique : janvier 2016 - juin 2019 (Temps plein, 5 fois 8 heures par semaine).
+Si vous ne fournissez pas ou ne remplissez pas les conditions susmentionnées, votre candidature ne sera pas prise en considération.
+Veuillez noter que les communications relatives à ce concours se feront par courrier électronique. Veuillez fournir une adresse électronique et vous assurer que vous vérifiez régulièrement votre courrier électronique (y compris les courriers indésirables) pour les messages citant la demande d'emploi n° 72340.
+Ressources pour les candidats:
+Postuler à des emplois au sein de la fonction publique de l'Alberta:
+Find a job | Alberta.ca
+Comprendre le processus d'embauche de la fonction publique de l'Alberta:
+Recruitment principles | Alberta.ca
+ALIS:
+Look for Work in Alberta and build your work search skills - alis
+Déclaration de clôture
+Ce concours peut aussi servir pour pourvoir des postes vacants actuels et futurs au sein du Gouvernement de l'Alberta, soit au même niveau de classification ou à un niveau inférieur.
+Nous souhaitons remercier tous les candidats pour leur intérêt. Toutes les candidatures seront examinées pour déterminer les candidats qui répondent le mieux aux exigences annoncées. Seuls les candidats retenus pour une entrevue seront contactés.
+Si vous souhaitez obtenir de plus amples informations sur cette offre d'emploi ou une copie du profil du poste, et/ou si vous avez besoin d'un aménagement au cours du processus de recrutement, veuillez contacter Abhishek Sharma
+at
+Abhishek.Z.Sharma@gov.ab.ca
+.
+Si ce concours est terminé à la date de clôture notée ci-dessus, veuillez continuer à consulter
+https://www.alberta.ca/find-a-job
+pour la liste des offres d'emploi actuelles du Gouvernement de l'Alberta.
+Postulez maintenant pour que nous puissions vous inscrire dans la réserve de talents du gouvernement de l'Alberta pour devenir un officier de la Cour !</p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://jobpostings.alberta.ca/job/Various-Locations-Bilingual-Judicial-Clerk/592999317/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on Government of Alberta &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

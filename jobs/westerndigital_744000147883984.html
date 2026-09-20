@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HR スペシャリスト（HR Experience Partner） &mdash; Western Digital | Open Indeed</title>
+  <meta name="description" content="HR スペシャリスト（HR Experience Partner） at Western Digital in Fujisawa, Kanagawa, Japan.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">HR スペシャリスト（HR Experience Partner）</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">Western Digital</strong> &bull;
+          <span>Fujisawa, Kanagawa, Japan</span> &bull;
+          
+          <span class="pill pill-onsite">On-site</span> &bull;
+          
+          <span>2026-09-07</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://api.smartrecruiters.com/v1/companies/WesternDigital/postings/744000147883984"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on Western Digital &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>HR スペシャリスト（HR Experience Partner）</h1>
+<p><strong>Company</strong>: Western Digital
+<strong>Location</strong>: Fujisawa, Kanagawa, Japan
+<strong>URL</strong>: https://jobs.smartrecruiters.com/WesternDigital/744000147883984-hr-hr-experience-partner-</p>
+<hr />
+<h2>企業概要</h2>
+<p>At Western Digital, our vision is to power global innovation and push the boundaries of technology to make what you thought was once impossible, possible.</p>
+<p>At our core, Western Digital is a company of problem solvers. People achieve extraordinary things given the right technology. For decades, we’ve been doing just that—our technology helped people put a man on the moon and capture the first-ever picture of a black hole.</p>
+<p>We offer an expansive portfolio of technologies, HDDs, and platforms for business, creative professionals, and consumers alike under our Western Digital®, WD®, WD_BLACK™, and SanDisk® Professional brands.</p>
+<p>We are a key partner to some of the largest and highest-growth organizations in the world. From enabling systems to make cities safer and more connected, to powering the data centers behind many of the world’s biggest companies and hyperscale cloud providers, to meeting the massive and ever-growing data storage needs of the AI era, Western Digital is fueling a brighter, smarter future.</p>
+<p>Today’s exceptional challenges require your unique skills. Together, we can build the future of data storage.</p>
+<h2>求人内容</h2>
+<p>＜職務内容＞</p>
+<p>Western Digitalのハードディスクドライブ（HDD）の主要開発拠点である藤沢事業所において、HR Experience Partnerとして、ビジネスおよびHR Business Partner（HRBP）が抱える戦略上の人事課題に対し、COEの専門的なインプットも活用しながら、現場での具体的な解決・実現を担っていただきます。</p>
+<p>HRBPがStrategyを定義・策定するのに対し、HREPはそのPlan及びImplementationに責任を持ちます。マネージャーや従業員と直接関わりながら、HRの施策・プログラムが確実に日本の現場に届き、実際の行動変容と組織の成果につながるよう、HRBP・COE・HR Operationsと連携しながら業務を推進します。</p>
+<p>主な職務内容（Key Responsibilities）は次のとおりです。</p>
+<p><strong>国別人材戦略の実行（Country Talent Strategy Execution）：</strong></p>
+<p>HRBPが定義した人事戦略上の優先課題を受け、COEの専門知識も組み合わせながら、現地の実態に即した具体的な施策の検討・実行を担います。</p>
+<ul>
+<li>HRBPが設定した優先事項に基づき、施策の検討・実行・フォローアップを担う</li>
+<li>現地の状況・ニーズを継続的に把握し、HRBPへの情報提供・提言を通じて施策の効果を高める</li>
+<li>COEの専門領域（報酬、タレント、D&amp;I等）のインプットを取り入れ、施策に反映する</li>
+<li>担当プロジェクトの進捗・成果物を責任を持って管理し、期限内に質の高いアウトプットを届ける</li>
+</ul>
+<p><strong>国内HRプログラムのデリバリーと浸透（In-Country HR Program Delivery &amp; Service）：</strong></p>
+<p>COEが設計した企業全体のHRプログラムを日本の現場に確実に届け、マネージャーと従業員がその意図を理解し日常業務の中で実践できる状態をつくります。</p>
+<ul>
+<li>主要HRプログラム（パフォーマンス管理・エンゲージメント・報酬・タレントマネジメント等）の展開・浸透・定着を推進する</li>
+<li>プログラムの趣旨・背景をマネージャーと従業員にわかりやすく伝え、理解と実践を促す</li>
+<li>展開プロセスで生じた現場の疑問・障壁・フィードバックを収集し、HRBPおよびCOEへ報告・提案する</li>
+<li>展開後も定着状況をフォローし、必要な追加サポートを提供する</li>
+</ul>
+<p><strong>マネージャーの能力強化と実践支援（Manager Capability Building &amp; Practice Support）：</strong></p>
+<p>TD&amp;Iが設計・デリバリーするリーダーシッププログラムや研修を土台とし、その学びが日本の現場で実際の行動に結びつくよう実践的なサポートを提供します。</p>
+<ul>
+<li>TD&amp;Iが提供する研修・プログラムへのマネージャーの参加を促進し、参加後の実践・定着を現場レベルで継続支援する</li>
+<li>日常業務の中でマネージャーが直面する人事課題（チームマネジメント・メンバー対応・組織変更等）に対し、具体的なアドバイスとコーチングを提供する</li>
+<li>組織変更・再編など変化の場面で、マネージャーが適切に対応・リードできるよう伴走支援を行う</li>
+<li>マネージャー対応から得られた現場の課題・傾向をHRBPおよびTD&amp;Iへのインプットとして活用する</li>
+</ul>
+<p><strong>コンプライアンス対応の連携支援（Compliance Support in Partnership with ERC &amp; Legal）：</strong></p>
+<p>労働法規・社内規程に関するコンプライアンス対応の一義的な責任はERCおよびLegalが担います。HREPは日本における現場の窓口として、ERCと連携しながらコンプライアンスの浸透と適切なエスカレーションを支援します。</p>
+<ul>
+<li>マネージャー・従業員からの労働法規・社内規程に関する問い合わせを受け付け、必要に応じてERCまたはLegalへつなぐ</li>
+<li>法改正・規程変更の際に、ERCと連携して現場への情報周知・理解促進を支援する</li>
+<li>コンプライアンス上の懸念事案をERCへ速やかにエスカレーションし、解決プロセスをサポートする</li>
+<li>ERCが実施する監査・調査活動において、日本現場の情報提供や連絡調整を担う</li>
+</ul>
+<p><strong>アドホック対応およびHRBP支援（Ad Hoc Projects &amp; HRBP Support）：</strong></p>
+<p>HRBPからの依頼や突発的な人事上の対応事項に対し機動的にサポートし、情報収集・分析を通じてHRBPの意思決定や施策推進を下支えします。</p>
+<ul>
+<li>HRBPが必要とする人事関連情報（組織データ・人員情報等）を収集・整理し、適時かつ正確に提供する</li>
+<li>特命プロジェクトや横断的な人事施策に参加し、担当スコープ内で確実に成果を出す</li>
+<li>部門横断プロジェクトにおいて、日本の現場視点からの情報・意見を積極的に発信する</li>
+<li>HRBPの提案・報告資料作成を必要に応じてサポートする</li>
+</ul>
+<p>＜Position＞</p>
+<p>HR Specialist, Experience Partner</p>
+<p>As an HR Experience Partner, you will be responsible for translating strategic HR challenges identified by the Business and HR Business Partners (HRBPs) into concrete, on-the-ground solutions — drawing on the expertise of Centers of Excellence (COEs) as needed.</p>
+<p>While HRBPs define and drive the Strategy, the HREP takes ownership of the Plan and Implementation — ensuring that HR initiatives and programs reach managers and employees in Japan and lead to meaningful action and organizational outcomes, in close collaboration with HRBPs, COEs, and HR Operations.</p>
+<p>＜Key Responsibilities＞:</p>
+<p><strong>Country Talent Strategy Execution:</strong></p>
+<p>Receive strategic HR priorities from the HRBP and drive their realization on the ground, incorporating COE expertise to deliver effective, locally relevant solutions.</p>
+<ul>
+<li>Develop, execute, and follow up on HR initiatives based on strategic priorities defined by the HRBP</li>
+<li>Continuously assess local conditions and needs, sharing insights and recommendations with the HRBP to sharpen initiative effectiveness</li>
+<li>Draw on COE expertise (e.g., Total Rewards, Talent, D&amp;I) and incorporate their input into local execution</li>
+<li>Take ownership of project deliverables, managing progress and quality through to completion</li>
+</ul>
+<p><strong>In-Country HR Program Delivery &amp; Service:</strong></p>
+<p>Ensure that enterprise and COE-designed HR programs reach employees and managers in Japan effectively — focusing on building understanding and enabling real behavioral change in day-to-day practice.</p>
+<ul>
+<li>Drive awareness, rollout, and adoption of key HR programs (e.g., performance management, engagement, compensation &amp; benefits, talent management) in Japan</li>
+<li>Communicate the intent and organizational relevance of each program to managers and employees in a clear and accessible way</li>
+<li>Collect on-the-ground feedback and barriers during rollout, and report findings and improvement suggestions to the HRBP and relevant COEs</li>
+<li>Monitor adoption post-rollout and provide additional support where needed to reinforce sustained behavior change</li>
+</ul>
+<p><strong>Manager Capability Building &amp; Practice Support:</strong></p>
+<p>Build on the foundation that TD&amp;I establishes through program design and delivery, ensuring that manager learning translates into actual practice on the ground.</p>
+<ul>
+<li>Encourage manager participation in TD&amp;I-designed programs and provide ongoing site-level support to reinforce learning after delivery</li>
+<li>Offer practical coaching and advice to managers navigating day-to-day HR challenges (e.g., team management, member development, giving feedback, handling organizational change)</li>
+<li>Walk alongside managers during periods of organizational change or restructuring, helping them understand the situation and take appropriate action</li>
+<li>Document and share patterns and challenges observed through manager interactions as input for TD&amp;I and the HRBP</li>
+</ul>
+<p><strong>Compliance Support in Partnership with ERC &amp; Legal:</strong></p>
+<p>Primary responsibility for labor law compliance rests with the ERC team and Legal. The HREP serves as the on-the-ground point of contact in Japan, supporting ERC-led processes and connecting managers and employees to the right resources.</p>
+<ul>
+<li>Receive general inquiries regarding labor laws and internal policies, and route them appropriately to ERC or Legal</li>
+<li>Support communication and awareness activities with ERC when labor laws or internal policies change</li>
+<li>Escalate compliance concerns to ERC promptly and provide support throughout the ERC-led resolution process</li>
+<li>Assist with ERC-led audit and investigation activities by providing relevant information and coordinating locally in Japan</li>
+</ul>
+<p><strong>Ad Hoc Projects &amp; HRBP Support:</strong></p>
+<p>Respond flexibly to ad hoc HR requests and provide targeted support to the HRBP in executing business-driven HR initiatives.</p>
+<ul>
+<li>Gather, organize, and analyze HR-related information (e.g., organizational data, headcount) as requested by the HRBP, ensuring timely and accurate delivery</li>
+<li>Participate in special or cross-functional projects, taking full ownership of deliverables within the assigned scope</li>
+<li>Actively contribute Japan-based perspectives and on-the-ground insights in cross-functional project settings</li>
+<li>Support the HRBP in preparing proposals, reports, and presentation materials as needed</li>
+</ul>
+<h2>資格</h2>
+<p>＜必須となる経験、資格、スキル＞</p>
+<ul>
+<li>日本語（ネイティブレベル）および英語（ビジネスレベル：グローバルチームでの議論・業務遂行が可能なレベル）</li>
+<li>人事領域における5年以上の実務経験、あるいは同等の経験</li>
+<li>マネージャー層と協働した経験</li>
+</ul>
+<p>＜あれば望ましいスキル＞</p>
+<ul>
+<li>労務または人材育成領域のいずれかにおける実務経験</li>
+<li>HRプログラムの展開・推進に関わった経験（規模・役割は問わない）</li>
+<li>グローバルチームと連携した業務経験</li>
+<li>Change Managementに関する経験</li>
+<li>人事関連領域・ビジネス専攻での学士相当（MBA専門修士であればなお望ましい）</li>
+<li>コーチング・ファシリテーションのスキル・経験</li>
+<li>HRデータの収集・整理・活用の経験（HRシステム／Workday等の使用経験があればなお望ましい）</li>
+<li>日本の労働関連法規に関する基礎的な知識（労働基準法等）</li>
+<li>その他人事に関する幅広い知識および経験</li>
+</ul>
+<p>＜Required Experience, Qualifications &amp; Skills＞</p>
+<ul>
+<li>Japanese (Native level) and English (Business level: sufficient to engage in discussions and collaborate effectively with global teams)</li>
+<li>5+ years of hands-on experience in HR-related functions, or equivalent experience</li>
+<li>Experience working collaboratively with managers or business</li>
+</ul>
+<p>＜Preferred Skills＞</p>
+<ul>
+<li>Experience in labor relations and/or talent development</li>
+<li>Experience participating in the rollout or delivery of HR programs (scope and role flexible)</li>
+<li>Experience working in collaboration with global teams</li>
+<li>Experience in Change Management</li>
+<li>Bachelor's degree or equivalent in HR-related fields or Business (MBA or relevant Master's degree is a plus)</li>
+<li>Practical experience leveraging coaching and/or facilitation skills</li>
+<li>Experience in collecting, organizing, and utilizing HR data (familiarity with HR systems such as Workday is a plus)</li>
+<li>Basic knowledge of Japanese labor laws and regulations (e.g., Labor Standards Act)</li>
+<li>Broad knowledge and experience across a range of HR-related disciplines</li>
+</ul>
+<h2>その他の情報</h2>
+<p>＜求人概要＞</p>
+<p>【想定年収】600万円 ～ 900万円 ※経験・スキルを勘案の上、決定</p>
+<p>上記は裁量勤務、固定賞与を含む想定年収</p>
+<p>【雇用会社】ウエスタンデジタルテクノロジーズ合同会社</p>
+<p>【勤務地詳細】神奈川県藤沢市桐原町1番地 （湘南台駅よりバス10分）</p>
+<p>【勤務時間】8：45～17：15 （休憩1時間）※実働7時間30分/日</p>
+<p>【諸手当】</p>
+<p>-通勤手当（上限15万円/月）</p>
+<p>※電車・バス・自家用車（ガソリン代支給）通勤可</p>
+<p>-入社に伴い転居が必要な方に対する手当※社内規定による</p>
+<p>引越手当（独身者/単身者：450,000円、家族帯同：750,000円）</p>
+<p>家賃補助（最長入社から6年間）</p>
+<p>【昇給】あり</p>
+<p>【賞与】年2回 (インセンティブボーナス) および固定賞与（レベル別定額）</p>
+<p>【休日休暇】</p>
+<p>-完全週休2日制（土日）、祝日、年末年始、夏季休暇、GW休暇</p>
+<p>-年間休日 126日（2025年実績）</p>
+<p>-休暇制度（有給、傷病、慶弔、リフレッシュ、介護、出産 他）</p>
+<p>※有給休暇：初年度は入社月によって2日－24日付与(翌年1月より24日付与)</p>
+<p>※傷病休暇：風邪・病気や怪我の際に使用でき、年間5日付与</p>
+<p>【各種保険】</p>
+<p>健康保険(健康保険組合)、厚生年金、雇用保険、労災保険</p>
+<p>【福利厚生】</p>
+<p>退職金・年金制度（退職一時金、確定給付企業年金、確定拠出年金：401K）、</p>
+<p>財形貯蓄制度、自社株購入制度、弔慰金・祝金・見舞金、制度保険（団体生命</p>
+<p>・団体医療保険）</p>
+<p>【試用期間】あり（入社後3ヶ月）</p>
+<p>【選考フロー】</p>
+<p>書類選考（履歴書、職務経歴書）→ 面接2～3回(対面・オンライン)</p>
+<p>※応募書類: 履歴書・職務経歴書(いずれも日本語)、及び、英語レジュメ</p>
+<p>※日本語、英語による面接</p>
+<p>WD thrives on the power and potential of diversity. As a global company, we believe the most effective way to embrace the diversity of our customers and communities is to mirror it from within. We believe the fusion of various perspectives results in the best outcomes for our employees, our company, our customers, and the world around us. We are committed to an inclusive environment where every individual can thrive through a sense of belonging, respect and contribution.</p>
+<p>WD is committed to offering opportunities to applicants with disabilities and ensuring all candidates can successfully navigate our careers website and our hiring process. Please contact us at jobs.accommodations@wdc.com to advise us of your accommodation request. In your email, please include a description of the specific accommodation you are requesting as well as the job title and requisition number of the position for which you are applying.</p>
+<p><strong>Notice To Candidates:</strong> Please be aware that WD and its subsidiaries will never request payment as a condition for applying for a position or receiving an offer of employment. Should you encounter any such requests, please report it immediately to WD Ethics Helpline or email compliance@wdc.com.</p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://api.smartrecruiters.com/v1/companies/WesternDigital/postings/744000147883984"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on Western Digital &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

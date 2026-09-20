@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Senior Security Operations Engineer - 1 year Fixed Term &mdash; League | Open Indeed</title>
+  <meta name="description" content="Senior Security Operations Engineer - 1 year Fixed Term at League in Toronto, ON.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">Senior Security Operations Engineer - 1 year Fixed Term</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">League</strong> &bull;
+          <span>Toronto, ON</span> &bull;
+          
+          <span>2026-09-10</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://job-boards.greenhouse.io/leagueinc/jobs/6188542004"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on League &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>Senior Security Operations Engineer - 1 year Fixed Term</h1>
+<ul>
+<li><strong>Company</strong>: League</li>
+<li><strong>Requisition ID</strong>: <code>6188542004</code></li>
+<li><strong>Location</strong>: Toronto, ON</li>
+<li><strong>Official Posting</strong>: <a href="https://job-boards.greenhouse.io/leagueinc/jobs/6188542004">Apply on League Careers</a></li>
+</ul>
+<h2>Job Description</h2>
+<p><strong>About League</strong></p>
+<p>League is one of the fastest-growing technology companies in Canada and the leading healthcare experience platform. Getting healthcare is often the easy part — finishing it is where things fall apart: people book the appointment and skip the follow-up, fill the prescription and stop taking it, get the referral and never make the call. That gap costs health plans and health systems money, and it costs people their health. League closes that gap — identifying what each person needs to do next, clearing what’s in their way, and getting it done, for the 70 million+ people whose care already runs through our platform. Health plans and health systems trust us to do this at scale. Organizations like Manulife, SCAN, Geisinger, and Medibank on the payer side, and Baptist and Shoppers Drug Mart on the provider side.</p>
+<p><strong>Position Summary (One year Fixed Term)</strong></p>
+<p>League’s Security Engineering teams are responsible for scaling security in the development lifecycle and managing security incident management. We believe in security by design and follow a paved road philosophy by building or buying tools that we can integrate into our platform to ultimately make it easier for our engineers to do the right thing. As a Senior SecOps Engineer you will care deeply about “what goes bump in the night”. You have peers in Security Engineering who care about “build it secure” at League, your role is to ensure both validation and response occurs when inevitable challenges arise. This role will focus on detection, response, tuning, and refinement. Security Engineers and Analysts on our SecOps team take pride in response.</p>
+<p>As always, if this is your skillset we encourage you to apply. We also accept and encourage applicants who have existing software engineering experience and want to explore security and applicants who may have done a security program in a post-secondary institution. There are people across the engineering organization who are ready to help grow technical skills and who want to learn more about security.</p>
+<p><strong>About the Role</strong></p>
+<ul>
+<li><p><strong>Security Monitoring and Incident Response:</strong></p>
+</li>
+<li><p>Manage and maintain security tools and technologies, such as CrowdStrike NG SIEM, EDR, Falcon Complete, Wiz Defend and Netskope SASE</p>
+</li>
+<li><p>Develop and implement automation scripts and workflows to improve security operations efficiency and effectiveness</p>
+</li>
+<li><p>Demonstrated ability to leverage GCP services (e.g., Cloud Functions, Cloud Run) to host and automate security scripts and tools for event enrichment and response</p>
+</li>
+<li><p>Proficiency in utilizing GCP services like Pub/Sub, Dataflow,  BigQuery, and Cloud Storage for data processing, analysis, and enrichment</p>
+</li>
+<li><p>Evaluate and recommend new security tools and technologies to enhance our security posture</p>
+</li>
+<li><p>Direct hands-on experience integrating Claude or OpenAI models into security workflows (e.g., incident summarization, IOC enrichment, case triage)</p>
+</li>
+<li><p><strong>Security Tooling and Automation:</strong></p>
+</li>
+<li><p>Manage and maintain security tools and technologies, such as SIEM, EDR, and SASE platforms.</p>
+</li>
+<li><p>Develop and implement automation scripts and workflows to improve security operations efficiency and effectiveness.</p>
+</li>
+<li><p>Demonstrated ability to leverage GCP services (e.g., Cloud Functions, Cloud Run) to host and automate security scripts and tools for event enrichment and response.</p>
+</li>
+<li><p>Proficiency in utilizing GCP services like Pub/Sub, Dataflow,  BigQuery, and Cloud Storage for data processing, analysis, and enrichment.</p>
+</li>
+<li><p>Evaluate and recommend new security tools and technologies to enhance our security posture.</p>
+</li>
+<li><p>Manage and maintain infrastructure through Terraform.</p>
+</li>
+<li><p><strong>Threat Management:</strong></p>
+</li>
+<li><p>Conduct threat research and analysis to identify emerging threats and vulnerabilities.</p>
+</li>
+<li><p>Develop and implement threat detection rules and use cases.</p>
+</li>
+<li><p><strong>Security Engineering and Architecture:</strong></p>
+</li>
+<li><p>Contribute to the design and implementation of security systems architectures and solutions.</p>
+</li>
+<li><p>Evaluate and recommend security controls for new and existing systems.</p>
+</li>
+<li><p>Ensure security best practices are followed in system development and implementation.</p>
+</li>
+<li><p><strong>Collaboration and Communication:</strong></p>
+</li>
+<li><p>Collaborate with other teams to ensure security is integrated into all aspects of the organization's operations.</p>
+</li>
+<li><p>Communicate security risks and issues to technical and non-technical audiences, including leadership.</p>
+</li>
+<li><p>Mentors and provides guidance to junior security analysts and engineers to develop their technical growth.</p>
+</li>
+<li><p><strong>Compliance and Reporting:</strong></p>
+</li>
+<li><p>Ensure compliance with relevant security standards and regulations (e.g., HITRUST, NIST, GDPR).</p>
+</li>
+<li><p>Prepare and present security reports to management.</p>
+</li>
+<li><p>Participate in routine audits within the organization</p>
+</li>
+</ul>
+<p><strong>About You</strong></p>
+<ul>
+<li><p>Bachelor of Science degree (BS) in Computer Science (or a related field)</p>
+</li>
+<li><p>Minimum of 7 years in Cybersecurity with a strong focus on Incident Response</p>
+</li>
+<li><p>Minimum of 3 years in Security Operations with hands-on experience in SOAR and other automation tools</p>
+</li>
+<li><p>Deep and broad  technical understanding of security concepts, principles, and technologies</p>
+</li>
+<li><p>Advanced knowledge of Security Operations tools (e.g., CrowdStrike NG SIEM, EDR, Falcon Complete, Netskope, Wiz Defend), including configuration and administration of these tools</p>
+</li>
+<li><p>Proven leading and coordinating incident response processes and methodologies</p>
+</li>
+<li><p>Proficiency in scripting languages (e.g., Python, Go)</p>
+</li>
+<li><p>Experience building or integrating LLM-based agents/copilots into SIEM, SOAR, or EDR workflows (e.g., incident summarization, IOC enrichment, case triage)</p>
+</li>
+<li><p>Experience with threat intelligence platforms and implementing these in security operations</p>
+</li>
+<li><p>Strong analytical and problem-solving skills</p>
+</li>
+<li><p>You are a collaborator at your core</p>
+</li>
+<li><p>Excellent communication and interpersonal skills.</p>
+</li>
+</ul>
+<p><strong>Nice to Haves</strong></p>
+<ul>
+<li><p>Security certifications (e.g., OffSec Certifications, GIAC Certifications).</p>
+</li>
+<li><p>Experience with digital forensics</p>
+</li>
+<li><p>Experience with cloud security (AWS, Azure, GCP).</p>
+</li>
+<li><p>Experience with Security Orchestration,Automation and Response (SOAR).</p>
+</li>
+<li><p>Knowledge of networking protocols and security.</p>
+</li>
+<li><p>Contributions to the security community at League, and more broadly (eg. blog posts, conference presentations, etc.)</p>
+</li>
+</ul>
+<p><strong>AI Fluency &amp; Ways of Working</strong></p>
+<p>At League, we are an <strong>AI-native organization</strong>. We expect all employees regardless of role or level to thoughtfully leverage AI to improve the quality, speed, and impact of their work.</p>
+<p><strong>What this means in practice:</strong></p>
+<ul>
+<li><p><strong>Use AI tools as part of your daily workflow</strong> to enhance productivity, problem-solving, and decision-making (e.g., drafting, analysis, coding, research, or process automation)</p>
+</li>
+<li><p><strong>Apply judgment and accountability</strong> when using AI by reviewing outputs for accuracy, bias, and quality before use</p>
+</li>
+<li><p><strong>Continuously learn and adapt</strong> as new AI tools and capabilities emerge, incorporating them into your ways of working</p>
+</li>
+<li><p><strong>Identify opportunities to improve how work gets done</strong>from personal productivity to team-level workflows by leveraging AI effectively</p>
+</li>
+<li><p><strong>Operate with strong data responsibility and security awareness</strong>, especially when working with sensitive or regulated information</p>
+</li>
+</ul>
+<p><strong>How this scales by level:</strong></p>
+<ul>
+<li><p><strong>Individual Contributors:</strong> Use AI to improve personal productivity and quality of output</p>
+</li>
+<li><p><strong>Senior ICs / Managers:</strong> Integrate AI into team workflows and improve processes</p>
+</li>
+<li><p><strong>Leaders:</strong> Drive AI adoption at the organizational level and shape how work is done across teams</p>
+</li>
+</ul>
+<p><strong>What we look for:</strong></p>
+<ul>
+<li><p>Demonstrated experience using AI tools in a practical, responsible way</p>
+</li>
+<li><p>Curiosity and openness to experimenting with new technologies</p>
+</li>
+<li><p>Ability to balance efficiency with quality and sound judgment</p>
+</li>
+</ul>
+<p><strong>Security-Related Responsibilities</strong></p>
+<ul>
+<li><p>Compliance with Information Security Policies</p>
+</li>
+<li><p>Compliance with League’s secure coding practice</p>
+</li>
+<li><p>Responsibility and accountability for executing League's policies and procedures</p>
+</li>
+<li><p>Notification of HR, Legal, Compliance &amp; Security of any incidents, breaches or policy violations</p>
+</li>
+</ul>
+<p><em><strong>CANADA APPLICANTS ONLY:</strong> The Canada-specific compensation range below for this full-time position is exclusive of bonus, equity and benefits. This range reflects the minimum and maximum target for base salaries for the position across all Canadian locations. The salary range is intentional to account for the performance and career progressions a Leaguer will experience in the role throughout their time at League. Where in the band you may land is determined by job-related skills/experience. Your recruiter can share more about the specific salary range specific to your skills and experience during the hiring process.</em></p>
+<p>Compensation range for Canada applicants only$130,600—$170,000 CAD</p>
+<p><strong>AI Fluency &amp; Ways of Working</strong></p>
+<p>At League, we are an <strong>AI-native organization</strong>. We expect all employees regardless of role or level to thoughtfully leverage AI to improve the quality, speed, and impact of their work.</p>
+<p><strong>What this means in practice:</strong></p>
+<ul>
+<li><p><strong>Use AI tools as part of your daily workflow</strong> to enhance productivity, problem-solving, and decision-making (e.g., drafting, analysis, coding, research, or process automation)</p>
+</li>
+<li><p><strong>Apply judgment and accountability</strong> when using AI by reviewing outputs for accuracy, bias, and quality before use</p>
+</li>
+<li><p><strong>Continuously learn and adapt</strong> as new AI tools and capabilities emerge, incorporating them into your ways of working</p>
+</li>
+<li><p><strong>Identify opportunities to improve how work gets done</strong>from personal productivity to team-level workflows by leveraging AI effectively</p>
+</li>
+<li><p><strong>Operate with strong data responsibility and security awareness</strong>, especially when working with sensitive or regulated information</p>
+</li>
+</ul>
+<p><strong>How this scales by level:</strong></p>
+<ul>
+<li><p><strong>Individual Contributors:</strong> Use AI to improve personal productivity and quality of output</p>
+</li>
+<li><p><strong>Senior ICs / Managers:</strong> Integrate AI into team workflows and improve processes</p>
+</li>
+<li><p><strong>Leaders:</strong> Drive AI adoption at the organizational level and shape how work is done across teams</p>
+</li>
+</ul>
+<p><strong>What we look for:</strong></p>
+<ul>
+<li><p>Demonstrated experience using AI tools in a practical, responsible way</p>
+</li>
+<li><p>Curiosity and openness to experimenting with new technologies</p>
+</li>
+<li><p>Ability to balance efficiency with quality and sound judgment</p>
+</li>
+</ul>
+<p>Our employees come from different backgrounds, and we celebrate those differences. We are looking for the best candidates for our open roles, but do not expect applicants to meet every qualification in order to be considered. If you are excited about what you could accomplish at League and believe you can add value to our team, we would love to hear from you.</p>
+<p>We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. If you are an individual in need of assistance at any time during our recruitment process, please contact us at <a href="mailto:recruitinginfo@league.com">recruitinginfo@league.com</a>.</p>
+<p><strong>Our Application Process:</strong></p>
+<p>Applying to a role you love can be exhausting, and understanding the next steps can feel vague and uncertain. You have done the hard part of submitting your application; let's do ours by sharing potential next steps</p>
+<ul>
+<li><p>You should receive a confirmation email after submitting your application.</p>
+</li>
+<li><p>A recruiter (not a computer) reviews all applications at League.</p>
+</li>
+<li><p>If we see alignment with League's needs, a recruiter will reach out to learn more about your goals. The recruiter will also share the team-specific interview process depending on the roles you are exploring.</p>
+</li>
+<li><p>The final step is an offer, which we hope you will accept!</p>
+</li>
+<li><p>Prior to joining us, we conduct reference and background checks. Additional checks could be required for US Candidates, depending on the role you are exploring.</p>
+</li>
+</ul>
+<p>Here are some additional resources to learn more about League:</p>
+<ul>
+<li><p><a href="https://league.com/about/?utm_medium=job+posting">Learn about our platform, leadership team and partners</a></p>
+</li>
+<li><p><a href="https://league.com/newsroom/highmark-google-cloud-digital-front-door-health-experience/?utm_medium=job+posting">Highmark Health, Google Cloud, League: new digital front door to seamless care</a></p>
+</li>
+<li><p><a href="https://league.com/newsroom/michael-butler-leighanne-levensaler-join-board-of-directors/?utm_medium=job+posting">Former Providence President and Workday EVP of Corporate Strategy join League Board of Directors</a></p>
+</li>
+<li><p><a href="https://league.com/newsroom/league-raises-95-million-to-build-worlds-leading-health-os-platform/?utm_medium=job+posting">League raises $95 million USD in Series C to build world’s leading healthcare CX platform</a></p>
+</li>
+<li><p><a href="https://www.forbes.com/sites/forbestechcouncil/2022/06/08/the-platformization-of-healthcare-is-here/?sh=6790a07f145a">Forbes x League: The Platformization Of Healthcare Is Here</a></p>
+</li>
+<li><p><a href="https://www.fastcompany.com/90795794/if-we-want-better-innovations-in-healthtech-we-need-more-competition">Fast Company x League: If we want better innovations in healthtech, we need more competition</a></p>
+</li>
+</ul>
+<p><strong>Work Location:</strong></p>
+<p>We have a mix of office-centric roles based in our vibrant Toronto office, and remote-eligible roles based anywhere in Canada or US. Each job posting will indicate where the role will be based. Regardless of the role’s posted location, all Toronto-area Leaguers (living within 65 km of our downtown HQ) collaborate in-office Monday through Thursday. Depending on your distance to the office, you’ll enjoy 10 or 20 Flexible Remote Days each quarter for focus and deep-work time. We are committed to fostering a meaningful work environment and connections for all Leaguers regardless of location.</p>
+<p><strong>Recognize and Avoid Employment scams. Practice safe job searching.</strong></p>
+<p>Scammers are getting craftier and leveraging fake job postings to get personal information. Know the warning signs and protect yourself from scammers. Learn more <a href="https://go.league.com/phishing-guidelines">here</a>.</p>
+<p><strong>Use of AI Notice</strong>
+We are committed to ensuring fairness and transparency throughout our hiring process. League may use Artificial Intelligence (AI) tools to assist in the screening of applicants for this position. Please check out our stance on using AI in recruitment <a href="https://league.com/ai-policy-hiring/">here</a>.</p>
+<p><strong>Privacy Policy</strong>
+Review our <a href="https://league.com/applicant-privacy-notice/">Privacy Policy</a> for information on how League is protecting personal data.</p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://job-boards.greenhouse.io/leagueinc/jobs/6188542004"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on League &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

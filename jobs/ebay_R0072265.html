@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>チケット事業開発・運営担当 &mdash; eBay | Open Indeed</title>
+  <meta name="description" content="チケット事業開発・運営担当 at eBay in Tokyo.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">チケット事業開発・運営担当</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">eBay</strong> &bull;
+          <span>Tokyo</span> &bull;
+          
+          <span>2026-08-19</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://ebay.wd5.myworkdayjobs.com/en-US/apply/job/Tokyo/-_R0072265"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on eBay &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>チケット事業開発・運営担当</h1>
+<ul>
+<li><strong>Company</strong>: eBay</li>
+<li><strong>Requisition ID</strong>: <code>R0072265</code></li>
+<li><strong>Location</strong>: Tokyo</li>
+<li><strong>Official Posting</strong>: <a href="https://ebay.wd5.myworkdayjobs.com/en-US/apply/job/Tokyo/-_R0072265">Apply on eBay Careers</a></li>
+<li><strong>Time Type</strong>: Full time</li>
+<li><strong>Posted Date</strong>: Posted 30+ Days Ago</li>
+</ul>
+<h2>Job Description</h2>
+<p>At eBay, we're more than a global ecommerce leader — we’re changing the way the world shops and sells. Our platform empowers millions of buyers and sellers in more than 190 markets around the world. We’re committed to pushing boundaries and leaving our mark as we reinvent the future of ecommerce for enthusiasts.</p>
+<p>Our customers are our compass, authenticity thrives, bold ideas are welcome, and everyone can bring their unique selves to work — every day. We're in this together, sustaining the future of our customers, our company, and our planet.</p>
+<p>Join a team of passionate thinkers, innovators, and dreamers — and help us connect people and build communities to create economic opportunity for all.</p>
+<p><strong>Business Development Manager, Ticketing Business</strong></p>
+<p><strong>Entertainment Marketing Team | eBay Japan (Qoo10)</strong></p>
+<p><strong>1. Company Overview</strong></p>
+<p>eBay Japan is the Japanese subsidiary of eBay, one of the world's largest online marketplaces headquartered in Silicon Valley, California.</p>
+<p>In Japan, eBay Japan operates Qoo10, a leading e-commerce platform highly popular among Gen Z consumers and recognized as a trendsetter in beauty and lifestyle shopping.</p>
+<p>Culture and entertainment are key components of the lifestyle experiences that Qoo10 delivers. Through its entertainment business, Qoo10 aims to create new value in Japan's rapidly evolving entertainment market by connecting online and offline experiences, including concerts, fan meetings, exhibitions, sporting events, and other live entertainment offerings.</p>
+<p><strong>2. Position Background</strong></p>
+<p>To support the continued growth and expansion of Qoo10's Entertainment Business, we are seeking a highly motivated business development professional to lead the growth of our ticketing business.</p>
+<p>This role will be responsible for developing and operating the ticketing business in Japan, including identifying and acquiring new partners, securing ticket inventory, developing ticket-related products, and driving sales operations.</p>
+<p>This is a hands-on business development role that requires not only strategic planning but also direct execution, including business development, partnership management, contract negotiations, and commercial operations.</p>
+<p><strong>3. Position Summary</strong></p>
+<p>Department: Entertainment Marketing, eBay Japan (Qoo10)</p>
+<p>Role: Business Development &amp; Operations Manager – Ticketing Business</p>
+<p>This position will lead the development and operation of Qoo10 Japan's ticketing business by identifying ticket sales opportunities, acquiring ticket inventory, establishing strategic partnerships, and driving revenue growth.</p>
+<p><strong>4. Key Responsibilities</strong></p>
+<ul>
+<li><p>Business Development &amp; New Partner Acquisition</p>
+</li>
+<li><p>Drive customer acquisition initiatives within Japan's entertainment market.</p>
+</li>
+<li><p>Identify, approach, and establish partnerships with talent agencies, record labels, concert promoters, event organizers, and other entertainment stakeholders.</p>
+</li>
+<li><p>Source and secure ticket sales opportunities.</p>
+</li>
+<li><p>Develop strategic alliances to accelerate business growth and revenue expansion.</p>
+</li>
+</ul>
+<p>-Ticket Product Development &amp; Sales Operations</p>
+<ul>
+<li>Identify and onboard ticket inventory for concerts, fan meetings, sporting events, exhibitions, and other entertainment experiences.</li>
+<li>Negotiate and secure exclusive sales rights and pre-sale opportunities.</li>
+<li>Lead commercial negotiations and contract execution with partners.</li>
+<li>Develop and manage ticket sales plans and operational processes.</li>
+<li>Analyze sales performance and implement optimization strategies to maximize results.</li>
+</ul>
+<p>-Entertainment Partnership Development</p>
+<ul>
+<li>Build and maintain strong relationships with entertainment agencies, labels, promoters, and event organizers.</li>
+<li>Identify emerging entertainment content, intellectual property (IP), and business opportunities.</li>
+<li>Collaborate with partners to develop exclusive Qoo10 offerings and experiences.</li>
+<li>Expand Qoo10's entertainment ecosystem and market presence in Japan.</li>
+</ul>
+<p><strong>5. Qualifications (Must Have)</strong>
+<strong>Experience</strong></p>
+<p>Minimum 5 years of professional experience in one or more of the following areas:</p>
+<p>-Business development, sales, or new business acquisition
+-Development, sales, or operations of ticketing products or entertainment-related services
+-Business operations within e-commerce or digital platform environments
+-Partnership development within the entertainment industry</p>
+<p>-Experience focused on the Japanese market is strongly preferred.</p>
+<p><strong>Industry Background</strong></p>
+<p>Experience in one or more of the following industries:</p>
+<p>-Ticketing platforms or ticketing service providers
+-Entertainment companies
+-Concert, live event, or event management companies
+-E-commerce platforms
+-Digital service companies</p>
+<p><strong>Skills</strong>
+-Strong understanding of Japan's entertainment industry and market dynamics
+-Proven track record in business development and partnership acquisition
+-Strong negotiation, relationship-building, and alliance management skills
+-Demonstrated ability to drive business growth and achieve revenue targets</p>
+<p><strong>Language</strong>
+-Native-level Japanese proficiency (required)</p>
+<p><strong>Academic Background</strong></p>
+<p>-University graduate and above</p>
+<p><strong>6. Preferred Qualifications (Nice to Have)</strong>
+-Established network within talent agencies, concert promoters, event organizers, or entertainment companies
+-Experience securing ticketing rights or exclusive ticket inventory
+-Experience leading or managing an entertainment-related business unit
+-Experience operating ticketing businesses within an e-commerce platform
+-Korean language proficiency (business or conversational level)</p>
+<p><strong>7. Employment Conditions</strong></p>
+<p>-Employment Type: Full-time, Permanent</p>
+<p>-Location: Tokyo, Japan (Head Office)</p>
+<p>-Working Hours: 8 hours per day with flexible working arrangements</p>
+<p>-Days Off: Two-day weekend system (Saturday and Sunday), plus company holidays, Available to work on weekends and public holidays when required for events</p>
+<p>-Compensation: Competitive salary commensurate with experience and qualifications</p>
+<p>-Compensation: Determined based on experience and skills</p>
+<h1>1. 事業概要</h1>
+<p>eBay Japanは、米国シリコンバレーに本社を置く世界最大級のマーケットプレイス「eBay」の日本法人です。日本国内では、Z世代を中心に支持されるショッピングモール「Qoo10」を運営し、日本のビューティーおよびライフスタイルをリードしています。</p>
+<p>文化・エンターテインメントは、Qoo10が提供するライフスタイル体験の重要な要素の一つです。Qoo10は、日本国内のコンサート、ファンミーティング、展示会、スポーツイベントなど、オンラインとオフラインをつなぐエンターテインメント市場において、新たな価値を創出するプラットフォームを目指しています。</p>
+<h1>2. 募集背景</h1>
+<p>Qoo10エンターテインメント事業のさらなる成長および市場シェア拡大に向け、チケット事業の拡大を担う事業開発人材を募集します。</p>
+<p>本ポジションでは、日本国内におけるチケット事業の開発および運営を担当し、新規パートナー開拓、チケット商品の獲得・開発、販売運営を自ら推進していただきます。</p>
+<p>戦略立案や企画業務だけでなく、営業活動、パートナーシップ構築、契約交渉、販売運営まで一貫して担当する実行型ポジションです。</p>
+<h1>3. ポジション概要</h1>
+<p>所属：eBay Japan（Qoo10運営会社） Entertainment Marketing部門</p>
+<p>役割：Qoo10 Japanにおけるチケット事業の事業開発および運営全般</p>
+<p>チケット販売パートナーの開拓、商品獲得、販売運営を自ら推進し、事業成長および売上拡大を担うポジション</p>
+<h1>4. 主な業務内容</h1>
+<p>■ 新規顧客獲得および事業開発</p>
+<ul>
+<li><p>日本国内のエンターテインメント市場における新規顧客獲得施策の実行</p>
+</li>
+<li><p>芸能事務所、レコード会社、プロモーター、イベント主催者等との新規パートナー開拓</p>
+</li>
+<li><p>チケット販売機会の発掘および営業活動</p>
+</li>
+<li><p>売上拡大に向けたアライアンス推進</p>
+</li>
+</ul>
+<p>■ チケット商品開発および販売運営</p>
+<ul>
+<li><p>コンサート、ファンミーティング、スポーツ、展示会等のチケット商品の発掘および導入</p>
+</li>
+<li><p>独占販売権および先行販売権の獲得</p>
+</li>
+<li><p>パートナー企業との条件交渉および契約推進</p>
+</li>
+<li><p>チケット販売計画の立案および運営</p>
+</li>
+<li><p>販売実績分析および改善施策の実行</p>
+</li>
+</ul>
+<p>■ エンターテインメントパートナーシップ推進</p>
+<ul>
+<li><p>芸能事務所、レーベル、プロモーター、イベント主催者との関係構築</p>
+</li>
+<li><p>新規コンテンツおよびIPの発掘</p>
+</li>
+<li><p>Qoo10独自商品の共同開発</p>
+</li>
+<li><p>日本国内におけるエンターテインメント事業機会の開拓</p>
+</li>
+</ul>
+<h1>5. 必須要件（Must Have）</h1>
+<p>■ 経験</p>
+<p>以下いずれかの領域において5年以上の実務経験を有する方</p>
+<ul>
+<li><p>新規顧客開拓、営業、事業開発経験</p>
+</li>
+<li><p>チケットまたはエンターテインメント関連商品の開発・販売・運営経験</p>
+</li>
+<li><p>ECまたはデジタルプラットフォームにおける事業運営経験</p>
+</li>
+<li><p>エンターテインメント業界におけるパートナーシップ開発経験</p>
+</li>
+</ul>
+<p>※日本国内市場を対象とした実務経験を重視します。</p>
+<p>■ 業界経験</p>
+<p>以下いずれかの業界における実務経験</p>
+<ul>
+<li><p>チケットサービス企業</p>
+</li>
+<li><p>エンターテインメント企業</p>
+</li>
+<li><p>コンサート・イベント事業会社</p>
+</li>
+<li><p>ECプラットフォーム企業</p>
+</li>
+<li><p>デジタルサービス企業</p>
+</li>
+</ul>
+<p>■ スキル</p>
+<ul>
+<li><p>日本国内エンターテインメント市場に対する深い理解</p>
+</li>
+<li><p>パートナー開拓および営業活動の実務経験</p>
+</li>
+<li><p>契約交渉およびアライアンス推進能力</p>
+</li>
+<li><p>売上目標達成に向けた事業推進能力</p>
+</li>
+</ul>
+<p>■ 言語</p>
+<ul>
+<li>日本語：ネイティブレベル必須</li>
+</ul>
+<p>■ 学歴</p>
+<ul>
+<li>大卒以上</li>
+</ul>
+<h1>6. 歓迎要件（Nice to Have）</h1>
+<ul>
+<li><p>芸能事務所、プロモーター、イベント主催者とのネットワーク保有</p>
+</li>
+<li><p>チケット販売権獲得経験</p>
+</li>
+<li><p>エンターテインメント事業における事業責任者経験</p>
+</li>
+<li><p>ECプラットフォームにおけるチケット事業経験</p>
+</li>
+<li><p>韓国語（日常会話レベル以上）</p>
+</li>
+</ul>
+<h1>7. 勤務条件</h1>
+<p>雇用形態：正社員</p>
+<p>勤務地：東京都内（本社）</p>
+<p>勤務時間：1日8時間（時差出勤制度あり）</p>
+<p>休日：完全週休2日制、イベント開催時の週末・祝日に勤務が可能なこと</p>
+<p>給与：経験・能力を考慮のうえ決定</p>
+<p>【직무기술서】티켓 사업 개발·운영 담당(티켓 사업 개발 매니저)</p>
+<h1>1. 사업 개요</h1>
+<p>eBay Japan은 미국 실리콘밸리에 본사를 둔 세계 최대급 마켓플레이스 'eBay'의 일본 법인입니다. 일본 국내에서는 Z세대를 중심으로 지지를 받는 쇼핑몰 'Qoo10'을 운영하며, 일본의 뷰티 및 라이프스타일을 선도하고 있습니다.</p>
+<p>문화·엔터테인먼트는 Qoo10이 제공하는 라이프스타일 체험의 중요한 요소 중 하나입니다. Qoo10은 일본 국내의 콘서트, 팬미팅, 전시회, 스포츠 이벤트 등 온라인과 오프라인을 연결하는 엔터테인먼트 시장에서 새로운 가치를 창출하는 플랫폼을 목표로 하고 있습니다.</p>
+<h1>2. 모집 배경</h1>
+<p>Qoo10 엔터테인먼트 사업의 더욱 성장과 시장 점유율 확대를 위해 티켓 사업의 확장을 담당할 사업 개발 인재를 모집합니다.</p>
+<p>본 포지션에서는 일본 국내에서 티켓 사업의 개발 및 운영을 담당하시며, 신규 파트너 개척, 티켓 상품의 획득·개발, 판매 운영을 직접 추진해 주시게 됩니다.</p>
+<p>전략 수립과 기획 업무뿐만 아니라 영업 활동, 파트너십 구축, 계약 협상, 판매 운영까지 일관되게 담당하는 실행형 포지션입니다.</p>
+<h1>3. 포지션 개요</h1>
+<p>소속: eBay Japan(Qoo10 운영 회사) Entertainment Marketing部門</p>
+<p>역할: Qoo10 Japan에서의 티켓 사업의 사업 개발 및 운영 전반</p>
+<p>티켓 판매 파트너 개척, 상품 확보, 판매 운영을 스스로 추진하며 사업 성장 및 매출 확대를 담당하는 포지션</p>
+<h1>4. 주요 업무 내용</h1>
+<p>■ 신규 고객 확보 및 사업 개발</p>
+<ul>
+<li><p>일본 국내 엔터테인먼트 시장에서 신규 고객 확보 전략의 실행</p>
+</li>
+<li><p>연예 기획사, 음반사, 프로모터, 이벤트 주최자 등과의 신규 파트너 개척</p>
+</li>
+<li><p>티켓 판매 기회 발굴 및 영업 활동</p>
+</li>
+<li><p>매출 확대를 위한 제휴 추진</p>
+</li>
+</ul>
+<p>■ 티켓 상품 개발 및 판매 운영</p>
+<ul>
+<li><p>콘서트, 팬미팅, 스포츠, 전시회 등의 티켓 상품 발굴 및 도입</p>
+</li>
+<li><p>독점 판매권 및 선행 판매권 획득</p>
+</li>
+<li><p>파트너 기업과의 조건 협상 및 계약 추진</p>
+</li>
+<li><p>티켓 판매 계획의 수립 및 운영</p>
+</li>
+<li><p>판매 실적 분석 및 개선 대책 실행</p>
+</li>
+</ul>
+<p>■ 엔터테인먼트 파트너십 추진</p>
+<ul>
+<li><p>연예 기획사, 레이블, 프로모터, 이벤트 주최자와의 관계 구축</p>
+</li>
+<li><p>신규 콘텐츠 및 IP 발굴</p>
+</li>
+<li><p>Qoo10 독자 상품 공동 개발</p>
+</li>
+<li><p>일본 국내에서의 엔터테인먼트 사업 기회의 개척</p>
+</li>
+</ul>
+<h1>5. 필수 요건 (Must Have)</h1>
+<p>■ 경험</p>
+<p>다음 중 어느 한 분야에서 5년 이상의 실무 경험이 있는 분</p>
+<ul>
+<li><p>신규 고객 개척, 영업, 사업 개발 경험</p>
+</li>
+<li><p>티켓 또는 엔터테인먼트 관련 상품의 개발·판매·운영 경험</p>
+</li>
+<li><p>EC 또는 디지털 플랫폼에서의 사업 운영 경험</p>
+</li>
+<li><p>엔터테인먼트 업계에서의 파트너십 개발 경험</p>
+</li>
+</ul>
+<p>※일본 국내 시장을 대상으로 한 실무 경험을 중시합니다.</p>
+<p>■ 업계 경험</p>
+<p>다음 중 어느 한 업계에서의 실무 경험</p>
+<ul>
+<li><p>티켓 서비스 기업</p>
+</li>
+<li><p>엔터테인먼트 기업</p>
+</li>
+<li><p>콘서트·이벤트 사업 회사</p>
+</li>
+<li><p>EC 플랫폼 기업</p>
+</li>
+<li><p>디지털 서비스 기업</p>
+</li>
+</ul>
+<p>■ 스킬</p>
+<ul>
+<li><p>일본 국내 엔터테인먼트 시장에 대한 깊은 이해</p>
+</li>
+<li><p>파트너 개척 및 영업 활동 실무 경험</p>
+</li>
+<li><p>계약 협상 및 얼라이언스 추진 능력</p>
+</li>
+<li><p>매출 목표 달성을 위한 사업 추진 능력</p>
+</li>
+</ul>
+<p>■ 언어</p>
+<ul>
+<li>일본어: 원어민 수준 필수</li>
+</ul>
+<h1>6. 환영 요건 (Nice to Have)</h1>
+<ul>
+<li><p>연예 기획사, 프로모터, 이벤트 주최자와의 네트워크 보유</p>
+</li>
+<li><p>티켓 판매권 획득 경험</p>
+</li>
+<li><p>엔터테인먼트 사업에서의 사업 책임자 경험</p>
+</li>
+<li><p>EC 플랫폼에서의 티켓 사업 경험</p>
+</li>
+<li><p>한국어(일상 회화 수준 이상)</p>
+</li>
+</ul>
+<h1>7. 근무 조건</h1>
+<p>고용 형태: 정규직</p>
+<p>근무지: 도쿄도 내 (본사)</p>
+<p>근무 시간: 1일 8시간 (플렉스타임 제도 있음)</p>
+<p>휴일: 완전 주 2일 휴무제</p>
+<p>급여: 경력 및 능력을 고려하여 결정</p>
+<p>이 내용을 영어로 작성</p>
+<p><strong>Additional Details</strong></p>
+<p>eBay is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, national origin, sex, sexual orientation, gender identity, veteran status, and disability, or other legally protected status. If you have a need that requires accommodation, please contact us at talent@ebay.com. We will make every effort to respond to your request for accommodation as soon as possible. View our accessibility statement to learn more about eBay's commitment to ensuring digital accessibility for people with disabilities.</p>
+<p>We use cookies to enhance your experience and may use AI tools for administrative tasks in the hiring process. To learn how we handle your personal data and use AI responsibly, please visit our Talent Privacy Notice, Privacy Center, and AI Hiring Guidelines.</p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://ebay.wd5.myworkdayjobs.com/en-US/apply/job/Tokyo/-_R0072265"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on eBay &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

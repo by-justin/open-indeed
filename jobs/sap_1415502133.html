@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Commercial - SAP Academy for Customer Success - Montréal (hybride) &mdash; SAP | Open Indeed</title>
+  <meta name="description" content="Commercial - SAP Academy for Customer Success - Montréal (hybride) at SAP in Montreal, Québec, CA, H3B 0B3.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">Commercial - SAP Academy for Customer Success - Montréal (hybride)</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">SAP</strong> &bull;
+          <span>Montreal, Québec, CA, H3B 0B3</span> &bull;
+          
+          <span class="pill pill-hybrid">Hybrid</span> &bull;
+          
+          <span>Recent</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://jobs.sap.com/job/Montreal-Commercial-SAP-Academy-for-Customer-Success-Montr%C3%A9al-%28hybride%29-Qu%C3%A9b-H3B-0B3/1415502133/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on SAP &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>Commercial - SAP Academy for Customer Success - Montréal (hybride)</h1>
+<ul>
+<li><strong>Company</strong>: SAP</li>
+<li><strong>Requisition ID</strong>: <code>1415502133</code></li>
+<li><strong>Location</strong>: Montreal, Québec, CA, H3B 0B3</li>
+<li><strong>Official Posting</strong>: <a href="https://jobs.sap.com/job/Montreal-Commercial-SAP-Academy-for-Customer-Success-Montr%C3%A9al-%28hybride%29-Qu%C3%A9b-H3B-0B3/1415502133/">Apply on SAP Careers</a></li>
+<li><strong>Application Deadline</strong>: 2026-10-18</li>
+</ul>
+<h2>Job Description</h2>
+<p><strong>Nous aidons le monde à mieux fonctionner</strong>Chez SAP, nous faisons simple : vous apportez le meilleur de vous-même, et nous ferons ressortir ce que vous avez de meilleur. Nous sommes des bâtisseurs qui touchent plus de 20 secteurs et 80 % du commerce mondial, et nous avons besoin de vos talents uniques pour façonner l’avenir. Le travail est exigeant – mais il a du sens.
+Vous trouverez ici un endroit où vous pouvez être vous-même, où votre bien-être est une priorité, et où vous aurez réellement votre place.</p>
+<p>Qu’est-ce que cela vous apporte ? Un apprentissage constant, le développement de vos compétences, d’excellents avantages, et une équipe qui veut vous voir évoluer et réussir.</p>
+<p>Commercial - SAP Academy for Customer Success - Montréal (hybride)</p>
+<p>Votre rôle</p>
+<p>En tant que Commercial au sein de SAP Next-Gen - Academy for Customer Success, vos missions seront les suivantes :</p>
+<ul>
+<li><p>Mener à terme un programme d’apprentissage et de mise en pratique de 10 mois, comprenant des phases en salle et sur le terrain avec votre équipe de vente, afin de renforcer votre contribution dans ce rôle clé, tourné vers le client, au sein de notre service Customer Success.</p>
+</li>
+<li><p>Vous plonger dans une expérience immersive d’apprentissage multidimensionnelle axée sur la transformation numérique, l’intelligence globale, les compétences humaines, le sens de la technologie et des affaires, les connaissances du secteur/des solutions et les processus/outils/stratégies.</p>
+</li>
+<li><p>Apprendre à créer de la valeur tout au long du cycle de vie du client en favorisant l’adoption des solutions et les renouvellements qui encouragent l’expansion des comptes.</p>
+</li>
+<li><p>Suivre un parcours d’intégration adapté à votre marché local, incluant une formation pratique et un accompagnement assuré par un Commercial senior sur le terrain. Vous serez capable de travailler aussi bien en coulisses que directement auprès des clients.</p>
+</li>
+</ul>
+<p>Ce programme enrichira vos connaissances de SAP et du service Customer Success, et vous apportera l’expérience professionnelle nécessaire pour accompagner efficacement nos clients. Nous proposons un emploi à temps plein dès le premier jour, avec des applications pratiques pour votre poste. À l’issue du programme, vous évoluerez vers un rôle commercial au contact direct du client sur votre marché et continuerez de bénéficier d’un mentorat et d’un accompagnement pour poursuivre votre évolution.</p>
+<p>Rôles commerciaux visés : Commercial (AE), Cadre commercial Solution (SSE)</p>
+<p>Domaines de compétence du SSE :</p>
+<ul>
+<li><p>SAP Finance &amp; Spend Management (F&amp;S) : connaissances dans les domaines clés tels que la comptabilité, l’approvisionnement, la gestion des fournisseurs, avec pour objectif de renforcer la visibilité, de réduire les coûts, et d’améliorer l’efficacité.</p>
+</li>
+<li><p>SAP SuccessFactors (Human Capital Management - HCM) : connaissances dans les domaines clés des ressources humaines et de la paie, de la gestion des talents, de la gestion de l’expérience des employés, de l’analyse des ressources humaines, de la planification des effectifs et de la gestion des performances commerciales.</p>
+</li>
+<li><p>SAP Supply Chain Management (SCM) : connaissances de la chaîne logistique, de la gestion des actifs, de la fabrication, de la logistique ou de la gestion du cycle de vie des produits ou des projets.</p>
+</li>
+<li><p>SAP Customer Experience (CX) : connaissances dans les processus liés au commerce électronique, aux ventes, au service client et au marketing.</p>
+</li>
+<li><p>SAP Business Transformation Management (BTM) : connaissances en applications d’automatisation des processus métier/de gestion des processus métier.</p>
+</li>
+<li><p>SAP Business Technology Platform (BTP) et SAP Business Data Cloud (BDC) : connaissances en bases de données et gestion des données, de l’analyse, du développement et de l’intégration d’applications, des technologies intelligentes et de l’IA. Compréhension des domaines technologiques liés à l’intégration, aux applications, aux données, à l’infrastructure et à la sécurité.</p>
+</li>
+</ul>
+<p>Votre profil</p>
+<ul>
+<li><p>2 à 3 ans d’expérience professionnelle dans un environnement commercial de services avec objectifs de vente dans le secteur technologique OU dans un rôle largement orienté vers les processus métier.</p>
+</li>
+<li><p>Une expérience dans la génération d’opportunités, la qualification des clients potentiels et la gestion des pipelines de vente pour un territoire défini, avec une capacité éprouvée à établir des relations client et à articuler des propositions de valeur.</p>
+</li>
+<li><p>Une approche coopérative et productive des relations de travail, tant en interne qu’en externe.</p>
+</li>
+<li><p>Une forte capacité à apprendre rapidement de nouveaux concepts, à s’adapter à des environnements changeants et à mettre en pratique ses connaissances en vue d’obtenir des résultats.</p>
+</li>
+<li><p>Une compréhension des principes fondamentaux, de l’utilisation et de l’éthique de l’IA afin d’identifier les problèmes commerciaux pouvant être résolus grâce à l’IA.</p>
+</li>
+<li><p>Un sens aigu des affaires, notamment une connaissance avérée des processus métier et/ou des secteurs d’activité.</p>
+</li>
+<li><p>Une bonne maîtrise de l’anglais pour interagir avec notre réseau mondial.</p>
+</li>
+<li><p>Domaines prioritaires liés à l’IA : état d’esprit axé sur l’adoption de l’IA, utilisation quotidienne de l’IA agentique et ingénierie contextuelle.</p>
+</li>
+<li><p>Un esprit curieux et agile, une passion pour l’apprentissage ainsi qu’une grande capacité d’adaptation et de résilience, nécessaires pour réussir dans un environnement qui évolue rapidement.</p>
+</li>
+<li><p>De bonnes compétences en matière de résolution de problèmes, de gestion de projets et de réflexion créative, ainsi qu’une capacité à collaborer avec les différentes équipes et à partager clairement et efficacement ses idées.</p>
+</li>
+<li><p>Une intelligence émotionnelle et une sensibilité culturelle qui favorisent le travail d’équipe inclusif et l’implication des parties prenantes.</p>
+</li>
+<li><p>Une solide compréhension du monde des affaires et des technologies émergentes, particulièrement de l’intelligence artificielle, avec une approche orientée vers les résultats et une capacité à prendre des initiatives.</p>
+</li>
+</ul>
+<p>SAP Academy for Customer Success est un programme de développement global conçu pour les talents qui débutent leur carrière.</p>
+<p>À propos de SAP Academy for Customer Success</p>
+<p>SAP Academy for Customer Success propose un programme sur trois ans qui favorise la responsabilisation et améliore la productivité. Il permet aux diplômés de montrer l’impact rapide qu’ils peuvent avoir dans des fonctions en contact avec la clientèle tout en favorisant la longévité de leur carrière et leur potentiel de leadership.</p>
+<p>En nous rejoignant, vous saisissez une opportunité unique de développer un réseau mondial, de collaborer avec des clients afin de relever des défis commerciaux concrets et d’acquérir une expérience pratique avec des solutions infonuagiques exceptionnelles, tout en vous formant dans un environnement dynamique et en bénéficiant d’un salaire et d’avantages sociaux compétitifs.</p>
+<p>#SAPAcademyforCustomerSuccess</p>
+<p>#SAPNextGen</p>
+<p>SAP Next Gen est notre programme d’expérience internationale pour les étudiants et les jeunes talents (entre 0 et 3 ans d’expérience professionnelle). En intégrant la communauté Next Gen, vous aurez accès à un réseau d’accompagnement international, à des opportunités de développement personnalisées et à la possibilité de contribuer à des projets d’envergure qui ont un impact concret sur l’entreprise.</p>
+<p>Les collaborateurs SAP de différentes régions peuvent donner le meilleur d’eux-mêmes grâce à une combinaison optimale de travail au bureau et à distance, conformément aux directives et réglementations spécifiques à chaque pays. En règle générale, notre configuration de travail hybride consiste en trois jours par semaine au bureau ou sur site chez des clients ou des partenaires.</p>
+<p>Nous prévoyons une partie pratique et immersive de notre programme qui impliquera probablement que les participants passent quatre (4) semaines, réparties sur deux séjours, à San Ramon, en Californie. Cette expérience est conçue pour offrir des possibilités inégalées d’apprentissage pratique et de réseautage.</p>
+<p>Pendant les phases intensives du programme, il est indispensable que tous les participants soient pleinement engagés et présents afin de garantir un apprentissage et une réussite optimaux. Par conséquent, les congés ne seront pas approuvés pendant certaines périodes essentielles du programme.</p>
+<p>Nous sommes SAP</p>
+<p>Révélez votre plein potentiel. Les innovations SAP aident plus de 400 000 clients du monde entier à collaborer plus efficacement et à mieux exploiter leur expertise métier. Réputée à l’origine comme l’entreprise numéro un des progiciels de gestion intégrés (ERP), SAP a évolué pour devenir un leader sur le marché des logiciels d’application d’entreprise de bout en bout et des services connexes pour les bases de données, les outils d’analyse, les technologies intelligentes et la gestion de l’expérience. En tant qu’entreprise du nuage rassemblant 200 millions d’utilisateurs et comptant plus de 100 000 collaborateurs dans le monde, nous nous préparons à l’avenir en ciblant des objectifs concrets, fidèles à notre éthique encourageant vivement l’esprit d’équipe et à notre engagement en faveur du développement personnel. Qu’il s’agisse de connecter des secteurs d’activité, des individus ou des plateformes, nous veillons à trouver la solution adéquate pour relever chaque défi. Chez SAP, vous pouvez révéler votre plein potentiel.</p>
+<p>Notre réussite va de pair avec l’inclusion. Notre culture d’inclusion chez SAP prête une attention toute particulière à la santé et au bien-être. Nous proposons ainsi des modèles de travail flexibles pour que chacun, quel que soit son profil, se sente inclus et puisse démontrer pleinement ses performances. Chez SAP, nous sommes d’avis que les capacités et qualités uniques que chaque collaborateur apporte à notre entreprise nous rendent plus forts, et c’est pourquoi nous misons sur nos employés pour leur donner confiance et aider chacun à libérer son plein potentiel. En résumé, nous voulons recourir à tous les talents, et créer un monde meilleur et plus équitable.</p>
+<p>SAP est fière d’être un employeur qui défend l’égalité des chances et la discrimination positive. Nous nous engageons à respecter les principes de l’égalité des chances en matière d’emploi et à fournir des installations adaptées aux candidats présentant un handicap physique et/ou mental. Si vous souhaitez postuler pour un emploi chez SAP et que vous avez besoin d’un aménagement spécial ou d’une aide pour parcourir notre site Web ou pour remplir votre candidature, veuillez envoyer votre demande par courriel à l’équipe Recruiting Operations : <a href="mailto:Careers@sap.com">Careers@sap.com</a>.</p>
+<p>Pour les employés SAP : seuls les postes permanents sont en droit de participer au Programme de recommandation d’employé, conformément aux règles d’admissibilité définies dans la Politique de recommandation SAP. Des conditions spécifiques peuvent s’appliquer aux postes s’inscrivant dans le cadre de formations professionnelles.</p>
+<p>Égalité des chances en matière d’emploi/Discrimination positive H/F / Vétéran / Handicap : les candidatures répondant aux critères ci-dessus seront examinées sans distinction d’âge, de race, de religion, de nationalité, d’origine ethnique, de sexe (y compris grossesse, accouchement, etc.), d’orientation sexuelle, d’identité ou expression sexuelle, de statut protégé (ancien vétéran, par exemple) ou de handicap. Les candidats retenus devront peut-être se soumettre à une vérification des antécédents par un prestataire externe.</p>
+<p><strong>Faites ressortir le meilleur de vous-même</strong>Les innovations de SAP permettent à plus de quatre cent mille clients dans le monde de travailler ensemble plus efficacement et d'utiliser plus efficacement les informations commerciales. Connu à l'origine pour son leadership en matière de logiciels de planification des ressources d'entreprise (ERP), SAP a évolué pour devenir un leader du marché des logiciels d'application de gestion de bout en bout et des services connexes pour les bases de données, l'analytique, les technologies intelligentes et la gestion de l'expérience. En tant que société en nuage comptant deux-cents millions d'utilisateurs et plus de cent mille employés dans le monde, nous sommes motivés et tournés vers l'avenir, avec une éthique d'équipe hautement collaborative et un engagement envers le développement personnel. Qu'il s'agisse de connecter des industries, des personnes ou des plates-formes mondiales, nous veillons à ce que chaque défi reçoive la solution qu'il mérite. Chez SAP, vous pouvez faire ressortir le meilleur de vous-même.</p>
+<p><strong>Nous gagnons grâce à l'inclusion</strong>
+La culture de l’inclusion chez SAP, l’accent mis sur la santé et le bien-être, ainsi que les modèles de travail flexibles contribuent à garantir que chacun – quel que soit son parcours – se sente inclus et puisse donner le meilleur de lui-même. Chez SAP, nous croyons que notre force réside dans les capacités et les qualités uniques que chaque personne apporte à notre entreprise, et nous investissons dans nos collaborateurs pour inspirer la confiance et permettre à chacun de réaliser son plein potentiel. Nous croyons fondamentalement en la libération de tous les talents et en la création d’un monde meilleur.</p>
+<p>SAP s'engage à respecter les principes d'égalité des chances en matière d'emploi et à adapter raisonnablement ses installations à destination des candidats présentant un handicap physique et/ou mental. Si vous avez besoin d'installations spécifiques ou d'une aide particulière pour accéder à notre site Web ou finaliser votre candidature, envoyez un e-mail précisant votre demande à l'équipe Recruiting Operations Team: Careers@sap.com. Les demandes d’aménagement raisonnable seront examinées au cas par cas.</p>
+<p>Employés SAP : les candidats ne peuvent être recommandés que pour des postes permanents - vous trouverez d'autres réglementations dans <a href="https://one.int.sap/me@sap/jobs_and_hiring/employee_referral/region/0000/lang/en">la politique de recommandation SAP</a>.</p>
+<p>SAP estime que la transparence salariale contribue à instaurer une culture d’honnêteté et un environnement positif. Il s’agit d’une étape importante qui témoigne de l’engagement de SAP en faveur de l’équité salariale. SAP indique la fourchette de salaire basée sur un taux horaire qui s’applique au poste à pourvoir. La fourchette cible pour ce poste est de 91,500 - 200, 700. Le montant effectif qui sera proposé au candidat retenu sera compris dans cette fourchette et dépendra d’éléments clés estimés au cas par cas durant le processus de sélection, tels que la formation, les compétences, l’expérience, le périmètre du poste, le lieu de travail, etc. SAP propose des avantages limités aux employés rémunérés sur une base horaire et autres postes analogues, comme précisé dans le plan/la politique applicable. Vous pouvez consulter une synthèse des avantages et des conditions d’éligibilité en suivant ce lien: www.SAPNorthAmericaBenefits.com.</p>
+<p>Compte tenu de la nature du poste, qui implique des interactions avec des entités SAP à l’échelle mondiale ainsi qu’avec des employés et parties prenantes au Canada, une maîtrise fonctionnelle de l’anglais est essentielle pour ce poste, lorsqu'il est basé au Québec.  ​</p>
+<p><strong>Utilisation de l’IA dans le processus de recrutement</strong>
+Pour en savoir plus sur l’utilisation responsable de l’intelligence artificielle dans notre processus de recrutement, veuillez consulter nos <a href="https://jobs.sap.com/content/Ethical_usage_of_AI_in_the_recruiting_process/?locale=en_US"><strong>lignes directrices sur l’utilisation éthique de l’IA dans le cadre du recrutement</strong></a>.
+Veuillez noter qu’un non-respect de ces lignes directrices peut entraîner une exclusion du processus de recrutement.</p>
+<p>Réquisition: 456895 Secteur de travail: Sales Déplacement escompté: 0 - 50% Statuts de carrière: Professional Type d’emploi: Regular Full Time Emplacements Supplémentaires:  #LI-Hybrid</p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://jobs.sap.com/job/Montreal-Commercial-SAP-Academy-for-Customer-Success-Montr%C3%A9al-%28hybride%29-Qu%C3%A9b-H3B-0B3/1415502133/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on SAP &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

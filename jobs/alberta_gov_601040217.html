@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regulatory Advisor &mdash; Government of Alberta | Open Indeed</title>
+  <meta name="description" content="Regulatory Advisor at Government of Alberta in Edmonton, AB.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">Regulatory Advisor</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">Government of Alberta</strong> &bull;
+          <span>Edmonton, AB</span> &bull;
+          
+          <span>2026-08-23</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://jobpostings.alberta.ca/job/Edmonton-Regulatory-Advisor/601040217/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on Government of Alberta &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>Regulatory Advisor</h1>
+<ul>
+<li><strong>Ministry / Department</strong>: Education and Childcare</li>
+<li><strong>Job Requisition ID</strong>: 81724</li>
+<li><strong>Location</strong>: Edmonton, AB</li>
+<li><strong>Classification</strong>: Program services 4</li>
+<li><strong>Closing Date</strong>: Open until till suitable candidate found</li>
+<li><strong>Employment Type</strong>: Full Time</li>
+<li><strong>Official Posting</strong>: <a href="https://jobpostings.alberta.ca/job/Edmonton-Regulatory-Advisor/601040217/">Apply / View</a></li>
+</ul>
+<hr />
+<h2>Role &amp; Responsibilities</h2>
+<p>Job Information
+Job Title: Regulatory Advisor
+Job Requisition ID: 81724
+Ministry: Education and Childcare
+Location: Edmonton
+Full or Part-Time: Full Time
+Hours of Work: 36.25 hours per week
+Permanent/Temporary: Permanent
+Scope: Open Competition
+Closing Date: Open until
+till suitable candidate found
+Classification: Program services 4
+Salary: $3,148.2 to $ 4,126.82 bi-weekly ($82,168.00 – 107,710.00/year)
+The Government of Alberta is committed to a diverse and inclusive public service that reflects the population we serve to best meet the needs of Albertans. Consider joining a team where diversity, inclusion and innovation are valued and supported. For more information on diversity and inclusion, please visit:
+https://www.alberta.ca/diversity-inclusion-policy.aspx
+Ministry of Education and Childcare
+Through safe and caring schools for all students, Alberta’s government is making life better by investing in education – one of the most important investments we can make in our future. The Ministry is responsible for: developing and evaluating curriculum; teacher development and certification; supporting students with diverse learning needs; funding and supporting school boards; First Nations, Métis and Inuit and Francophone education; and overseeing basic education policy and regulations.
+Alberta Teaching Profession Commission (ATPC)
+Are you passionate about regulatory oversight and meaningful engagement with Alberta’s education sector? Do you thrive in an environment where your analytical skills, legislative expertise, and strategic thinking guide recommendations on complex regulatory matters. If so, this position offers an excellent opportunity to strengthen your expertise in statutory obligations, compliance and decision-making.
+The Alberta Teaching Profession Commission is looking for an experienced and motivated senior-level professional with expertise in analyzing and defining complex and diverse problems and developing appropriate recommendations for action. The successful candidate will demonstrate progressive professional experience, exceptional communication skills, intellectual curiosity and sound professional discretion. They will be driven to contribute as part of a team dedicated to delivering credible, consistent outcomes and strive for continuous improvement
+As a Teaching Profession Regulatory Advisor, you will play a key role in helping to shape and develop best practices pertained to regulated professions and in upholding the standards of the teaching profession in Alberta.
+The
+Education Act (the Act)
+provides the statutory authority for the Alberta Teaching Profession Commission and the appointment of an arm's length Commissioner to oversee teacher and teacher leader conduct and competency complaints for the profession. This process applies to all teacher and teacher leaders under the Act.
+The Alberta Teaching Profession Commission oversees a new model, which came into force on January 1, 2023, for teacher and teacher leader disciplinary matters, which brought Alberta in line with best practices used in comparable provinces and other regulated professions. The Alberta Teaching Profession Commission protects students and enhances accountability and transparency for disciplinary matters as a regulated profession.
+For more information on the Ministry of Education and Childcare, please visit:
+https://www.alberta.ca/education.aspx
+Role Responsibilities
+Reporting to the Manager, Professional Assurance, this position analyzes complaints of alleged unprofessional conduct and professional incompetence against Alberta certificated teachers and teacher leaders in accordance with the
+Education Act
+, the Code of Professional Conduct for Teachers and Teacher Leaders, and through the application and interpretation of legislation, regulations, standards, practices and processes.
+The position prepares recommendations for the Commissioner on the appropriate course of action regarding complaints in accordance with legislation, administrative fairness, established procedures and precedence. The position is responsible for conducting preliminary inquiries based on the complaint and assessing information provided during preliminary inquiries. The incumbent will be involved in analyzing completed investigation reports to inform clear, transparent and reasonable recommendations, drafting decisions for consideration by the Commissioner and preparing consent resolution agreements. The incumbent will contribute to other projects and initiatives and will be expected to manage multiple, complex issues while delivering results.
+As a Teaching Profession Regulatory Advisor, the incumbent is required to demonstrate a high degree of discretion, neutrality and confidentiality. The incumbent is required to manage a large caseload, navigate complex and nuanced issues, and work within strict guidelines and timelines. The Teaching Profession Regulatory Advisor has a high degree of autonomy in managing their day-to-day activities, but will receive ongoing feedback and review to ensure legislative, legal and procedural compliance of their work. The Commissioner for the Alberta Teaching Profession Commission is the decision maker on all files and the Commission acts a neutral party representing neither the complainant nor teacher or teacher leader in the complaint process.
+Role Cont'd
+Key responsibilities include:
+Complaint Assessment and Preliminary Analysis to Support Regulatory Decision-Making
+Analyze complaints of alleged unprofessional conduct and/or professional incompetence of Alberta certificated teachers and teacher leaders.
+Conduct preliminary inquiries into complaints referred to the Commission, including drafting allegation statements, verifying information and gathering additional information relevant to the decision-making process, which may include conducting interviews with complainants and teachers or teacher leaders and assessing the relevance of information provided during preliminary inquiries.
+Assess completed investigation, mediation and dispute resolution reports related to alleged teacher and teacher leader unprofessional conduct and/or professional incompetence.
+Technical Advice and Regulatory Recommendations
+Provide technical advice and prepare draft decisions for consideration for the Manager, Director, Executive Director and the Commissioner within operational and legislative timelines based on relevant legislation, policy, standards, processes and protocols.
+Ensure recommendations meet all legislative and procedural requirements in alignment with case law and precedent.
+Deliver technical advice related to complaints and the Commissioner’s decision making process, demonstrated through advanced writing skills and a consistent, precedent based approach.
+Regularly measure and communicate progress, risks and provide practical solutions to deliver high-quality deliverables.
+Strategic Contribution to Regulatory Excellence
+As a member of the Professional Assurance team, positively contribute to the Alberta Teaching Profession Commission's success by promoting, developing and implementing best practices and strategies to effectively support teacher and teacher leader conduct and competency in Alberta's education system.
+Under the direction of the Manager, Director, Executive Director, the Commissioner and/or legal counsel, attend appeal hearings of alleged unprofessional conduct and/or professional incompetence involving teachers and teacher leaders.
+Prepare briefings and recommendations to support executive decision making and operationalization of policy.
+Please click on this
+link
+to view the job description for this position.
+APS Competencies
+Competencies are behaviors that are essential to reach our goals in serving Albertans. We encourage you to have an in depth understanding of the competencies that are required for this opportunity and to be prepared to demonstrate them during the recruitment process.
+This link will assist you with understanding competencies:
+https://www.alberta.ca/system/files/custom_downloaded_images/psc-alberta-public-service-competency-model.pdf
+.
+Drive for Results
+–Demonstrate exceptional organizational skills to set goals, prioritize work, and follow through on tasks in meeting strict deadlines and operational requirements.
+Develop Self and Others
+–Collaborate with team members and model a commitment to life-long learning.
+Creative Problem Solving
+–Demonstrate highly developed critical thinking, problem solving, relationship building and communication skills.  The incumbent must objectively define complex and diverse problems, develop appropriate recommendations and align their work with best practices, precedent and operational direction.
+Agility
+–Anticipate, assess and adapt to changing priorities. As a senior level professional in responding to and addressing professional discipline matters involving Alberta certificated teachers and teacher leaders, demonstrate the ability to seek out opportunities for innovation and creative problem solving and support the Commissioner through the implementation of operational initiatives.  The position requires a high degree of flexibility and commitment to implement feedback.
+Qualifications
+University graduation in a related field (Education, Business Administration, Public Administration, Law, etc.), plus a minimum of 4 years of related experience. Related experience or education may be considered as an equivalency on a one for on basis.
+Equivalency:
+Directly related education or experience considered on the basis of:
+1 year of education for 1 year of experience; or
+1 year of experience for 1 year of education
+The positions
+requires
+experience and advanced knowledge and thorough understanding of:
+Advanced writing and communication skills.
+Natural justice and administrative law.
+Exceptional critical thinking skills and ability to independently define complex and diverse problems and develop actions, considering statutory authority and direction established by the Commissioner.
+Working within operational policy/procedures and organizational guidelines to produce work that is clear, consistent, reasonable and credible.
+Applying complex legislation, case precedence and legal advice to prepare reasoned recommendations.
+Caseload, task and time management; exceptional ability to manage high volumes with competing priorities of time sensitive work.
+The following are considered
+assets
+to the position:
+Experience within the Government of Alberta.
+Experience in human resources or labour relations.
+Experience adapting working and writing style to meet operational needs.
+Experience working with regulated professions, conduct and competency oversight and/or regulatory compliance.
+Experience/knowledge working within quasi-judicial processes.
+Experience working within a digital case management environment including advanced skill working with Microsoft 365 suite of applications, SharePoint online and use of case management software.
+Minimum recruitment standards outline the minimum education and experience required for appointment to a job classification.
+Refer to
+https://www.alberta.ca/alberta-public-service-minimum-recruitment-standards
+.
+Notes
+This is a full-time permanent position working 36.25 hours per week, Monday to Friday, open only to salaried employees of Government of Alberta.
+On-site working location is 8th floor, Petwin Tower 10707 – 100 Avenue NW, Edmonton
+Shortlisted candidates will be required to undergo a written assessment.
+Final candidates will be required to undergo a security screening.
+Parking is not provided for this position.
+Employee annual professional fees/dues are not covered for this position.
+Any costs associated with obtaining the required documents/checks as noted or interview travel expenses will be the responsibility of the candidate. Out-of-province applicants can obtain the required documents/checks from the province they currently reside in.
+Applicants are
+required
+to provide a cover letter that outlines in detail their experiences and how that experience relates specifically to the requirements for this position.
+Applications without an appropriate cover letter or appropriate resume will not be considered.
+Cover letters must be written by the applicant and without the use of artificial intelligence.
+In your resume, please include dates (including months and years) associated with all education and work experience. Also, please indicate whether your work experience is casual, part-time or full-time. For example: January 15, 2006 - June 25, 2009: Assistant (PT three 8 hrs shifts/week).
+Interviews will be conducted
+in-person in Edmonton, Alberta. A written assessment will form part of the interview screening process.
+This competition will be used to develop a certified candidate list for future vacancies with the Alberta Teaching Profession Commission and may be used to fill future vacancies across the Government of Alberta, at equal or lower classification and salary.
+Links and information on what the GoA has to offer to prospective employees.
+Working for the Alberta Public Service -
+https://www.alberta.ca/advantages-
+working-for-alberta-public-service.aspx
+Public Service Pension Plan (PSPP) -
+https://www.pspp.ca
+Alberta Public Service Benefit Information -
+https://www.alberta.ca/alberta-public-service-benefits
+Professional learning and development -
+https://www.alberta.ca/professional-development-support-directive
+Research Alberta Public Service Careers tool –
+https://researchapscareers.alberta.ca
+Positive workplace culture and work-life balance.
+Opportunity to participate in flexible work arrangements or hours of work averaging agreement such as modified work schedule agreement or an earned day off.
+Leadership and mentorship programs.
+How To Apply
+Applicants are advised to provide information that clearly and concisely demonstrates how their qualifications meet the advertised requirements, including education, experience, and relevant examples of required competencies.
+Candidates are required to apply for a job online. Please visit
+https://www.alberta.ca/job-application-resources#before
+for more information. Please visit
+Recruitment Principles
+, for more information.
+In your resume, please include dates (including months and years) associated with all education and work experience. For example, January 2006 - June 2009 (part-time). This example is provided for illustrative purposes only. Applicants are encouraged to present their information clearly and thoroughly, using a format that best conveys their experience.
+It is recommended applicants who have completed post-secondary studies from outside of Canada obtain an evaluation of their credentials from the International Qualifications Assessment Service (IQAS)(
+https://www.alberta.ca/international-qualifications-assessment.aspx
+) or from a recognized Canadian Credential Evaluator; please visit the Alliance of Credential Evaluation Services of Canada for more information
+(
+https://canalliance.org/en/default.html
+).
+It is recommended that applicants include the assessment certificate from IQAS or any other educational assessment service as part of their application.
+Closing Statement
+This competition may be used to fill future vacancies, across the Government of Alberta, at the same or lower classification level.
+We thank all applicants for their interest. All applications will be reviewed to determine which candidates' qualifications most closely match the advertised requirements. Only individuals selected for interviews will be contacted.
+If you require any further information on this job posting or require an accommodation during the recruitment process, please contact Liliane Karara at
+liliane.karara@gov.ab.ca
+.</p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://jobpostings.alberta.ca/job/Edmonton-Regulatory-Advisor/601040217/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on Government of Alberta &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

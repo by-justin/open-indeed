@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Principal Software Developer (Hybrid) - Product Data &mdash; Autodesk | Open Indeed</title>
+  <meta name="description" content="Principal Software Developer (Hybrid) - Product Data at Autodesk in 3 Locations.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">Principal Software Developer (Hybrid) - Product Data</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">Autodesk</strong> &bull;
+          <span>3 Locations</span> &bull;
+          
+          <span class="pill pill-hybrid">Hybrid</span> &bull;
+          
+          <span>2026-08-19</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://autodesk.wd1.myworkdayjobs.com/en-US/Ext/job/Montreal-QC-CAN/Principal-Software-Engineer_24WD83815"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on Autodesk &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>Principal Software Developer (Hybrid) - Product Data</h1>
+<ul>
+<li><strong>Company</strong>: Autodesk</li>
+<li><strong>Requisition ID</strong>: <code>24WD83815</code></li>
+<li><strong>Location</strong>: 3 Locations</li>
+<li><strong>Official Posting</strong>: <a href="https://autodesk.wd1.myworkdayjobs.com/en-US/Ext/job/Montreal-QC-CAN/Principal-Software-Engineer_24WD83815">Apply on Autodesk Careers</a></li>
+<li><strong>Posted Date</strong>: Posted 30+ Days Ago</li>
+</ul>
+<h2>Job Description</h2>
+<p><strong>Job Requisition ID #</strong></p>
+<p>24WD83815</p>
+<p><strong>24WD83815,  Principal Software Developer</strong></p>
+<p>French job description to follow!/La description de poste en français se trouve plus bas!</p>
+<p><strong>This is a hybrid role. Relocation is an option.</strong></p>
+<p><strong>Position Overview</strong></p>
+<p>Autodesk is looking for a  <strong>Principal Software Developer</strong> to join the  <strong>Autodesk</strong></p>
+<p><strong>Platform Services Data Models Team</strong> .</p>
+<p>The team delivers high-value, exabyte-scale and cloud data platform components powering desktop, mobile, and web products. This enables our product teams to build cohesive in-product data experiences, our partners to integrate and expand our data, and our end-users to work with their data across all Autodesk products.</p>
+<p>You will report to the Manager, Software Development Manager based in Canada, and the role is hybrid based in Montreal or Toronto. This is an exciting opportunity to be part of and to help evolve developing the engineering discipline in a lean/Agile environment and to contribute to an organization committed to continuous improvement. You will be a central part of the team who creates amazing things and will learn from some of the best in the industry! Our team enables real-time data-centric experiences at scale to make a difference for all of those who imagine, design, and make our world. Join us to make anything!</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Lead team-level outcomes and high stakes Initiatives</li>
+<li>Independently lead and contribute to key business outcomes of the team</li>
+<li>Lead one or more critical business goals</li>
+<li>Have an understanding of how the team work connects to the business goals</li>
+<li>Demonstrate impact and influence across teams outside of the direct organisation</li>
+<li>Exhibit steadfast leadership and make substantial contributions to large-scale, intricate projects that frequently entail collaboration among multiple engineers and cross-functional teams</li>
+<li>Excel at offering guidance and removing obstacles for both your team and broader colleagues</li>
+<li>Leading projects with unclear milestones by clarifying requirements, carefully planning and executing the scope, closely monitoring quality and team performance to ensure milestones are successfully met on time</li>
+<li>Confidently lead or actively participate in transformative initiatives within Autodesk Platform Services</li>
+<li>Exhibit ownership of platform capabilities managed by the team, encompassing end-to-end responsibilities from Engineering Practices, Solutions, Quality, and Deployment to Support</li>
+<li>Act as a driving force for enhancing Engineering Practices and Quality while simultaneously functioning as an influential multiplier for the team, offering valuable guidance and unwavering support</li>
+<li>Lead technical discussions across the organisation driving the results and business outcomes</li>
+<li>Demonstrate strong leadership in incident calls driving the investigation, timely resolution, and improvements required for each incident. Drive actions for improvements within and outside the team</li>
+<li>Capable of acting as Product owner for the team, balancing the requirements from different sources like architectural roadmaps or product management, as well as improving services.</li>
+<li>Mentor and lead other members of the team, and create opportunities to share knowledge</li>
+</ul>
+<p><strong>Minimum Qualifications</strong></p>
+<ul>
+<li>Graduate or Postgraduate in Computer Science Engineering or related technical fields</li>
+<li>8+ years of software design, development, and/or consulting experience in cloud systems or web services, with at least 3 years in a leadership role</li>
+<li>Lead position on a successful delivery of a commercial cloud product</li>
+<li>Proven capability to lead incident response, drive root cause analysis, and implement preventive measures</li>
+<li>Excellent verbal and written communication skills, with the ability to lead technical discussions and present complex ideas to diverse audiences</li>
+<li>Good understanding of business drivers and ability to articulate them clearly.</li>
+<li>Proven ability to mentor and develop technical talent within the organization.</li>
+<li>Excellent hands-on Java programming skills and exposure to Spring Boot</li>
+<li>Experience with software development lifecycle (SDLC) processes, tools, and Agile methodologies</li>
+<li>Hands-on Experience with AWS or other cloud providers</li>
+<li>API development experience (REST, GraphQL, gRPC)</li>
+<li>Additional programming skills like Go or TypeScript</li>
+<li>High expertise in object-oriented design patterns</li>
+<li>Experience with CI/CD concepts and working with a deployment pipeline such as Jenkins</li>
+<li>Experience with Databases and database design principles at cloud scale</li>
+<li>Experience with building scalable systems and services in the cloud</li>
+</ul>
+<hr />
+<p><strong>24WD83815, Développeur principal de logiciels</strong></p>
+<p><strong>Aperçu du poste</strong></p>
+<p>Autodesk est à la recherche d'un  <strong>développeur logiciel principal</strong> pour rejoindre l'équipe des modèles de données d' <strong>Autodesk Platform</strong>  Services  <strong>.</strong></p>
+<p><strong>Platform Services Data Models Team</strong> .</p>
+<p>L'équipe fournit des composants de plateforme de données de grande valeur, à l'échelle exabyte et dans le nuage, qui alimentent les produits de bureau, mobiles et Web. Cela permet à nos équipes de produits de construire des expériences de données cohésives dans les produits, à nos partenaires d'intégrer et d'étendre nos données, et à nos utilisateurs finaux de travailler avec leurs données à travers tous les produits Autodesk.</p>
+<p>Vous relèverez du directeur du développement logiciel basé au Canada, et le rôle est hybride, basé à Montréal ou à Toronto. Il s'agit d'une opportunité passionnante de faire partie et de contribuer à l'évolution du développement de la discipline d'ingénierie dans un environnement Lean/Agile et de contribuer à une organisation engagée dans l'amélioration continue. Vous serez un élément central de l'équipe qui crée des choses étonnantes et vous apprendrez de certains des meilleurs de l'industrie ! Notre équipe permet des expériences centrées sur les données en temps réel à l'échelle pour faire une différence pour tous ceux qui imaginent, conçoivent et fabriquent notre monde. Rejoignez-nous pour créer quelque chose !</p>
+<p><strong>Responsabilités</strong></p>
+<ul>
+<li>Diriger les résultats au niveau de l'équipe et les initiatives à fort enjeu</li>
+<li>Diriger et contribuer de manière indépendante aux principaux résultats commerciaux de l'équipe</li>
+<li>Diriger un ou plusieurs objectifs critiques de l'entreprise</li>
+<li>Comprendre comment le travail de l'équipe est lié aux objectifs de l'entreprise</li>
+<li>Faire preuve d'impact et d'influence au sein des équipes en dehors de l'organisation directe</li>
+<li>Faire preuve d'un leadership inébranlable et apporter des contributions substantielles à des projets complexes et de grande envergure qui impliquent fréquemment la collaboration de plusieurs ingénieurs et d'équipes interfonctionnelles</li>
+<li>exceller dans l'offre de conseils et l'élimination des obstacles, tant pour votre équipe que pour des collègues plus larges</li>
+<li>Diriger des projets dont les étapes ne sont pas clairement définies en clarifiant les besoins, en planifiant et en exécutant soigneusement le champ d'application, en surveillant de près la qualité et les performances de l'équipe afin de s'assurer que les étapes sont respectées dans les délais impartis</li>
+<li>Diriger avec confiance ou participer activement à des initiatives de transformation au sein d'Autodesk Platform Services</li>
+<li>S'approprier les capacités de la plateforme gérées par l'équipe, en assumant des responsabilités de bout en bout, depuis les pratiques d'ingénierie, les solutions, la qualité et le déploiement jusqu'à l'assistance</li>
+<li>Agir en tant que force motrice pour améliorer les pratiques d'ingénierie et la qualité tout en fonctionnant comme un multiplicateur d'influence pour l'équipe, en offrant des conseils précieux et un soutien inébranlable</li>
+<li>Mener des discussions techniques dans l'ensemble de l'organisation afin d'obtenir des résultats et des retombées commerciales</li>
+<li>Faire preuve d'un grand leadership dans les appels d'incidents en menant l'enquête, la résolution en temps opportun et les améliorations requises pour chaque incident. Mener des actions d'amélioration au sein et en dehors de l'équipe</li>
+<li>Être capable d'agir en tant que Product Owner pour l'équipe, en équilibrant les exigences provenant de différentes sources telles que les feuilles de route architecturales ou la gestion des produits, ainsi qu'en améliorant les services</li>
+<li>Encadrer et diriger les autres membres de l'équipe et créer des opportunités de partage des connaissances</li>
+</ul>
+<p><strong>Qualifications minimales</strong></p>
+<ul>
+<li>Diplôme d'ingénieur en informatique ou dans un domaine technique connexe</li>
+<li>Plus de 8 ans d'expérience dans la conception de logiciels, le développement et/ou le conseil dans le domaine des systèmes en nuage ou des services web, dont au moins 3 ans dans un rôle de direction</li>
+<li>Avoir joué un rôle de premier plan dans la livraison réussie d'un produit commercial de type « cloud »</li>
+<li>Capacité avérée à diriger la réponse aux incidents, à mener l'analyse des causes profondes et à mettre en œuvre des mesures préventives</li>
+<li>Excellentes aptitudes à la communication orale et écrite, avec la capacité de mener des discussions techniques et de présenter des idées complexes à des publics divers</li>
+<li>Bonne compréhension des moteurs de l'entreprise et capacité à les exprimer clairement</li>
+<li>Capacité avérée à encadrer et à développer les talents techniques au sein de l'organisation</li>
+<li>Excellentes compétences pratiques en programmation Java et exposition à Spring Boot</li>
+<li>Expérience des processus et outils du cycle de développement logiciel (SDLC) et des méthodologies Agile</li>
+<li>Expérience pratique avec AWS ou d'autres fournisseurs de services en nuage</li>
+<li>Expérience du développement d'API (REST, GraphQL, gRPC)</li>
+<li>Compétences supplémentaires en programmation comme Go ou TypeScript</li>
+<li>Grande expertise dans les modèles de conception orientés objet</li>
+<li>Expérience des concepts CI/CD et du travail avec un pipeline de déploiement tel que Jenkins</li>
+<li>Expérience des bases de données et des principes de conception de bases de données à l'échelle du cloud</li>
+<li>Expérience dans la construction de systèmes et de services évolutifs dans le cloud</li>
+</ul>
+<p>#LI-DV1</p>
+<p><strong>Learn More / Plus d'information</strong></p>
+<p><strong>About Autodesk /</strong>   <strong>À propos d’Autodesk</strong></p>
+<p>Welcome to Autodesk! Amazing things are created every day with our software – from the greenest buildings and cleanest cars to the smartest factories and biggest hit movies. We help innovators turn their ideas into reality, transforming not only how things are made, but what can be made.</p>
+<p>We take great pride in our culture here at Autodesk – our Culture Code is at the core of everything we do. Our values and ways of working help our people thrive and realize their potential, which leads to even better outcomes for our customers.</p>
+<p>When you’re an Autodesker, you can be your whole, authentic self and do meaningful work that helps build a better future for all. Ready to shape the world and your future? Join us!</p>
+<p>Bienvenue à Autodesk ! Des choses incroyables sont créées chaque jour avec nos logiciels - des bâtiments les plus écologiques et des voitures les plus propres aux usines les plus intelligentes et aux plus grands films à succès. Nous aidons les innovateurs à transformer leurs idées en réalité, transformant non seulement la façon dont les choses sont faites, mais ce qui peut être fait.</p>
+<p>Nous sommes très fiers de notre culture ici chez Autodesk - notre code en matière de culture est au cœur de tout ce que nous faisons. Nos valeurs et nos méthodes de travail aident nos employés à prospérer et à réaliser leur potentiel, ce qui conduit à des résultats encore meilleurs pour nos clients.</p>
+<p>Lorsque vous êtes un employé Autodesk, vous pouvez être entier et authentique et effectuer un travail significatif qui aide à construire un avenir meilleur pour tous. Prêt à façonner le monde et votre avenir? Joignez-vous à nous !</p>
+<p><strong>Salary transparency / Transparence salariale</strong></p>
+<p>Salary is one part of Autodesk’s competitive compensation package. Offers are based on the candidate’s experience and geographic location. In addition to base salaries, we also have a significant emphasis on discretionary annual cash bonuses, commissions for sales roles, stock or long-term incentive cash grants, and a comprehensive benefits package.</p>
+<p>Le salaire est l'un des éléments de l'offre compétitive d'Autodesk. Les offres sont basées sur l'expérience et la situation géographique du candidat. Outre les salaires de base, nous accordons également une grande importance aux primes annuelles discrétionnaires en espèces, aux commissions pour les fonctions de vente, aux actions ou aux primes d'encouragement à long terme en espèces, ainsi qu'à un ensemble complet d'avantages sociaux.</p>
+<p><strong>Diversity &amp; Belonging /</strong>  <strong>Diversité et appurtenance</strong></p>
+<p>We take pride in cultivating a culture of belonging and an equitable workplace where everyone can thrive. Learn more here: https://www.autodesk.com/company/diversity-and-belonging</p>
+<p>Nous sommes fiers de cultiver une culture d’appartenance et un milieu de travail équitable où tout le monde peut s’épanouir. Pour en savoir plus, cliquez ici : https://www.autodesk.com/company/diversity-and-belonging</p>
+<p><strong>Are you an existing contractor or consultant with Autodesk?</strong></p>
+<p><strong>Êtes-vous un sous-traitant ou un consultant existant d’Autodesk ?</strong></p>
+<p>Please search for open jobs and apply internally (not on this external site).</p>
+<p>Veuillez rechercher des emplois vacants et postuler à l’interne (pas sur ce site externe).</p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://autodesk.wd1.myworkdayjobs.com/en-US/Ext/job/Montreal-QC-CAN/Principal-Software-Engineer_24WD83815"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on Autodesk &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>

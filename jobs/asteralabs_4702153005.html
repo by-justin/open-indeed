@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hardware Design Engineering, Senior Director - Signal Connectivity Rack-Scale Platforms &mdash; Astera Labs | Open Indeed</title>
+  <meta name="description" content="Hardware Design Engineering, Senior Director - Signal Connectivity Rack-Scale Platforms at Astera Labs in San Jose, California, United States.">
+  <link rel="stylesheet" href="../static/pico.min.css">
+  <style>
+    /* ==========================================================================
+       1. Design Tokens & Theme Variables
+       ========================================================================== */
+    :root {
+      --pico-font-size: 92.5%;
+      --pico-line-height: 1.45;
+      --pico-border-radius: 4px;
+      --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Subtle custom scrollbars */
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--pico-muted-border-color);
+      border-radius: 3px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       2. Pills & Badges (High Contrast in Light and Dark)
+       ========================================================================== */
+    .pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .pill-remote {
+      background: rgba(46, 125, 50, 0.15);
+      color: #1b5e20;
+    }
+    .pill-hybrid {
+      background: rgba(2, 119, 189, 0.15);
+      color: #0277bd;
+    }
+    .pill-onsite, .pill-on-site, .pill-on_site {
+      background: rgba(100, 116, 139, 0.15);
+      color: #475569;
+    }
+    .pill-unspecified {
+      display: none;
+    }
+
+    /* Dark Mode High-Contrast Overrides */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .pill-remote {
+        background: rgba(76, 175, 80, 0.22);
+        color: #81c784;
+      }
+      :root:not([data-theme="light"]) .pill-hybrid {
+        background: rgba(33, 150, 243, 0.22);
+        color: #64b5f6;
+      }
+      :root:not([data-theme="light"]) .pill-onsite,
+      :root:not([data-theme="light"]) .pill-on-site,
+      :root:not([data-theme="light"]) .pill-on_site {
+        background: rgba(148, 163, 184, 0.22);
+        color: #cbd5e1;
+      }
+    }
+    [data-theme="dark"] .pill-remote {
+      background: rgba(76, 175, 80, 0.22);
+      color: #81c784;
+    }
+    [data-theme="dark"] .pill-hybrid {
+      background: rgba(33, 150, 243, 0.22);
+      color: #64b5f6;
+    }
+    [data-theme="dark"] .pill-onsite,
+    [data-theme="dark"] .pill-on-site,
+    [data-theme="dark"] .pill-on_site {
+      background: rgba(148, 163, 184, 0.22);
+      color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       3. Common Buttons & Action Controls
+       ========================================================================== */
+    .btn-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--pico-primary);
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary);
+      cursor: pointer;
+      line-height: 1.3;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .btn-apply:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+    .btn-newtab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.36rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-newtab:hover {
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.80rem;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-muted-color);
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-back:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+      text-decoration: none;
+    }
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.65rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background: transparent !important;
+      color: var(--pico-muted-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      transition: all 0.15s ease;
+    }
+    .btn-reset:hover {
+      color: var(--pico-color) !important;
+      border-color: var(--pico-color) !important;
+    }
+    .help-toggle-btn {
+      position: absolute;
+      right: 0.5rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--pico-code-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 3px;
+      color: var(--pico-muted-color);
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s ease;
+    }
+    .help-toggle-btn:hover {
+      color: var(--pico-color);
+      border-color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       4. App Shell Layout (Master-Detail, ZERO Outer Scrollbar)
+       ========================================================================== */
+    html.app-shell, body.app-shell {
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden !important;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    html.app-shell *, html.app-shell *::before, html.app-shell *::after {
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .app-topbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 1.25rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .app-topbar .brand, .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .app-topbar .brand-sub, .brand-sub {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+      margin-left: 0.4rem;
+    }
+    .app-topbar .topbar-meta {
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .about-link {
+      color: var(--pico-muted-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .about-link:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    dialog#about-modal article {
+      max-width: 540px;
+      width: 90%;
+      margin: auto;
+    }
+    dialog#about-modal h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+    dialog#about-modal p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Search & Filter Header Bar */
+    .app-filterbar {
+      flex-shrink: 0;
+      padding: 0.4rem 1.25rem 0.45rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .search-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .search-row .search-input, .search-input {
+      flex: 1;
+      margin-bottom: 0 !important;
+      padding: 0.42rem 4.8rem 0.42rem 2.5rem !important;
+      font-size: 0.88rem !important;
+      border-radius: 4px !important;
+      height: 36px !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+    }
+    .search-row .search-input:focus, .search-input:focus {
+      border-color: var(--pico-primary) !important;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .syntax-guide {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.76rem;
+      color: var(--pico-muted-color);
+    }
+    .syntax-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.35rem 0.75rem;
+    }
+    .syntax-grid code {
+      font-size: 0.75rem;
+      color: var(--pico-primary);
+    }
+
+    .controls-row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      overflow-x: auto;
+    }
+    .controls-left {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .controls-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+    .control-select {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 0.2rem 1.6rem 0.2rem 0.55rem !important;
+      font-size: 0.78rem !important;
+      height: 30px !important;
+      margin-bottom: 0 !important;
+      border-radius: 4px !important;
+      border: 1px solid var(--pico-muted-border-color) !important;
+      background-color: var(--pico-background-color) !important;
+      color: var(--pico-color) !important;
+      cursor: pointer;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .control-select:focus {
+      border-color: var(--pico-primary) !important;
+    }
+
+    /* Workspace */
+    .app-workspace {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       5. Master List & Virtual Table
+       ========================================================================= */
+    .col-list {
+      width: 44%;
+      min-width: 420px;
+      max-width: 640px;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+    }
+    .col-list .clusterize-scroll {
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: none;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: none;
+      border-radius: 0;
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.84rem;
+      margin: 0;
+    }
+    .jobs-table thead th {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pico-muted-color);
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-background-color);
+      text-align: left;
+      white-space: nowrap !important;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .jobs-table td {
+      padding: 0.42rem 0.6rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .jobs-table tr.job-row {
+      cursor: pointer;
+      transition: background 0.08s ease;
+    }
+    .jobs-table tr.job-row:hover {
+      background-color: var(--pico-code-background-color);
+    }
+    .jobs-table tr.job-row:focus {
+      outline: 2px solid var(--pico-primary);
+      outline-offset: -2px;
+    }
+    .jobs-table tr.job-row.active td {
+      background-color: var(--pico-code-background-color) !important;
+      border-top: 1px solid var(--pico-primary) !important;
+      border-bottom: 1px solid var(--pico-primary) !important;
+    }
+    .jobs-table tr.job-row.active td:first-child {
+      border-left: 3px solid var(--pico-primary) !important;
+    }
+
+    .col-date {
+      width: 86px;
+      font-family: var(--app-font-mono);
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      white-space: nowrap;
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    th.col-date {
+      padding-left: 0.4rem !important;
+      padding-right: 0.4rem !important;
+    }
+    .col-company {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 120px;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--pico-color);
+      font-size: 0.82rem;
+    }
+    .col-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-title a {
+      text-decoration: none;
+      color: var(--pico-color);
+    }
+    .col-title a:hover {
+      color: var(--pico-primary);
+      text-decoration: underline;
+    }
+    .col-location {
+      color: var(--pico-muted-color);
+      font-size: 0.74rem;
+      white-space: nowrap;
+      width: 85px;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .col-mode {
+      width: 70px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th.col-mode {
+      text-align: right !important;
+    }
+    .jobs-table thead th[style*="cursor: pointer"]:hover {
+      color: var(--pico-color);
+    }
+
+    /* Clusterize utility */
+    .clusterize-extra-row {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .clusterize-extra-row.clusterize-keep-parity {
+      display: none;
+    }
+    .clusterize-content {
+      outline: 0;
+    }
+
+    /* ==========================================================================
+       6. Right Column: Job Detail Reading Pane & Standalone Job View
+       ========================================================================== */
+    .col-detail {
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 3rem;
+      background: var(--pico-background-color);
+    }
+    .detail-pane-header, .detail-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    .detail-pane-title, .detail-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+      color: var(--pico-color);
+    }
+    .detail-pane-meta, .detail-meta {
+      font-size: 0.84rem;
+      color: var(--pico-muted-color);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .detail-pane-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    /* Markdown Body Typography */
+    .detail-pane-body, .detail-body {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: var(--pico-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-pane-body > h1:first-child,
+    .detail-pane-body > h2:first-child,
+    .detail-body > h1:first-child,
+    .detail-body > h2:first-child {
+      display: none;
+    }
+    /* Clean Specs Grid for Scraped Job Metadata */
+    .detail-pane-body > ul:first-of-type,
+    .detail-body > ul:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.45rem 1.25rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1.15rem;
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0.5rem 0 1.25rem 0;
+      font-size: 0.82rem;
+    }
+    .detail-pane-body > ul:first-of-type li,
+    .detail-body > ul:first-of-type li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    .detail-pane-body > ul:first-of-type li strong,
+    .detail-body > ul:first-of-type li strong {
+      color: var(--pico-color);
+      font-weight: 600;
+    }
+    .detail-pane-body > ul:first-of-type li a,
+    .detail-body > ul:first-of-type li a {
+      color: var(--pico-primary);
+    }
+    .detail-pane-body > hr:first-of-type,
+    .detail-body > hr:first-of-type {
+      display: none;
+    }
+    .detail-pane-body h1, .detail-body h1 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--pico-color);
+    }
+    .detail-pane-body h2, .detail-body h2 {
+      font-size: 1.10rem;
+      margin-top: 1.35rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      color: var(--pico-color);
+      border-bottom: 1px solid var(--pico-muted-border-color);
+      padding-bottom: 0.25rem;
+    }
+    .detail-pane-body h3, .detail-body h3 {
+      font-size: 0.98rem;
+      margin-top: 1.15rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+    .detail-pane-body p, .detail-body p {
+      margin-bottom: 0.85rem;
+    }
+    .detail-pane-body ul, .detail-body ul,
+    .detail-pane-body ol, .detail-body ol {
+      margin-bottom: 0.85rem;
+      padding-left: 1.4rem;
+    }
+    .detail-pane-body li, .detail-body li {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body li > p, .detail-body li > p {
+      margin-bottom: 0.25rem;
+    }
+    .detail-pane-body pre, .detail-body pre {
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      background: var(--pico-code-background-color);
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+    .detail-pane-body blockquote, .detail-body blockquote {
+      border-left: 3px solid var(--pico-primary);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--pico-muted-color);
+    }
+
+    /* ==========================================================================
+       7. Empty State Components
+       ========================================================================== */
+    .empty-state-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      height: 100%;
+      min-height: 280px;
+      box-sizing: border-box;
+    }
+    .empty-state-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pico-code-background-color);
+      color: var(--pico-muted-color);
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+    .empty-state-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.4rem;
+    }
+    .empty-state-desc {
+      font-size: 0.82rem;
+      color: var(--pico-muted-color);
+      max-width: 320px;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+    }
+    .empty-reset-btn {
+      padding: 0.35rem 0.95rem !important;
+      font-size: 0.8rem !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      background: var(--pico-primary) !important;
+      color: var(--pico-primary-inverse, #fff) !important;
+      border: 1px solid var(--pico-primary) !important;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .empty-reset-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* ==========================================================================
+       8. App Status Bar & Standalone Page Footer
+       ========================================================================== */
+    .app-statusbar {
+      flex-shrink: 0;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 1.25rem;
+      font-size: 0.72rem;
+      color: var(--pico-muted-color);
+      border-top: 1px solid var(--pico-muted-border-color);
+      background: var(--pico-card-background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-statusbar a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    .app-statusbar a:hover {
+      color: var(--pico-color);
+    }
+
+    /* Standalone (non-app-shell) page layout */
+    body:not(.app-shell) {
+      padding-top: 1.25rem;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      background: var(--pico-background-color);
+    }
+    body:not(.app-shell) header.site-header {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pico-muted-border-color);
+    }
+    body:not(.app-shell) .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    body:not(.app-shell) footer.site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--pico-muted-border-color);
+      font-size: 0.75rem;
+      color: var(--pico-muted-color);
+      text-align: center;
+    }
+    body:not(.app-shell) footer.site-footer a {
+      color: var(--pico-muted-color);
+      text-decoration: underline;
+    }
+    body:not(.app-shell) footer.site-footer a:hover {
+      color: var(--pico-color);
+    }
+
+    /* ==========================================================================
+       9. Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .col-list {
+        width: 48%;
+        min-width: 360px;
+      }
+      .col-location {
+        width: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .app-topbar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.2rem !important;
+        padding: 0.45rem 0.75rem !important;
+      }
+      .brand {
+        font-size: 0.98rem !important;
+      }
+      .brand-sub {
+        display: none !important;
+      }
+      .topbar-meta {
+        font-size: 0.70rem !important;
+      }
+
+      .app-workspace {
+        flex-direction: column;
+      }
+      .col-list {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48%;
+        border-right: none;
+        border-bottom: 1px solid var(--pico-muted-border-color);
+      }
+      .col-detail {
+        width: 100%;
+        height: 52%;
+        padding: 1rem 1.25rem 2rem;
+      }
+
+      .controls-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.35rem !important;
+      }
+      .controls-left, .controls-right {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 0.35rem !important;
+        width: 100% !important;
+        scrollbar-width: none !important;
+      }
+      .controls-left::-webkit-scrollbar,
+      .controls-right::-webkit-scrollbar {
+        display: none !important;
+      }
+      .controls-right {
+        justify-content: space-between !important;
+      }
+      .controls-left .control-select,
+      .controls-right .control-select {
+        flex-shrink: 0 !important;
+      }
+
+      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      .jobs-table th:nth-child(4),
+      .jobs-table td:nth-child(4),
+      .jobs-table th:nth-child(5),
+      .jobs-table td:nth-child(5),
+      colgroup col:nth-child(4),
+      colgroup col:nth-child(5) {
+        display: none !important;
+      }
+    }
+  </style>
+  
+</head>
+<body class="">
+  
+  <header class="site-header container">
+    <div class="header-nav">
+      <div>
+        <a href="../index.html" class="brand">Open Indeed</a>
+        <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
+      </div>
+      <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
+        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <a href="#about" class="about-link" title="About Open Indeed">? About</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<div style="margin-bottom: 1.25rem;">
+  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+</div>
+
+<article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+  <header class="detail-header">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 class="detail-title">Hardware Design Engineering, Senior Director - Signal Connectivity Rack-Scale Platforms</h1>
+        <div class="detail-meta">
+          <strong style="color: var(--pico-color);">Astera Labs</strong> &bull;
+          <span>San Jose, California, United States</span> &bull;
+          
+          <span>2026-06-03</span>
+        </div>
+      </div>
+      <div>
+        <a
+          href="https://job-boards.greenhouse.io/asteralabs/jobs/4702153005"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-apply"
+        >
+          Apply on Astera Labs &nearr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-body">
+    <h1>Hardware Design Engineering, Senior Director - Signal Connectivity Rack-Scale Platforms</h1>
+<ul>
+<li><strong>Company</strong>: Astera Labs</li>
+<li><strong>Job ID</strong>: <code>4702153005</code></li>
+<li><strong>Location</strong>: San Jose, California, United States</li>
+<li><strong>Official Posting</strong>: <a href="https://job-boards.greenhouse.io/asteralabs/jobs/4702153005">Apply on Greenhouse</a></li>
+<li><strong>Department</strong>: Hardware Engineering</li>
+<li><strong>Updated At</strong>: 2026-08-25T12:42:13-04:00</li>
+</ul>
+<h2>Job Description</h2>
+<p>Astera Labs (NASDAQ: ALAB) provides rack-scale AI infrastructure through purpose-built connectivity solutions. By collaborating with hyperscalers and ecosystem partners, Astera Labs enables organizations to unlock the full potential of modern AI. Astera Labs’ Intelligent Connectivity Platform integrates CXL®, Ethernet, NVLink, PCIe®, and UALink™ semiconductor-based technologies with the company’s COSMOS software suite to unify diverse components into cohesive, flexible systems that deliver end-to-end scale-up, and scale-out connectivity. The company’s custom connectivity solutions business complements its standards-based portfolio, enabling customers to deploy tailored architectures to meet their unique infrastructure requirements. Discover more at www.asteralabs.com.</p>
+<h2>About Astera Labs</h2>
+<p>Astera Labs is the connectivity backbone of rack-scale AI infrastructure. Our Active Electrical Cables (AEC), Smart Cable Modules (SCM), Silicon Evaluation Platforms, and rack-scale products deliver purpose-built, high-speed connectivity for the world's most demanding AI clusters. As our product portfolio expands in complexity, performance, and volume — and as OEM customers increasingly adopt Astera Labs silicon into their own designs — we need a senior engineering leader to build and scale the hardware design engineering organization that creates industry-defining products and enables our customers' success.</p>
+<h2>About the Role</h2>
+<p>We are hiring a  <strong>Senior Director, Hardware Design Engineering</strong>  to lead and scale Astera Labs' hardware design engineering organization across Active Electrical Cables (AEC), Smart Cable Modules (SCM), Silicon Evaluation Platforms (SVB/EVB), rack-scale products, and OEM/customer design enablement. This is a senior leadership role with full ownership of the hardware design function — encompassing electrical/PCB design, mechanical engineering, hardware validation, lab infrastructure, and customer hardware engineering support.</p>
+<p>You will build and lead a world-class, multidisciplinary engineering organization that takes products from concept through design, validation, qualification, and production release — while simultaneously enabling OEM customers and design partners to successfully integrate Astera Labs silicon into their own products. Your teams will own the complete hardware realization of Astera Labs' connectivity products and serve as the technical bridge between Astera Labs' silicon capabilities and the broader ecosystem of customers building next-generation AI infrastructure.</p>
+<p>You will be a key member of the engineering leadership team, driving technology roadmaps, making critical technical and business trade-off decisions, and partnering closely with silicon, firmware, signal integrity, NPI, manufacturing, quality, product management, sales, and customer-facing teams. You'll also be responsible for attracting, developing, and retaining top engineering talent as Astera Labs scales through hyper-growth.</p>
+<h2>Key Responsibilities</h2>
+<h3>Engineering Leadership &amp; Organization Building</h3>
+<ul>
+<li>Lead and scale Astera Labs' hardware design engineering organization, encompassing:</li>
+</ul>
+<p><strong>Electrical/PCB Hardware Design Engineering</strong>  — schematic capture, high-speed PCB/flex/substrate layout, power delivery, component engineering for cable modules through rack-scale systems</p>
+<p><strong>Mechanical Engineering</strong>  — connector design, housing/enclosure design, thermal management, cable strain relief, chassis/sheet metal, form factor compliance, tolerance analysis</p>
+<p><strong>Hardware Validation Engineering</strong>  — product-level electrical, mechanical, environmental, and reliability qualification and validation across all product lines</p>
+<p><strong>Lab Engineering &amp; Infrastructure</strong>  — test lab buildout, capital equipment strategy, measurement capability, and lab operations</p>
+<p><strong>Customer Hardware Engineering &amp; OEM Enablement</strong>  — reference design support, design reviews, integration guidance, and hands-on technical engagement with OEM customers adopting Astera Labs silicon</p>
+<ul>
+<li><p>Build, mentor, and lead a team of engineering managers and senior individual contributors across all hardware design disciplines</p>
+</li>
+<li><p>Define organizational structure, hiring plans, career development frameworks, and technical competency models as the team scales</p>
+</li>
+<li><p>Foster a culture of engineering excellence, rigorous design practices, cross-functional collaboration, and customer-centric technical support</p>
+</li>
+<li><p>Represent the hardware design engineering function in executive reviews, board updates, and strategic planning sessions</p>
+</li>
+</ul>
+<h3>Technology Roadmap &amp; Strategic Planning</h3>
+<ul>
+<li><p>Define and manage the hardware technology roadmap for AEC, SCM, Silicon Evaluation Platforms, and rack-scale products — aligned with silicon roadmaps, customer requirements, market trends, and competitive dynamics</p>
+</li>
+<li><p>Drive technology strategy decisions across interconnect architectures, PCB/substrate technologies, connector platforms, cable constructions, thermal solutions, chassis architectures, and form factors</p>
+</li>
+<li><p>Identify and invest in next-generation hardware technologies (e.g., 224G/lane substrates, advanced thermal materials, novel connector interfaces, miniaturized form factors, liquid cooling integration) that maintain Astera Labs' competitive differentiation</p>
+</li>
+<li><p>Partner with Product Management and Business Development to translate customer needs, market requirements, and standards evolution into engineering development priorities</p>
+</li>
+<li><p>Align hardware design roadmap with silicon tape-out schedules, firmware development timelines, manufacturing readiness milestones, and OEM customer design-in timelines</p>
+</li>
+<li><p>Incorporate customer and OEM feedback into technology roadmap decisions — ensuring reference designs, evaluation platforms, and design collateral evolve to meet ecosystem needs</p>
+</li>
+</ul>
+<h3>Product Development &amp; Execution</h3>
+<ul>
+<li>Drive R&amp;D and new product development for the full range of hardware products — from cable-scale modules to rack-scale systems:</li>
+</ul>
+<p><strong>Active Electrical Cables (AEC)</strong>  — high-speed active cable products with integrated retimer silicon</p>
+<p><strong>Smart Cable Modules (SCM)</strong>  — advanced cable modules with intelligent management and diagnostic capabilities</p>
+<p><strong>Silicon Evaluation Platforms (SVB/EVB)</strong>  — evaluation boards and system validation platforms that enable silicon bring-up, characterization, and customer evaluation</p>
+<p><strong>Rack-Scale Products</strong>  — AI chassis-class systems, switch trays, CEM cards, and associated system-level hardware</p>
+<p><strong>Reference Designs &amp; Customer Enablement Hardware</strong>  — reference schematics, layout guidelines, and demonstration platforms that accelerate OEM adoption of Astera Labs silicon</p>
+<ul>
+<li><p>Oversee products through the full design lifecycle — from architecture definition, schematic/layout design, mechanical design, prototype build, validation, qualification, to production release</p>
+</li>
+<li><p>Ensure rigorous design review processes at each stage (architecture, schematic, layout, mechanical, pre-production) with clear entry/exit criteria and cross-functional participation</p>
+</li>
+<li><p>Make critical technical trade-off decisions that balance performance, cost, manufacturability, schedule, and risk across the product portfolio</p>
+</li>
+<li><p>Drive schedule discipline and engineering milestone execution — ensuring products hit market windows aligned with customer platform cycles and silicon availability</p>
+</li>
+</ul>
+<h3>Electrical &amp; PCB Design</h3>
+<ul>
+<li>Oversee high-speed PCB, flex circuit, and substrate design across the full product portfolio:</li>
+</ul>
+<p><strong>AEC/SCM:</strong>  Retimer integration on flex/substrate, high-speed routing, power delivery, dense component placement in constrained cable module form factors</p>
+<p><strong>Silicon Evaluation Platforms:</strong>  Complex multi-layer PCBs for silicon bring-up, high-speed channel characterization, and reference design generation</p>
+<p><strong>Rack-Scale Products:</strong>  Backplane/midplane design, switch tray PCBs, CEM card layouts, chassis power distribution, and high-density connector interfaces</p>
+<p><strong>Reference Designs:</strong>  Production-quality schematics and layouts that serve as starting points for OEM customers integrating Astera Labs silicon</p>
+<ul>
+<li><p>Ensure designs meet signal integrity requirements for 112G and 224G PAM4 lanes, including impedance control, loss budgets, crosstalk isolation, and return loss compliance</p>
+</li>
+<li><p>Drive component engineering decisions — selecting connectors, passives, power management ICs, and materials that meet performance, reliability, cost, and availability requirements</p>
+</li>
+<li><p>Establish and enforce design rules, layout guidelines, stackup definitions, and PCB/substrate technology selection criteria across all product lines</p>
+</li>
+<li><p>Partner with Signal Integrity engineering to validate designs through simulation and correlation with measured performance</p>
+</li>
+</ul>
+<h3>Mechanical Engineering</h3>
+<ul>
+<li>Direct mechanical engineering across the full product range:</li>
+</ul>
+<p><strong>AEC/SCM:</strong>  Connector mating interfaces, housings, latching mechanisms, cable strain relief, overmold design, and thermal solutions for active cable modules</p>
+<p><strong>Silicon Evaluation Platforms:</strong>  Board-level mechanical design, heatsink integration, test fixture compatibility, and debug accessibility</p>
+<p><strong>Rack-Scale Products:</strong>  Chassis design, sheet metal, airflow/thermal architecture, cable management, hot-swap mechanisms, rack mounting, and system-level mechanical integration</p>
+<ul>
+<li><p>Ensure products meet relevant form factor standards (OSFP, QSFP-DD, OCP, Open19, or proprietary) with full compliance to mechanical interface specifications</p>
+</li>
+<li><p>Drive thermal management design across all product lines — from retimer-scale thermal solutions in cable modules to chassis-level airflow and liquid cooling architectures for rack-scale systems</p>
+</li>
+<li><p>Oversee tolerance analysis, FEA/CFD simulation, material selection, and mechanical reliability assessments for all product designs</p>
+</li>
+<li><p>Ensure mechanical designs support manufacturing scalability — DFM, DFA, tooling feasibility, and assembly sequence optimization</p>
+</li>
+</ul>
+<h3>Hardware Validation &amp; Qualification</h3>
+<ul>
+<li><p>Own the hardware validation strategy and execution for all products — including electrical performance validation, mechanical/environmental stress testing, reliability qualification, and standards compliance</p>
+</li>
+<li><p>Define validation plans that provide comprehensive coverage across signal integrity performance, power delivery, thermal behavior, mechanical durability, and environmental resilience</p>
+</li>
+<li><p>Establish qualification programs aligned with customer requirements, industry standards (GR-468, IEC, Telcordia, OCP specifications), and internal reliability targets</p>
+</li>
+<li><p>Drive a data-driven validation culture — ensuring all design decisions are backed by measured data, all failures are root-caused, and all products ship with complete characterization</p>
+</li>
+<li><p>Oversee interoperability testing with customer host platforms, switches, NICs, and system environments</p>
+</li>
+<li><p>For Silicon Evaluation Platforms, ensure validation coverage enables comprehensive silicon characterization and provides customers confidence in Astera Labs' silicon performance</p>
+</li>
+</ul>
+<h3>Lab Engineering &amp; Infrastructure</h3>
+<ul>
+<li><p>Define and execute the strategy for Astera Labs' hardware engineering labs — including high-speed electrical measurement, mechanical testing, environmental/reliability chambers, rack-scale system test environments, and production-representative assembly capabilities</p>
+</li>
+<li><p>Drive capital equipment planning, procurement, and installation for lab infrastructure that supports 112G/224G characterization (high-bandwidth oscilloscopes, BER testers, VNAs, TDR systems) as well as system-level power, thermal, and mechanical testing</p>
+</li>
+<li><p>Ensure lab environments support rapid prototyping, debug, validation, and failure analysis workflows across all product lines — from cable modules to full rack configurations</p>
+</li>
+<li><p>Provide lab resources and environments for customer engagement activities — including joint debug sessions, interoperability testing, and silicon evaluation demonstrations</p>
+</li>
+<li><p>Build and lead a lab engineering team responsible for equipment maintenance, calibration, measurement methodology, and lab operations</p>
+</li>
+</ul>
+<h3>OEM Engagement &amp; Customer Design Enablement</h3>
+<ul>
+<li><strong>OEM Collaboration on Customer Designs Using Astera Labs Silicon:</strong></li>
+</ul>
+<p>Lead hardware engineering engagement with OEM customers who are designing Astera Labs silicon into their own products — including hyperscale cloud providers, server OEMs, switch vendors, and cable/module manufacturers</p>
+<p>Provide design review support for customer hardware designs incorporating Astera Labs retimers, re-drivers, and connectivity ASICs — reviewing schematics, layouts, power delivery, thermal solutions, and signal integrity</p>
+<p>Develop and maintain comprehensive reference design packages — including reference schematics, recommended layouts, stackup guidelines, BOM recommendations, thermal design guides, and application notes</p>
+<p>Create and publish hardware design guides, integration manuals, and best-practice documentation that enable OEM customers to achieve first-pass success with Astera Labs silicon</p>
+<p>Establish design review frameworks and checklists that OEM customers can use for self-assessment, supplemented by Astera Labs expert review at critical milestones</p>
+<ul>
+<li><strong>Customer Technical Support:</strong></li>
+</ul>
+<p>Build and lead a customer hardware engineering support function that provides responsive, expert-level technical assistance to OEM customers during their design and integration cycles</p>
+<p>Support customer bring-up, debug, and troubleshooting activities — providing hands-on engineering engagement when customers encounter hardware integration challenges with Astera Labs silicon</p>
+<p>Drive resolution of customer-reported hardware issues — coordinating across internal teams (silicon, firmware, SI, validation) to provide root cause analysis and corrective guidance</p>
+<p>Establish escalation processes and service-level expectations for customer hardware engineering support, ensuring timely and high-quality responses</p>
+<p>Travel to customer sites as needed to provide on-site design review, debug support, or integration assistance for critical programs</p>
+<ul>
+<li><strong>Internal &amp; External Design Collaboration:</strong></li>
+</ul>
+<p>Serve as the bridge between Astera Labs' internal product designs and the external ecosystem of customers building with Astera Labs silicon — ensuring learnings flow bidirectionally</p>
+<p>Capture common customer design challenges, failure modes, and best practices — feeding these back into reference designs, design guides, evaluation platforms, and silicon requirements</p>
+<p>Partner with Sales, FAE, and Product Management teams to identify high-value customer engagements and prioritize hardware engineering support resources</p>
+<p>Collaborate with silicon design teams to provide hardware-level feedback on package design, pin assignment, power requirements, and thermal specifications based on customer and internal design experience</p>
+<p>Support joint development programs with strategic OEM partners — including co-designed products, custom form factors, and platform-specific optimizations</p>
+<h3>Cross-Functional Collaboration</h3>
+<ul>
+<li><p>Partner closely with  <strong>Signal Integrity</strong>  engineering to ensure designs meet channel performance requirements and simulation-to-measurement correlation is maintained</p>
+</li>
+<li><p>Collaborate with  <strong>Firmware Engineering</strong>  to ensure hardware-firmware co-design — including power sequencing, thermal management, CMIS interface implementation, BMC integration (for rack-scale products), and diagnostic feature support</p>
+</li>
+<li><p>Work with  <strong>NPI and Manufacturing Engineering</strong>  to ensure designs are manufacturable, testable, and scalable at volume — participating in DFM/DFA/DFT reviews and supporting production ramp across CMs and ODMs</p>
+</li>
+<li><p>Engage with  <strong>Quality and Reliability</strong>  teams to ensure products meet Astera Labs' quality standards and customer reliability expectations</p>
+</li>
+<li><p>Interface with  <strong>Product Management</strong>  to align development priorities with market opportunities, customer requirements, and business objectives</p>
+</li>
+<li><p>Partner with  <strong>Sales and FAE teams</strong>  to support customer design-in activities, provide technical differentiation during competitive evaluations, and ensure customer success drives revenue growth</p>
+</li>
+<li><p>Support  <strong>Customer Engineering</strong>  and  <strong>Applications</strong>  teams in resolving platform integration issues and driving design improvements based on field feedback</p>
+</li>
+<li><p>Collaborate with  <strong>Silicon Engineering</strong>  to ensure evaluation platforms provide optimal silicon bring-up, characterization, and demonstration capabilities — and that customer hardware integration feedback informs future silicon development</p>
+</li>
+</ul>
+<h3>Standards &amp; Industry Engagement</h3>
+<ul>
+<li><p>Ensure hardware designs comply with relevant industry standards — IEEE 802.3ck/dj, OIF CEI-112G/224G, SFF-TA (OSFP, QSFP-DD), CMIS, OCP specifications, and emerging rack-scale standards</p>
+</li>
+<li><p>Represent Astera Labs in industry standards bodies, MSAs, and technical working groups as appropriate</p>
+</li>
+<li><p>Monitor competitive landscape, emerging technologies, and standards evolution to inform roadmap and design decisions</p>
+</li>
+<li><p>Engage with OEM customers and industry partners on pre-standard technologies and next-generation specifications</p>
+</li>
+</ul>
+<h2>Basic Qualifications</h2>
+<ul>
+<li><p>Bachelor's degree in Electrical Engineering, Computer Engineering, or related technical discipline</p>
+</li>
+<li><p>18+ years of progressive experience in hardware design engineering for high-speed interconnect, transceiver/module, cable assembly, evaluation platforms, or rack-scale system products</p>
+</li>
+<li><p>8+ years in engineering management/leadership roles, including managing managers and building multi-team organizations</p>
+</li>
+<li><p>Proven track record leading engineering teams through full product development lifecycle — from concept through qualification and volume production — across product scales from modules to systems</p>
+</li>
+<li><p>Deep technical expertise in high-speed PCB/substrate design, signal integrity, power delivery, and mixed-signal circuit design at 56G/112G PAM4 data rates or above</p>
+</li>
+<li><p>Strong background in mechanical engineering for interconnect and system products — connector design, thermal management, chassis architecture, and form factor compliance</p>
+</li>
+<li><p>Demonstrated experience establishing and executing hardware validation and qualification programs for high-reliability products</p>
+</li>
+<li><p>Experience building and managing hardware engineering lab infrastructure and measurement capabilities</p>
+</li>
+<li><p><strong>Proven experience engaging with OEM customers on hardware design enablement — including design reviews, reference design development, and customer technical support for silicon/ASIC integration</strong></p>
+</li>
+<li><p>Proven ability to make both strategic technology decisions and detailed technical trade-offs that balance performance, cost, schedule, and manufacturability</p>
+</li>
+<li><p>Experience managing engineering teams through hyper-growth — scaling organizations, processes, and infrastructure simultaneously</p>
+</li>
+<li><p>Strong executive communication skills — able to present technology strategy, program status, and risk assessments to C-level leadership and customer executives</p>
+</li>
+<li><p>Experience partnering with contract manufacturers and ODMs in Asia for hardware product realization</p>
+</li>
+</ul>
+<h2>Preferred Qualifications</h2>
+<ul>
+<li><p>Master's or Ph.D. in Electrical Engineering with emphasis on high-speed interconnects, electromagnetic design, or mixed-signal systems</p>
+</li>
+<li><p>Direct experience developing Active Electrical Cables (AEC), Smart Cable Modules (SCM), optical transceivers, or high-speed cable/connector assemblies</p>
+</li>
+<li><p>Experience designing silicon evaluation platforms (EVBs/SVBs) for complex SoCs, ASICs, or connectivity silicon</p>
+</li>
+<li><p>Experience developing rack-scale or chassis-class hardware products for data center, hyperscale, or AI infrastructure applications (switch chassis, OCP systems, or equivalent)</p>
+</li>
+<li><p><strong>Track record of successful OEM design enablement — helping customers achieve first-pass success integrating complex semiconductor products into their hardware platforms</strong></p>
+</li>
+<li><p><strong>Experience building and scaling customer-facing hardware engineering support organizations</strong></p>
+</li>
+<li><p>Experience with 224G/lane (1.6T aggregate) interconnect technology and next-generation substrate/connector/cable architectures</p>
+</li>
+<li><p>Track record delivering connectivity products to hyperscale customers (AWS, Google, Microsoft, Meta, NVIDIA, or equivalent) for AI/ML infrastructure applications</p>
+</li>
+<li><p>Experience integrating retimer ASICs into cable module or system-level products</p>
+</li>
+<li><p>Deep familiarity with relevant standards: IEEE 802.3ck/dj, OIF CEI-112G/224G, SFF-8636, CMIS 5.x+, OSFP, QSFP-DD, OCP specifications</p>
+</li>
+<li><p>Experience with rack-scale system design including power distribution, thermal/airflow architecture, BMC/management interfaces, and high-density backplane/midplane design</p>
+</li>
+<li><p>Background in FMEA, DFMEA, robust design methodologies, and six-sigma quality approaches</p>
+</li>
+<li><p>Mandarin language proficiency for direct engagement with manufacturing partners in China</p>
+</li>
+<li><p>Experience with simulation and EDA tools (Cadence Allegro/OrCAD, Ansys HFSS/SIwave, Keysight ADS, SolidWorks/Creo, thermal/CFD simulation tools)</p>
+</li>
+</ul>
+<h4>Base salary range is $220,000 to $280,000 depending on experience, level, and business need. This role may be eligible for discretionary bonus, incentives and benefits.</h4>
+<p>We know that creativity and innovation happen more often when teams include diverse ideas, backgrounds, and experiences, and we actively encourage everyone with relevant experience to apply, including people of color, LGBTQ+ and non-binary people, veterans, parents, and individuals with disabilities.</p>
+
+  </div>
+
+  <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a
+      href="https://job-boards.greenhouse.io/asteralabs/jobs/4702153005"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-apply"
+    >
+      Apply on Astera Labs &nearr;
+    </a>
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer container">
+    <span><a href="#about" class="about-link" style="color: inherit;">About Open Indeed</a></span>
+  </footer>
+  
+
+  <!-- About Open Indeed Modal Dialog -->
+  <dialog id="about-modal">
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev" class="close" id="about-modal-close-btn"></button>
+        <h3>About Open Indeed</h3>
+      </header>
+      <p>
+        <strong>Open Indeed</strong> is a free, public job board created to help Canadian undergraduate students and new graduates discover verified tech internships, co-ops, and early-career opportunities.
+      </p>
+      <p>
+        Postings are indexed directly from official employer career portals via an autonomous scraping pipeline and updated on a recurring schedule&mdash;keeping listings timely, accurate, and completely free of spam or recruiter reposts.
+      </p>
+      <p>
+        The complete data collection and indexing pipeline is currently undergoing active reliability testing and will be fully open-sourced once thoroughly verified.
+      </p>
+      <footer>
+        <button class="secondary" id="about-modal-close-footer" style="margin-bottom: 0; padding: 0.35rem 1rem;">Got it</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <script>
+    (function() {
+      function initAboutModal() {
+        var modal = document.getElementById('about-modal');
+        if (!modal) return;
+        var openLinks = document.querySelectorAll('.about-link');
+        var closeBtn = document.getElementById('about-modal-close-btn');
+        var closeFooter = document.getElementById('about-modal-close-footer');
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          } else {
+            modal.setAttribute('open', '');
+          }
+        }
+        function closeModal(e) {
+          if (e) e.preventDefault();
+          if (typeof modal.close === 'function') {
+            modal.close();
+          } else {
+            modal.removeAttribute('open');
+          }
+          if (window.location.hash === '#about') {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+          }
+        }
+
+        openLinks.forEach(function(link) {
+          link.addEventListener('click', openModal);
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          var art = modal.querySelector('article');
+          if (!art) return;
+          var r = art.getBoundingClientRect();
+          if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+            closeModal(e);
+          }
+        });
+
+        if (window.location.hash === '#about') {
+          openModal();
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutModal);
+      } else {
+        initAboutModal();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>
