@@ -3,10 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
   <title>Open Indeed — Canadian Tech Internship Tracker</title>
-  <meta name="description" content="Open Indeed is a public job board helping Canadian students and new grads discover tech, engineering, and co-op opportunities.">
+  <meta name="description" content="Search 58,654 verified Canadian tech, engineering, and co-op internships indexed directly from official employer career portals.">
+  <link rel="canonical" href="https://jobs.justin.by/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:site_name" content="Open Indeed">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Open Indeed — Canadian Tech Internship Tracker">
+  <meta property="og:description" content="Search 58,654 verified Canadian tech, engineering, and co-op internships indexed directly from official employer career portals.">
+  <meta property="og:url" content="https://jobs.justin.by/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Open Indeed — Canadian Tech Internship Tracker">
+  <meta name="twitter:description" content="Search 58,654 verified Canadian tech, engineering, and co-op internships indexed directly from official employer career portals.">
+
+  <!-- Structured Data JSON-LD -->
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Open Indeed",
+  "url": "https://jobs.justin.by/",
+  "description": "Public job board helping Canadian undergraduate and new grad students discover verified tech and engineering internships.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://jobs.justin.by/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Open Indeed",
+  "url": "https://jobs.justin.by/",
+  "description": "Open Indeed is a free, public job tracker helping Canadian undergraduate students and new graduates discover verified engineering and tech internships."
+}
+</script>
+
+
   <link rel="stylesheet" href="static/pico.min.css">
   <style>
+    /* Screen reader accessible text for search crawlers & a11y */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
     /* ==========================================================================
        1. Design Tokens & Theme Variables
        ========================================================================== */
@@ -473,31 +527,21 @@
       line-height: 1.25;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-    .col-title a {
-      text-decoration: none;
       color: var(--pico-color);
+      transition: color 0.12s ease;
     }
-    .col-title a:hover {
+    .jobs-table tr.job-row:hover .col-title,
+    .jobs-table tr.job-row.active .col-title {
       color: var(--pico-primary);
-      text-decoration: underline;
     }
     .col-location {
       color: var(--pico-muted-color);
       font-size: 0.74rem;
       white-space: nowrap;
-      width: 85px;
-      max-width: 85px;
+      width: 170px;
+      max-width: 170px;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-    .col-mode {
-      width: 70px;
-      text-align: right;
-      white-space: nowrap;
-    }
-    th.col-mode {
-      text-align: right !important;
     }
     .jobs-table thead th[style*="cursor: pointer"]:hover {
       color: var(--pico-color);
@@ -783,7 +827,8 @@
         min-width: 360px;
       }
       .col-location {
-        width: 75px;
+        width: 130px;
+        max-width: 130px;
       }
     }
 
@@ -845,13 +890,10 @@
         flex-shrink: 0 !important;
       }
 
-      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      /* On narrow mobile screens, hide Location from list table to give full room to Title & Company */
       .jobs-table th:nth-child(4),
       .jobs-table td:nth-child(4),
-      .jobs-table th:nth-child(5),
-      .jobs-table td:nth-child(5),
-      colgroup col:nth-child(4),
-      colgroup col:nth-child(5) {
+      colgroup col:nth-child(4) {
         display: none !important;
       }
     }
@@ -860,13 +902,14 @@
 </head>
 <body class="app-shell">
   
+<h1 class="sr-only">Open Indeed — Canadian Tech Internship Tracker</h1>
 <header class="app-topbar">
   <div style="display: flex; align-items: baseline; gap: 0.5rem;">
     <a href="index.html" class="brand">Open Indeed</a>
     <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
   </div>
   <div class="topbar-meta">
-    <span>Updated 2026-09-20 18:32 UTC</span> &bull;
+    <span>Updated 2026-09-21 05:12 UTC</span> &bull;
     <a href="#about" class="about-link" title="About Open Indeed">? About</a>
   </div>
 </header>
@@ -964,8 +1007,7 @@
           <col style="width: 80px;">
           <col style="width: 120px;">
           <col style="width: auto;">
-          <col style="width: 85px;">
-          <col style="width: 70px;">
+          <col style="width: 170px;">
         </colgroup>
         <thead>
           <tr>
@@ -973,1207 +1015,708 @@
             <th class="col-company" id="th-company" style="cursor: pointer;" title="Sort by Company">Company</th>
             <th class="col-title" id="th-title" style="cursor: pointer;" title="Sort by Title">Position</th>
             <th class="col-location">Location</th>
-            <th class="col-mode">Mode</th>
           </tr>
         </thead>
         <tbody id="contentArea" class="clusterize-content">
           
-          <tr class="job-row active" data-url="jobs/subnetsolutions_students-and-new-grads-opportunities.html" data-id="subnetsolutions_students-and-new-grads-opportunities" data-index="0" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="SUBNET Solutions">SUBNET Solutions</td>
-            <td class="col-title"><a href="jobs/subnetsolutions_students-and-new-grads-opportunities.html" class="job-link" target="_blank" rel="noopener noreferrer">Students and New Grads Opportunities</a></td>
-            <td class="col-location" title="Calgary, Alberta, Canada">Calgary, AB</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/cgi_J0926-1501.html" data-id="cgi_J0926-1501" data-index="1" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="CGI Group">CGI Group</td>
-            <td class="col-title"><a href="jobs/cgi_J0926-1501.html" class="job-link" target="_blank" rel="noopener noreferrer">Stage coopératif - Hiver 2027 Analyste ServiceNow (4 months)</a></td>
-            <td class="col-location" title="Drummondville, Canada">Drummondville</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/cgi_J0926-1458.html" data-id="cgi_J0926-1458" data-index="2" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="CGI Group">CGI Group</td>
-            <td class="col-title"><a href="jobs/cgi_J0926-1458.html" class="job-link" target="_blank" rel="noopener noreferrer">Stage coopératif - Hiver 2027– Développement ServiceNow (4 months)</a></td>
-            <td class="col-location" title="Drummondville, Canada">Drummondville</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/cgi_J0926-1378.html" data-id="cgi_J0926-1378" data-index="3" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="CGI Group">CGI Group</td>
-            <td class="col-title"><a href="jobs/cgi_J0926-1378.html" class="job-link" target="_blank" rel="noopener noreferrer">Winter 2027 Co-op: Bilingual Campus Recruitment Coordinator (8 months)</a></td>
-            <td class="col-location" title="Montréal or Toronto, Canada">Montréal or Toronto</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/cgi_J0926-0916.html" data-id="cgi_J0926-0916" data-index="4" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="CGI Group">CGI Group</td>
-            <td class="col-title"><a href="jobs/cgi_J0926-0916.html" class="job-link" target="_blank" rel="noopener noreferrer">Coop - AI Developer</a></td>
-            <td class="col-location" title="Victoria, Canada">Victoria</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/cgi_J0726-0381.html" data-id="cgi_J0726-0381" data-index="5" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="CGI Group">CGI Group</td>
-            <td class="col-title"><a href="jobs/cgi_J0726-0381.html" class="job-link" target="_blank" rel="noopener noreferrer">Développeur Datastage Sénior</a></td>
-            <td class="col-location" title="Montréal, Canada">Montréal</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/cgi_J0626-1709.html" data-id="cgi_J0626-1709" data-index="6" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="CGI Group">CGI Group</td>
-            <td class="col-title"><a href="jobs/cgi_J0626-1709.html" class="job-link" target="_blank" rel="noopener noreferrer">Senior Internal Auditor, Finance Operations</a></td>
-            <td class="col-location" title="Montréal, Canada">Montréal</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/campusbridge_engg_146708.html" data-id="campusbridge_engg_146708" data-index="7" tabindex="0">
+          <tr class="job-row active" data-url="jobs/campusbridge_engg_146708.html" data-id="campusbridge_engg_146708" data-index="0" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Astera Labs">Astera Labs</td>
-            <td class="col-title"><a href="jobs/campusbridge_engg_146708.html" class="job-link" target="_blank" rel="noopener noreferrer">System Validation Engineer Intern</a></td>
+            <td class="col-title" title="System Validation Engineer Intern">System Validation Engineer Intern</td>
             <td class="col-location" title="Vancouver, BC, Canada">Vancouver, BC</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/campusbridge_engg_146565.html" data-id="campusbridge_engg_146565" data-index="8" tabindex="0">
+          <tr class="job-row" data-url="jobs/campusbridge_engg_146565.html" data-id="campusbridge_engg_146565" data-index="1" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Astera Labs">Astera Labs</td>
-            <td class="col-title"><a href="jobs/campusbridge_engg_146565.html" class="job-link" target="_blank" rel="noopener noreferrer">Platform Applications Engineer Intern (Tools Development Engineer - COSMOS Platform Software)</a></td>
+            <td class="col-title" title="Platform Applications Engineer Intern (Tools Development Engineer - COSMOS Platform Software)">Platform Applications Engineer Intern (Tools Development Engineer - COSMOS Platform Software)</td>
             <td class="col-location" title="Vancouver, BC, Canada">Vancouver, BC</td>
-            <td class="col-mode">
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/tesla_282445.html" data-id="tesla_282445" data-index="9" tabindex="0">
+          <tr class="job-row" data-url="jobs/tesla_283633.html" data-id="tesla_283633" data-index="2" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Tesla">Tesla</td>
-            <td class="col-title"><a href="jobs/tesla_282445.html" class="job-link" target="_blank" rel="noopener noreferrer">Internship, Service Technician Trainee (Fall 2026)</a></td>
+            <td class="col-title" title="Internship, Program Manager, Territory Operations (Winter/Spring 2027)">Internship, Program Manager, Territory Operations (Winter/Spring 2027)</td>
+            <td class="col-location" title="Quebec City, Quebec">QC City, QC</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/tesla_282445.html" data-id="tesla_282445" data-index="3" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Tesla">Tesla</td>
+            <td class="col-title" title="Internship, Service Technician Trainee (Fall 2026)">Internship, Service Technician Trainee (Fall 2026)</td>
             <td class="col-location" title="Ottawa, Ontario">Ottawa, ON</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/tesla_281501.html" data-id="tesla_281501" data-index="10" tabindex="0">
+          <tr class="job-row" data-url="jobs/tesla_281501.html" data-id="tesla_281501" data-index="4" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Tesla">Tesla</td>
-            <td class="col-title"><a href="jobs/tesla_281501.html" class="job-link" target="_blank" rel="noopener noreferrer">Internship, Cathode Advanced Manufacturing Engineer, Cell Engineering (Spring 2027)</a></td>
+            <td class="col-title" title="Internship, Cathode Advanced Manufacturing Engineer, Cell Engineering (Spring 2027)">Internship, Cathode Advanced Manufacturing Engineer, Cell Engineering (Spring 2027)</td>
             <td class="col-location" title="Mississauga, Ontario">Mississauga, ON</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/tesla_280393.html" data-id="tesla_280393" data-index="11" tabindex="0">
+          <tr class="job-row" data-url="jobs/tesla_280393.html" data-id="tesla_280393" data-index="5" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Tesla">Tesla</td>
-            <td class="col-title"><a href="jobs/tesla_280393.html" class="job-link" target="_blank" rel="noopener noreferrer">Internship, Mechanical Design Engineer, Cell Engineering (Winter/Spring 2027)</a></td>
+            <td class="col-title" title="Internship, Mechanical Design Engineer, Cell Engineering (Winter/Spring 2027)">Internship, Mechanical Design Engineer, Cell Engineering (Winter/Spring 2027)</td>
             <td class="col-location" title="Richmond Hill, Ontario">Richmond Hill, ON</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/tesla_280390.html" data-id="tesla_280390" data-index="12" tabindex="0">
+          <tr class="job-row" data-url="jobs/tesla_280390.html" data-id="tesla_280390" data-index="6" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Tesla">Tesla</td>
-            <td class="col-title"><a href="jobs/tesla_280390.html" class="job-link" target="_blank" rel="noopener noreferrer">Internship, Technical Program Manager, Cell Manufacturing (Winter/Spring 2027)</a></td>
+            <td class="col-title" title="Internship, Technical Program Manager, Cell Manufacturing (Winter/Spring 2027)">Internship, Technical Program Manager, Cell Manufacturing (Winter/Spring 2027)</td>
             <td class="col-location" title="Markham, Ontario">Markham, ON</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/tesla_280389.html" data-id="tesla_280389" data-index="13" tabindex="0">
+          <tr class="job-row" data-url="jobs/tesla_280389.html" data-id="tesla_280389" data-index="7" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Tesla">Tesla</td>
-            <td class="col-title"><a href="jobs/tesla_280389.html" class="job-link" target="_blank" rel="noopener noreferrer">Internship, Mechanical Engineer, Cell Engineering (Winter/Spring 2027)</a></td>
+            <td class="col-title" title="Internship, Mechanical Engineer, Cell Engineering (Winter/Spring 2027)">Internship, Mechanical Engineer, Cell Engineering (Winter/Spring 2027)</td>
             <td class="col-location" title="Markham, Ontario">Markham, ON</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/tesla_280326.html" data-id="tesla_280326" data-index="14" tabindex="0">
+          <tr class="job-row" data-url="jobs/tesla_280326.html" data-id="tesla_280326" data-index="8" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Tesla">Tesla</td>
-            <td class="col-title"><a href="jobs/tesla_280326.html" class="job-link" target="_blank" rel="noopener noreferrer">Internship, Service Technician Trainee (Fall 2026)</a></td>
+            <td class="col-title" title="Internship, Service Technician Trainee (Fall 2026)">Internship, Service Technician Trainee (Fall 2026)</td>
             <td class="col-location" title="Nepean, Ontario">Nepean, ON</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/tesla_280324.html" data-id="tesla_280324" data-index="15" tabindex="0">
+          <tr class="job-row" data-url="jobs/tesla_280324.html" data-id="tesla_280324" data-index="9" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Tesla">Tesla</td>
-            <td class="col-title"><a href="jobs/tesla_280324.html" class="job-link" target="_blank" rel="noopener noreferrer">Stage, Technicien de Service (Automne 2026) | Internship, Service Technician Trainee (Fall 2026)</a></td>
+            <td class="col-title" title="Stage, Technicien de Service (Automne 2026) | Internship, Service Technician Trainee (Fall 2026)">Stage, Technicien de Service (Automne 2026) | Internship, Service Technician Trainee (Fall 2026)</td>
             <td class="col-location" title="Montreal, Quebec">Montreal, QC</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/tesla_279835.html" data-id="tesla_279835" data-index="16" tabindex="0">
+          <tr class="job-row" data-url="jobs/tesla_279807.html" data-id="tesla_279807" data-index="10" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Tesla">Tesla</td>
-            <td class="col-title"><a href="jobs/tesla_279835.html" class="job-link" target="_blank" rel="noopener noreferrer">Technicien de Service START (Hiver 2027) | START Service Technician (Winter 2027)</a></td>
+            <td class="col-title" title="Stage, Technicien de Service (Automne 2026) | Internship, Service Technician Trainee (Fall 2026)">Stage, Technicien de Service (Automne 2026) | Internship, Service Technician Trainee (Fall 2026)</td>
             <td class="col-location" title="Laval, Quebec">Laval, QC</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/tesla_279807.html" data-id="tesla_279807" data-index="17" tabindex="0">
+          <tr class="job-row" data-url="jobs/tesla_272776.html" data-id="tesla_272776" data-index="11" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Tesla">Tesla</td>
-            <td class="col-title"><a href="jobs/tesla_279807.html" class="job-link" target="_blank" rel="noopener noreferrer">Stage, Technicien de Service (Automne 2026) | Internship, Service Technician Trainee (Fall 2026)</a></td>
-            <td class="col-location" title="Laval, Quebec">Laval, QC</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/tesla_272776.html" data-id="tesla_272776" data-index="18" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Tesla">Tesla</td>
-            <td class="col-title"><a href="jobs/tesla_272776.html" class="job-link" target="_blank" rel="noopener noreferrer">Internship, Service Technician Trainee (Summer 2026)</a></td>
+            <td class="col-title" title="Internship, Service Technician Trainee (Summer 2026)">Internship, Service Technician Trainee (Summer 2026)</td>
             <td class="col-location" title="Calgary, Alberta">Calgary, AB</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/tesla_267076.html" data-id="tesla_267076" data-index="19" tabindex="0">
+          <tr class="job-row" data-url="jobs/tesla_267076.html" data-id="tesla_267076" data-index="12" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Tesla">Tesla</td>
-            <td class="col-title"><a href="jobs/tesla_267076.html" class="job-link" target="_blank" rel="noopener noreferrer">Internship, Service Technician Trainee (Summer 2026)</a></td>
+            <td class="col-title" title="Internship, Service Technician Trainee (Summer 2026)">Internship, Service Technician Trainee (Summer 2026)</td>
             <td class="col-location" title="Vancouver, British Columbia">Vancouver, BC</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/teck_1430876400.html" data-id="teck_1430876400" data-index="20" tabindex="0">
+          <tr class="job-row" data-url="jobs/teck_1430876400.html" data-id="teck_1430876400" data-index="13" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Teck Resources">Teck Resources</td>
-            <td class="col-title"><a href="jobs/teck_1430876400.html" class="job-link" target="_blank" rel="noopener noreferrer">Business Systems Analyst Co-op</a></td>
+            <td class="col-title" title="Business Systems Analyst Co-op">Business Systems Analyst Co-op</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/teck_1430874900.html" data-id="teck_1430874900" data-index="21" tabindex="0">
+          <tr class="job-row" data-url="jobs/teck_1430874900.html" data-id="teck_1430874900" data-index="14" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Teck Resources">Teck Resources</td>
-            <td class="col-title"><a href="jobs/teck_1430874900.html" class="job-link" target="_blank" rel="noopener noreferrer">Cyber Risk Analyst Co-op</a></td>
+            <td class="col-title" title="Cyber Risk Analyst Co-op">Cyber Risk Analyst Co-op</td>
             <td class="col-location" title="Vancouver, British Columbia, CA">Vancouver, BC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/teck_1430698500.html" data-id="teck_1430698500" data-index="22" tabindex="0">
+          <tr class="job-row" data-url="jobs/teck_1430698500.html" data-id="teck_1430698500" data-index="15" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Teck Resources">Teck Resources</td>
-            <td class="col-title"><a href="jobs/teck_1430698500.html" class="job-link" target="_blank" rel="noopener noreferrer">Business Analyst Co-op</a></td>
+            <td class="col-title" title="Business Analyst Co-op">Business Analyst Co-op</td>
             <td class="col-location" title="Vancouver, British Columbia, CA">Vancouver, BC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_606252017.html" data-id="scotiabank_606252017" data-index="23" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_606098517.html" data-id="scotiabank_606098517" data-index="16" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606252017.html" class="job-link" target="_blank" rel="noopener noreferrer">Business Advisor - Regional Opportunities - Downtown Vancouver &amp; Area Trainee</a></td>
-            <td class="col-location" title="Vancouver, BC, CA, V6C3A8">Vancouver, BC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_606229917.html" data-id="scotiabank_606229917" data-index="24" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606229917.html" class="job-link" target="_blank" rel="noopener noreferrer">International Investment Advisory Branch Administrator - Toronto</a></td>
-            <td class="col-location" title="Toronto, ON, CA, M5H 1H1">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_606163717.html" data-id="scotiabank_606163717" data-index="25" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606163717.html" class="job-link" target="_blank" rel="noopener noreferrer">Canada&#39;s Top Students (CTS) 2026 Presented by Scotiabank</a></td>
-            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_606156517.html" data-id="scotiabank_606156517" data-index="26" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606156517.html" class="job-link" target="_blank" rel="noopener noreferrer">Manager, International AML Advisory</a></td>
-            <td class="col-location" title="Toronto, ON, CA, M5C2W1">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_606154717.html" data-id="scotiabank_606154717" data-index="27" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606154717.html" class="job-link" target="_blank" rel="noopener noreferrer">Manager, Strategy &amp; Transformation (English/Spanish), International Banking - Toronto</a></td>
-            <td class="col-location" title="Toronto, ON, CA, M5H1B6">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_606107417.html" data-id="scotiabank_606107417" data-index="28" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606107417.html" class="job-link" target="_blank" rel="noopener noreferrer">Senior Manager, Portfolio Strategy and Capital Efficiency, International Banking - Toronto</a></td>
-            <td class="col-location" title="Toronto, ON, CA, M5H1B6">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_606098517.html" data-id="scotiabank_606098517" data-index="29" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606098517.html" class="job-link" target="_blank" rel="noopener noreferrer">Wealth Management - ScotiaMcLeod Internship/Co-op - Winter 2027 - Montreal</a></td>
+            <td class="col-title" title="Wealth Management - ScotiaMcLeod Internship/Co-op - Winter 2027 - Montreal">Wealth Management - ScotiaMcLeod Internship/Co-op - Winter 2027 - Montreal</td>
             <td class="col-location" title="Montreal, QC, CA">Montreal, QC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_606098417.html" data-id="scotiabank_606098417" data-index="30" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_606098417.html" data-id="scotiabank_606098417" data-index="17" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606098417.html" class="job-link" target="_blank" rel="noopener noreferrer">Gestion de Patrimoine - ScotiaMcLeod Stage/Co-op - Hiver 2027 - Montréal</a></td>
+            <td class="col-title" title="Gestion de Patrimoine - ScotiaMcLeod Stage/Co-op - Hiver 2027 - Montréal">Gestion de Patrimoine - ScotiaMcLeod Stage/Co-op - Hiver 2027 - Montréal</td>
             <td class="col-location" title="Montreal, QC, CA">Montreal, QC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_606053217.html" data-id="scotiabank_606053217" data-index="31" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_606042917.html" data-id="scotiabank_606042917" data-index="18" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606053217.html" class="job-link" target="_blank" rel="noopener noreferrer">Bilingual (English/Spanish) Manager,  International Compliance &amp; AML, Policy Management</a></td>
-            <td class="col-location" title="Toronto, ON, CA, M5C2W1">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_606042917.html" data-id="scotiabank_606042917" data-index="32" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606042917.html" class="job-link" target="_blank" rel="noopener noreferrer">Global Banking and Markets - Sales and Trading Intern Co-op - Winter/Summer 2027 - Montreal</a></td>
+            <td class="col-title" title="Global Banking and Markets - Sales and Trading Intern Co-op - Winter/Summer 2027 - Montreal">Global Banking and Markets - Sales and Trading Intern Co-op - Winter/Summer 2027 - Montreal</td>
             <td class="col-location" title="Montreal, QC, CA">Montreal, QC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_606042817.html" data-id="scotiabank_606042817" data-index="33" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605921217.html" data-id="scotiabank_605921217" data-index="19" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606042817.html" class="job-link" target="_blank" rel="noopener noreferrer">Services bancaires et marchés mondiaux - Vente et négociation - Stage - Montréal - Hiver / Été 2027</a></td>
-            <td class="col-location" title="Montreal, QC, CA">Montreal, QC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_606021317.html" data-id="scotiabank_606021317" data-index="34" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606021317.html" class="job-link" target="_blank" rel="noopener noreferrer">Manager, Policy Adherence and Effectiveness, International Banking - Toronto</a></td>
-            <td class="col-location" title="Toronto, ON, CA, L4W0B4">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_606019917.html" data-id="scotiabank_606019917" data-index="35" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606019917.html" class="job-link" target="_blank" rel="noopener noreferrer">Director, Retail &amp; Small Business Credit Policy Adherence &amp; Effectiveness, International Banking</a></td>
-            <td class="col-location" title="Toronto, ON, CA, M5H1H1">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_606014917.html" data-id="scotiabank_606014917" data-index="36" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_606014917.html" class="job-link" target="_blank" rel="noopener noreferrer">Financial Advisor, Investment &amp; Retirement Planning - Brockville,  Ontario</a></td>
-            <td class="col-location" title="Ottawa, ON, CA">Ottawa, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605924617.html" data-id="scotiabank_605924617" data-index="37" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605924617.html" class="job-link" target="_blank" rel="noopener noreferrer">GBM - Quantitative Trading Developer- Electronic Execution Services- PEY 12 months</a></td>
+            <td class="col-title" title="ASPIRE Commercial Banking - Winter 2027 Co-op / Internship - Toronto">ASPIRE Commercial Banking - Winter 2027 Co-op / Internship - Toronto</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605921217.html" data-id="scotiabank_605921217" data-index="38" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605919917.html" data-id="scotiabank_605919917" data-index="20" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605921217.html" class="job-link" target="_blank" rel="noopener noreferrer">ASPIRE Commercial Banking - Winter 2027 Co-op / Internship - Toronto</a></td>
+            <td class="col-title" title="ASPIRE Commercial Banking - National Office, Data &amp; Analytics - Winter 2027 Co-op/Internship Toronto">ASPIRE Commercial Banking - National Office, Data &amp; Analytics - Winter 2027 Co-op/Internship Toronto</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605919917.html" data-id="scotiabank_605919917" data-index="39" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605919217.html" data-id="scotiabank_605919217" data-index="21" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605919917.html" class="job-link" target="_blank" rel="noopener noreferrer">ASPIRE Commercial Banking - National Office, Data &amp; Analytics - Winter 2027 Co-op/Internship Toronto</a></td>
+            <td class="col-title" title="ASPIRE Commercial Banking - National Office - Winter 2027 Co-op / Internship - Toronto">ASPIRE Commercial Banking - National Office - Winter 2027 Co-op / Internship - Toronto</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605919217.html" data-id="scotiabank_605919217" data-index="40" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605919117.html" data-id="scotiabank_605919117" data-index="22" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605919217.html" class="job-link" target="_blank" rel="noopener noreferrer">ASPIRE Commercial Banking - National Office - Winter 2027 Co-op / Internship - Toronto</a></td>
+            <td class="col-title" title="ASPIRE Commercial Banking - Global Transaction Banking Strategy - Winter 2027 Co-op/Internship">ASPIRE Commercial Banking - Global Transaction Banking Strategy - Winter 2027 Co-op/Internship</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605919117.html" data-id="scotiabank_605919117" data-index="41" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605918517.html" data-id="scotiabank_605918517" data-index="23" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605919117.html" class="job-link" target="_blank" rel="noopener noreferrer">ASPIRE Commercial Banking - Global Transaction Banking Strategy - Winter 2027 Co-op/Internship</a></td>
-            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605918517.html" data-id="scotiabank_605918517" data-index="42" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605918517.html" class="job-link" target="_blank" rel="noopener noreferrer">ASPIRE Commercial Banking - Global Transaction Banking Sales - Winter 2027 Co-op/Internship Calgary</a></td>
+            <td class="col-title" title="ASPIRE Commercial Banking - Global Transaction Banking Sales - Winter 2027 Co-op/Internship Calgary">ASPIRE Commercial Banking - Global Transaction Banking Sales - Winter 2027 Co-op/Internship Calgary</td>
             <td class="col-location" title="Calgary, AB, CA">Calgary, AB, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605918317.html" data-id="scotiabank_605918317" data-index="43" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605918317.html" data-id="scotiabank_605918317" data-index="24" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605918317.html" class="job-link" target="_blank" rel="noopener noreferrer">ASPIRE Commercial Banking - Roynat Capital, M&amp;A - Winter 2027 Co-op / Internship - Toronto</a></td>
+            <td class="col-title" title="ASPIRE Commercial Banking - Roynat Capital, M&amp;A - Winter 2027 Co-op / Internship - Toronto">ASPIRE Commercial Banking - Roynat Capital, M&amp;A - Winter 2027 Co-op / Internship - Toronto</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605916117.html" data-id="scotiabank_605916117" data-index="44" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605916117.html" data-id="scotiabank_605916117" data-index="25" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605916117.html" class="job-link" target="_blank" rel="noopener noreferrer">Wealth Management Tax Administration Internship-Co-op (Vancouver) - Winter 2027</a></td>
+            <td class="col-title" title="Wealth Management Tax Administration Internship-Co-op (Vancouver) - Winter 2027">Wealth Management Tax Administration Internship-Co-op (Vancouver) - Winter 2027</td>
             <td class="col-location" title="Vancouver, BC, CA">Vancouver, BC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605915817.html" data-id="scotiabank_605915817" data-index="45" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605915817.html" data-id="scotiabank_605915817" data-index="26" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605915817.html" class="job-link" target="_blank" rel="noopener noreferrer">Wealth Management Tax Administration Internship-Co-op (Toronto) - Winter 2027</a></td>
+            <td class="col-title" title="Wealth Management Tax Administration Internship-Co-op (Toronto) - Winter 2027">Wealth Management Tax Administration Internship-Co-op (Toronto) - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605915017.html" data-id="scotiabank_605915017" data-index="46" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605915017.html" data-id="scotiabank_605915017" data-index="27" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605915017.html" class="job-link" target="_blank" rel="noopener noreferrer">Wealth Management Tax Administration Internship-Co-op (Ottawa) - Winter 2027</a></td>
+            <td class="col-title" title="Wealth Management Tax Administration Internship-Co-op (Ottawa) - Winter 2027">Wealth Management Tax Administration Internship-Co-op (Ottawa) - Winter 2027</td>
             <td class="col-location" title="Ottawa, ON, CA">Ottawa, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605911217.html" data-id="scotiabank_605911217" data-index="47" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605911217.html" data-id="scotiabank_605911217" data-index="28" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605911217.html" class="job-link" target="_blank" rel="noopener noreferrer">Wealth Management - Strategy &amp; Projects Internship-Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Wealth Management - Strategy &amp; Projects Internship-Co-op - Winter 2027">Wealth Management - Strategy &amp; Projects Internship-Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605909417.html" data-id="scotiabank_605909417" data-index="48" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605909417.html" data-id="scotiabank_605909417" data-index="29" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605909417.html" class="job-link" target="_blank" rel="noopener noreferrer">Wealth Management - ScotiaMcLeod Internship/Co-op (Victoria, BC)- Winter 2027</a></td>
+            <td class="col-title" title="Wealth Management - ScotiaMcLeod Internship/Co-op (Victoria, BC)- Winter 2027">Wealth Management - ScotiaMcLeod Internship/Co-op (Victoria, BC)- Winter 2027</td>
             <td class="col-location" title="Victoria, BC, CA">Victoria, BC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605906817.html" data-id="scotiabank_605906817" data-index="49" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605906817.html" data-id="scotiabank_605906817" data-index="30" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605906817.html" class="job-link" target="_blank" rel="noopener noreferrer">ASPIRE Commercial Banking - Mid-Market - Winter 2027 Co-op / Internship - Edmonton</a></td>
+            <td class="col-title" title="ASPIRE Commercial Banking - Mid-Market - Winter 2027 Co-op / Internship - Edmonton">ASPIRE Commercial Banking - Mid-Market - Winter 2027 Co-op / Internship - Edmonton</td>
             <td class="col-location" title="Edmonton, AB, CA">Edmonton, AB, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605906417.html" data-id="scotiabank_605906417" data-index="50" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605906417.html" data-id="scotiabank_605906417" data-index="31" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605906417.html" class="job-link" target="_blank" rel="noopener noreferrer">ASPIRE Commercial Banking - Mid-Market - Winter 2027 Co-op / Internship - Langley</a></td>
+            <td class="col-title" title="ASPIRE Commercial Banking - Mid-Market - Winter 2027 Co-op / Internship - Langley">ASPIRE Commercial Banking - Mid-Market - Winter 2027 Co-op / Internship - Langley</td>
             <td class="col-location" title="Langley, BC, CA">Langley, BC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605906217.html" data-id="scotiabank_605906217" data-index="51" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605906117.html" data-id="scotiabank_605906117" data-index="32" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605906217.html" class="job-link" target="_blank" rel="noopener noreferrer">ASPIRE Services bancaires commerciaux - Marché intermédiaire - Stage - Hiver 2027 - Montréal</a></td>
+            <td class="col-title" title="ASPIRE Commercial Banking - Mid-Market - Winter 2027 Co-op / Internship - Montreal">ASPIRE Commercial Banking - Mid-Market - Winter 2027 Co-op / Internship - Montreal</td>
             <td class="col-location" title="Montreal, QC, CA">Montreal, QC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605906117.html" data-id="scotiabank_605906117" data-index="52" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605902717.html" data-id="scotiabank_605902717" data-index="33" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605906117.html" class="job-link" target="_blank" rel="noopener noreferrer">ASPIRE Commercial Banking - Mid-Market - Winter 2027 Co-op / Internship - Montreal</a></td>
+            <td class="col-title" title="Velocity - Blockchain Engineer Internship/Co-Op - Winter 2027">Velocity - Blockchain Engineer Internship/Co-Op - Winter 2027</td>
+            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/scotiabank_605902217.html" data-id="scotiabank_605902217" data-index="34" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Scotiabank">Scotiabank</td>
+            <td class="col-title" title="Wealth Management - Valuation Analyst Intern (12-Month Role)">Wealth Management - Valuation Analyst Intern (12-Month Role)</td>
+            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/scotiabank_605902117.html" data-id="scotiabank_605902117" data-index="35" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Scotiabank">Scotiabank</td>
+            <td class="col-title" title="GBM - Client Insights &amp; Analytics Internship/Co-op - Fall 2027 (12 Months)">GBM - Client Insights &amp; Analytics Internship/Co-op - Fall 2027 (12 Months)</td>
+            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/scotiabank_605901717.html" data-id="scotiabank_605901717" data-index="36" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Scotiabank">Scotiabank</td>
+            <td class="col-title" title="GTB - Trade &amp; Working Capital Solution Internship/Co-Op - Winter 2027">GTB - Trade &amp; Working Capital Solution Internship/Co-Op - Winter 2027</td>
+            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/scotiabank_605898517.html" data-id="scotiabank_605898517" data-index="37" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Scotiabank">Scotiabank</td>
+            <td class="col-title" title="GBM - Data &amp; Operational Initiatives Internship/Co-op - Winter 2027">GBM - Data &amp; Operational Initiatives Internship/Co-op - Winter 2027</td>
+            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/scotiabank_605898417.html" data-id="scotiabank_605898417" data-index="38" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Scotiabank">Scotiabank</td>
+            <td class="col-title" title="GBM - GCM Banking Internship/Co-op - Winter 2027">GBM - GCM Banking Internship/Co-op - Winter 2027</td>
+            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/scotiabank_605898317.html" data-id="scotiabank_605898317" data-index="39" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Scotiabank">Scotiabank</td>
+            <td class="col-title" title="GBM - Business Risk Management (Internal Controls) Internship/Co-op - Winter 2027">GBM - Business Risk Management (Internal Controls) Internship/Co-op - Winter 2027</td>
+            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/scotiabank_605898017.html" data-id="scotiabank_605898017" data-index="40" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Scotiabank">Scotiabank</td>
+            <td class="col-title" title="GBM - Trade Floor Technology Consultant Internship/Co-op - Summer 2027 (12-16 Months)">GBM - Trade Floor Technology Consultant Internship/Co-op - Summer 2027 (12-16 Months)</td>
+            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/scotiabank_605897917.html" data-id="scotiabank_605897917" data-index="41" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Scotiabank">Scotiabank</td>
+            <td class="col-title" title="GBM - Trade Floor Technology Consultant Internship/Co-op - Summer 2027">GBM - Trade Floor Technology Consultant Internship/Co-op - Summer 2027</td>
+            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/scotiabank_605890717.html" data-id="scotiabank_605890717" data-index="42" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Scotiabank">Scotiabank</td>
+            <td class="col-title" title="Wealth Management - Tax Administrator Internship/Co-op - Winter 2027 - Montreal">Wealth Management - Tax Administrator Internship/Co-op - Winter 2027 - Montreal</td>
             <td class="col-location" title="Montreal, QC, CA">Montreal, QC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605902717.html" data-id="scotiabank_605902717" data-index="53" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605890617.html" data-id="scotiabank_605890617" data-index="43" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605902717.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Blockchain Engineer Internship/Co-Op - Winter 2027</a></td>
-            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605902217.html" data-id="scotiabank_605902217" data-index="54" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605902217.html" class="job-link" target="_blank" rel="noopener noreferrer">Wealth Management - Valuation Analyst Intern (12-Month Role)</a></td>
-            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605902117.html" data-id="scotiabank_605902117" data-index="55" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605902117.html" class="job-link" target="_blank" rel="noopener noreferrer">GBM - Client Insights &amp; Analytics Internship/Co-op - Fall 2027 (12 Months)</a></td>
-            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605901717.html" data-id="scotiabank_605901717" data-index="56" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605901717.html" class="job-link" target="_blank" rel="noopener noreferrer">GTB - Trade &amp; Working Capital Solution Internship/Co-Op - Winter 2027</a></td>
-            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605898517.html" data-id="scotiabank_605898517" data-index="57" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605898517.html" class="job-link" target="_blank" rel="noopener noreferrer">GBM - Data &amp; Operational Initiatives Internship/Co-op - Winter 2027</a></td>
-            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605898417.html" data-id="scotiabank_605898417" data-index="58" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605898417.html" class="job-link" target="_blank" rel="noopener noreferrer">GBM - GCM Banking Internship/Co-op - Winter 2027</a></td>
-            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605898317.html" data-id="scotiabank_605898317" data-index="59" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605898317.html" class="job-link" target="_blank" rel="noopener noreferrer">GBM - Business Risk Management (Internal Controls) Internship/Co-op - Winter 2027</a></td>
-            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605898017.html" data-id="scotiabank_605898017" data-index="60" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605898017.html" class="job-link" target="_blank" rel="noopener noreferrer">GBM - Trade Floor Technology Consultant Internship/Co-op - Summer 2027 (12-16 Months)</a></td>
-            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605897917.html" data-id="scotiabank_605897917" data-index="61" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605897917.html" class="job-link" target="_blank" rel="noopener noreferrer">GBM - Trade Floor Technology Consultant Internship/Co-op - Summer 2027</a></td>
-            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605890717.html" data-id="scotiabank_605890717" data-index="62" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605890717.html" class="job-link" target="_blank" rel="noopener noreferrer">Wealth Management - Tax Administrator Internship/Co-op - Winter 2027 - Montreal</a></td>
+            <td class="col-title" title="Gestion de Patrimoine - Administrateur des Impôts Stage/Co-op - Hiver 2027 - Montréal">Gestion de Patrimoine - Administrateur des Impôts Stage/Co-op - Hiver 2027 - Montréal</td>
             <td class="col-location" title="Montreal, QC, CA">Montreal, QC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605890617.html" data-id="scotiabank_605890617" data-index="63" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605888417.html" data-id="scotiabank_605888417" data-index="44" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605890617.html" class="job-link" target="_blank" rel="noopener noreferrer">Gestion de Patrimoine - Administrateur des Impôts Stage/Co-op - Hiver 2027 - Montréal</a></td>
-            <td class="col-location" title="Montreal, QC, CA">Montreal, QC, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605888417.html" data-id="scotiabank_605888417" data-index="64" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605888417.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Data Analyst Internship/Co-Op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Data Analyst Internship/Co-Op - Winter 2027">Velocity - Data Analyst Internship/Co-Op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605888117.html" data-id="scotiabank_605888117" data-index="65" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605888117.html" data-id="scotiabank_605888117" data-index="45" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605888117.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Business Analyst Internship/Co-Op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Business Analyst Internship/Co-Op - Winter 2027">Velocity - Business Analyst Internship/Co-Op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605885017.html" data-id="scotiabank_605885017" data-index="66" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605885017.html" data-id="scotiabank_605885017" data-index="46" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605885017.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Software Engineer Internship/Co-Op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Software Engineer Internship/Co-Op - Winter 2027">Velocity - Software Engineer Internship/Co-Op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605884417.html" data-id="scotiabank_605884417" data-index="67" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605884417.html" data-id="scotiabank_605884417" data-index="47" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605884417.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - DevOps Engineer- Capital Markets Internship/Co-op 12-16 Months - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - DevOps Engineer- Capital Markets Internship/Co-op 12-16 Months - Winter 2027">Velocity - DevOps Engineer- Capital Markets Internship/Co-op 12-16 Months - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605881917.html" data-id="scotiabank_605881917" data-index="68" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605881917.html" data-id="scotiabank_605881917" data-index="48" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605881917.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Corporate Security Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Corporate Security Internship/Co-op - Winter 2027">Velocity - Corporate Security Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605881617.html" data-id="scotiabank_605881617" data-index="69" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605881617.html" data-id="scotiabank_605881617" data-index="49" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605881617.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Project/Product Management Internship/Co-Op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Project/Product Management Internship/Co-Op - Winter 2027">Velocity - Project/Product Management Internship/Co-Op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605881417.html" data-id="scotiabank_605881417" data-index="70" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605881417.html" data-id="scotiabank_605881417" data-index="50" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605881417.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Data Scientist Internship/Co-Op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Data Scientist Internship/Co-Op - Winter 2027">Velocity - Data Scientist Internship/Co-Op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605881317.html" data-id="scotiabank_605881317" data-index="71" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605881317.html" data-id="scotiabank_605881317" data-index="51" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605881317.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Data Engineer Internship/Co-Op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Data Engineer Internship/Co-Op - Winter 2027">Velocity - Data Engineer Internship/Co-Op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605878217.html" data-id="scotiabank_605878217" data-index="72" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605878217.html" data-id="scotiabank_605878217" data-index="52" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605878217.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Cloud Engineer Internship/Co-Op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Cloud Engineer Internship/Co-Op - Winter 2027">Velocity - Cloud Engineer Internship/Co-Op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605878117.html" data-id="scotiabank_605878117" data-index="73" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605878117.html" data-id="scotiabank_605878117" data-index="53" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605878117.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - AI Engineer Internship/Co-Op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - AI Engineer Internship/Co-Op - Winter 2027">Velocity - AI Engineer Internship/Co-Op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605872017.html" data-id="scotiabank_605872017" data-index="74" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605863617.html" data-id="scotiabank_605863617" data-index="54" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605872017.html" class="job-link" target="_blank" rel="noopener noreferrer">Estudiantes/Recien Graduados - Asesor de Inversiones Tijuana</a></td>
-            <td class="col-location" title="Tijuana, BCN, MX">Tijuana, BCN, MX</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605871317.html" data-id="scotiabank_605871317" data-index="75" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605871317.html" class="job-link" target="_blank" rel="noopener noreferrer">Estudiantes/Recien Graduados - Banquero Patrimonial Tijuana</a></td>
-            <td class="col-location" title="Tijuana, BCN, MX">Tijuana, BCN, MX</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605863617.html" data-id="scotiabank_605863617" data-index="76" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605863617.html" class="job-link" target="_blank" rel="noopener noreferrer">GTB - Canadian Deposits Product Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="GTB - Canadian Deposits Product Internship/Co-op - Winter 2027">GTB - Canadian Deposits Product Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605841817.html" data-id="scotiabank_605841817" data-index="77" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605841817.html" data-id="scotiabank_605841817" data-index="55" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605841817.html" class="job-link" target="_blank" rel="noopener noreferrer">GTB - Change &amp; Payments Modernization Internship/Co-Op - Winter 2027</a></td>
+            <td class="col-title" title="GTB - Change &amp; Payments Modernization Internship/Co-Op - Winter 2027">GTB - Change &amp; Payments Modernization Internship/Co-Op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605838817.html" data-id="scotiabank_605838817" data-index="78" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605838817.html" data-id="scotiabank_605838817" data-index="56" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605838817.html" class="job-link" target="_blank" rel="noopener noreferrer">GTB - Business Deposits Portfolio Management Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="GTB - Business Deposits Portfolio Management Internship/Co-op - Winter 2027">GTB - Business Deposits Portfolio Management Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605834217.html" data-id="scotiabank_605834217" data-index="79" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605834217.html" data-id="scotiabank_605834217" data-index="57" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605834217.html" class="job-link" target="_blank" rel="noopener noreferrer">GTB - Portfolio Optimization Internship/Co-Op - Winter 2027</a></td>
+            <td class="col-title" title="GTB - Portfolio Optimization Internship/Co-Op - Winter 2027">GTB - Portfolio Optimization Internship/Co-Op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605830417.html" data-id="scotiabank_605830417" data-index="80" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605830417.html" data-id="scotiabank_605830417" data-index="58" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605830417.html" class="job-link" target="_blank" rel="noopener noreferrer">Global Banking and Markets - Global Analytic Financial Engineering (GAFE) Intern/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Global Banking and Markets - Global Analytic Financial Engineering (GAFE) Intern/Co-op - Winter 2027">Global Banking and Markets - Global Analytic Financial Engineering (GAFE) Intern/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605829217.html" data-id="scotiabank_605829217" data-index="81" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605829217.html" data-id="scotiabank_605829217" data-index="59" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605829217.html" class="job-link" target="_blank" rel="noopener noreferrer">GTB - Employee Experience Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="GTB - Employee Experience Internship/Co-op - Winter 2027">GTB - Employee Experience Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605800217.html" data-id="scotiabank_605800217" data-index="82" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605800217.html" data-id="scotiabank_605800217" data-index="60" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605800217.html" class="job-link" target="_blank" rel="noopener noreferrer">Global Banking and Markets - Technical Sales and Trading Intern/Co-op - Summer 2027</a></td>
+            <td class="col-title" title="Global Banking and Markets - Technical Sales and Trading Intern/Co-op - Summer 2027">Global Banking and Markets - Technical Sales and Trading Intern/Co-op - Summer 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605765317.html" data-id="scotiabank_605765317" data-index="83" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605758717.html" data-id="scotiabank_605758717" data-index="61" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605765317.html" class="job-link" target="_blank" rel="noopener noreferrer">Senior Manager, Software Engineering for International Banking</a></td>
-            <td class="col-location" title="Toronto, ON, CA, M5H1H1">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605758717.html" data-id="scotiabank_605758717" data-index="84" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605758717.html" class="job-link" target="_blank" rel="noopener noreferrer">Global Banking and Markets - Sales and Trading Intern/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Global Banking and Markets - Sales and Trading Intern/Co-op - Winter 2027">Global Banking and Markets - Sales and Trading Intern/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605724117.html" data-id="scotiabank_605724117" data-index="85" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605724117.html" data-id="scotiabank_605724117" data-index="62" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605724117.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Audit Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Audit Internship/Co-op - Winter 2027">Velocity - Audit Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605717017.html" data-id="scotiabank_605717017" data-index="86" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605717017.html" data-id="scotiabank_605717017" data-index="63" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605717017.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Mergers &amp; Acquisitions Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Mergers &amp; Acquisitions Internship/Co-op - Winter 2027">Velocity - Mergers &amp; Acquisitions Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605712917.html" data-id="scotiabank_605712917" data-index="87" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605712917.html" data-id="scotiabank_605712917" data-index="64" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605712917.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Finance &amp; Accounting Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Finance &amp; Accounting Internship/Co-op - Winter 2027">Velocity - Finance &amp; Accounting Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605574417.html" data-id="scotiabank_605574417" data-index="88" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605574417.html" data-id="scotiabank_605574417" data-index="65" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605574417.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Tangerine Finance Internship/Co-op -Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Tangerine Finance Internship/Co-op -Winter 2027">Velocity - Tangerine Finance Internship/Co-op -Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605574217.html" data-id="scotiabank_605574217" data-index="89" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605574217.html" data-id="scotiabank_605574217" data-index="66" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605574217.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Tangerine Operations Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Tangerine Operations Internship/Co-op - Winter 2027">Velocity - Tangerine Operations Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605573917.html" data-id="scotiabank_605573917" data-index="90" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605573917.html" data-id="scotiabank_605573917" data-index="67" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605573917.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Tangerine Marketing Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Tangerine Marketing Internship/Co-op - Winter 2027">Velocity - Tangerine Marketing Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605561317.html" data-id="scotiabank_605561317" data-index="91" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605561317.html" data-id="scotiabank_605561317" data-index="68" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605561317.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Tangerine Client Solutions (Product) Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Tangerine Client Solutions (Product) Internship/Co-op - Winter 2027">Velocity - Tangerine Client Solutions (Product) Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605559617.html" data-id="scotiabank_605559617" data-index="92" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605559617.html" data-id="scotiabank_605559617" data-index="69" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605559617.html" class="job-link" target="_blank" rel="noopener noreferrer">Canadian Banking - Technology &amp; Analysis Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Canadian Banking - Technology &amp; Analysis Internship/Co-op - Winter 2027">Canadian Banking - Technology &amp; Analysis Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605559117.html" data-id="scotiabank_605559117" data-index="93" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605559117.html" data-id="scotiabank_605559117" data-index="70" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605559117.html" class="job-link" target="_blank" rel="noopener noreferrer">Canadian Banking - UX/Product Design Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Canadian Banking - UX/Product Design Internship/Co-op - Winter 2027">Canadian Banking - UX/Product Design Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605542517.html" data-id="scotiabank_605542517" data-index="94" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605499217.html" data-id="scotiabank_605499217" data-index="71" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605542517.html" class="job-link" target="_blank" rel="noopener noreferrer">Director, Data Engineering, International Banking, Toronto, Mexico, Colombia, Peru</a></td>
-            <td class="col-location" title="Toronto, ON, CA, M5H1H1">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
-          </tr>
-          
-          <tr class="job-row" data-url="jobs/scotiabank_605499217.html" data-id="scotiabank_605499217" data-index="95" tabindex="0">
-            <td class="col-date">-</td>
-            <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605499217.html" class="job-link" target="_blank" rel="noopener noreferrer">Canadian Banking - Marketing &amp; Communications Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Canadian Banking - Marketing &amp; Communications Internship/Co-op - Winter 2027">Canadian Banking - Marketing &amp; Communications Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605498917.html" data-id="scotiabank_605498917" data-index="96" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605498917.html" data-id="scotiabank_605498917" data-index="72" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605498917.html" class="job-link" target="_blank" rel="noopener noreferrer">Canadian Banking - Finance Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Canadian Banking - Finance Internship/Co-op - Winter 2027">Canadian Banking - Finance Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605495617.html" data-id="scotiabank_605495617" data-index="97" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605495617.html" data-id="scotiabank_605495617" data-index="73" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605495617.html" class="job-link" target="_blank" rel="noopener noreferrer">Canadian Banking - Strategy and Projects Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Canadian Banking - Strategy and Projects Internship/Co-op - Winter 2027">Canadian Banking - Strategy and Projects Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605494317.html" data-id="scotiabank_605494317" data-index="98" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605494317.html" data-id="scotiabank_605494317" data-index="74" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605494317.html" class="job-link" target="_blank" rel="noopener noreferrer">Canadian Banking - Administration &amp; Support Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Canadian Banking - Administration &amp; Support Internship/Co-op - Winter 2027">Canadian Banking - Administration &amp; Support Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
           </tr>
           
-          <tr class="job-row" data-url="jobs/scotiabank_605467317.html" data-id="scotiabank_605467317" data-index="99" tabindex="0">
+          <tr class="job-row" data-url="jobs/scotiabank_605467317.html" data-id="scotiabank_605467317" data-index="75" tabindex="0">
             <td class="col-date">-</td>
             <td class="col-company" title="Scotiabank">Scotiabank</td>
-            <td class="col-title"><a href="jobs/scotiabank_605467317.html" class="job-link" target="_blank" rel="noopener noreferrer">Velocity - Marketing Internship/Co-op - Winter 2027</a></td>
+            <td class="col-title" title="Velocity - Marketing Internship/Co-op - Winter 2027">Velocity - Marketing Internship/Co-op - Winter 2027</td>
             <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
-            <td class="col-mode">
-              
-              <span class="pill pill-onsite">On-site</span>
-              
-            </td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/scotiabank_605467017.html" data-id="scotiabank_605467017" data-index="76" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Scotiabank">Scotiabank</td>
+            <td class="col-title" title="Velocity - Treasury Internship/Co-op - Winter 2027">Velocity - Treasury Internship/Co-op - Winter 2027</td>
+            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/scotiabank_605466717.html" data-id="scotiabank_605466717" data-index="77" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Scotiabank">Scotiabank</td>
+            <td class="col-title" title="Velocity - Global Risk Management (GRM) Internship/Co-op - Winter 2027">Velocity - Global Risk Management (GRM) Internship/Co-op - Winter 2027</td>
+            <td class="col-location" title="Toronto, ON, CA">Toronto, ON, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/sap_1432658533.html" data-id="sap_1432658533" data-index="78" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="SAP">SAP</td>
+            <td class="col-title" title="SAP iXp Intern - HANA and Analytics, Agile Developer [Vancouver]">SAP iXp Intern - HANA and Analytics, Agile Developer [Vancouver]</td>
+            <td class="col-location" title="Vancouver, British Columbia, CA, V6B 1A9">Vancouver, BC, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/sap_1432616433.html" data-id="sap_1432616433" data-index="79" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="SAP">SAP</td>
+            <td class="col-title" title="SAP iXp Intern - Cloud Engineering [Vancouver]">SAP iXp Intern - Cloud Engineering [Vancouver]</td>
+            <td class="col-location" title="Vancouver, British Columbia, CA, V6B 1A9">Vancouver, BC, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/sap_1425375933.html" data-id="sap_1425375933" data-index="80" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="SAP">SAP</td>
+            <td class="col-title" title="SAP iXp Intern - Développeur Java, développement Cloud">SAP iXp Intern - Développeur Java, développement Cloud</td>
+            <td class="col-location" title="Montreal, Québec, CA, H3B 0B3">Montreal, Québec, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/sap_1425374933.html" data-id="sap_1425374933" data-index="81" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="SAP">SAP</td>
+            <td class="col-title" title="SAP iXp Intern - Java Developer, Cloud Development">SAP iXp Intern - Java Developer, Cloud Development</td>
+            <td class="col-location" title="Montreal, Quebec, CA, H3B 0B3">Montreal, QC, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/sap_1424928633.html" data-id="sap_1424928633" data-index="82" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="SAP">SAP</td>
+            <td class="col-title" title="SAP iXp Intern - HANA Technical Support [Vancouver]">SAP iXp Intern - HANA Technical Support [Vancouver]</td>
+            <td class="col-location" title="Vancouver, British Columbia, CA, V6B 1A9">Vancouver, BC, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/sap_1421488533.html" data-id="sap_1421488533" data-index="83" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="SAP">SAP</td>
+            <td class="col-title" title="SAP iXp Intern - Agile Developer, Business Data Cloud">SAP iXp Intern - Agile Developer, Business Data Cloud</td>
+            <td class="col-location" title="Vancouver, British Columbia, CA, V6B 1A9">Vancouver, BC, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/sap_1421488433.html" data-id="sap_1421488433" data-index="84" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="SAP">SAP</td>
+            <td class="col-title" title="SAP iXp Intern - Technical Project Coordinator">SAP iXp Intern - Technical Project Coordinator</td>
+            <td class="col-location" title="Vancouver, British Columbia, CA, V6B 1A9">Vancouver, BC, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/sap_1404044033.html" data-id="sap_1404044033" data-index="85" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="SAP">SAP</td>
+            <td class="col-title" title="Stagiaire iXp SAP - CX Opérations Cloud, Développeur de plateforme (AIOps)">Stagiaire iXp SAP - CX Opérations Cloud, Développeur de plateforme (AIOps)</td>
+            <td class="col-location" title="Montreal, Québec, CA, H3B 0B3">Montreal, Québec, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/sap_1404043933.html" data-id="sap_1404043933" data-index="86" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="SAP">SAP</td>
+            <td class="col-title" title="SAP iXp Intern - CX Cloud Operation, Platform Developer (AIOps)">SAP iXp Intern - CX Cloud Operation, Platform Developer (AIOps)</td>
+            <td class="col-location" title="Montreal, Quebec, CA, H3B 0B3">Montreal, QC, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/opg_605861817.html" data-id="opg_605861817" data-index="87" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Ontario Power Generation">Ontario Power Generation</td>
+            <td class="col-title" title="Winter 2027 - Co-Op - Fund Management - Toronto">Winter 2027 - Co-Op - Fund Management - Toronto</td>
+            <td class="col-location" title="Toronto, ON, CA, M5G 1Z5">Toronto, ON, CA</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/nationalbank_35546.html" data-id="nationalbank_35546" data-index="88" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="National Bank of Canada">National Bank of Canada</td>
+            <td class="col-title" title="Student Intern">Student Intern</td>
+            <td class="col-location" title="Richmond Hill, Ontario">Richmond Hill, ON</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/kinaxis_2026-35378.html" data-id="kinaxis_2026-35378" data-index="89" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Kinaxis">Kinaxis</td>
+            <td class="col-title" title="Co-op/Intern AI Quality, Evaluation &amp; Security">Co-op/Intern AI Quality, Evaluation &amp; Security</td>
+            <td class="col-location" title="CA-ON-Ottawa">CA-ON-Ottawa</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/kinaxis_2026-35377.html" data-id="kinaxis_2026-35377" data-index="90" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Kinaxis">Kinaxis</td>
+            <td class="col-title" title="Co-op/Intern Developer, AI Innovation">Co-op/Intern Developer, AI Innovation</td>
+            <td class="col-location" title="CA-ON-Ottawa">CA-ON-Ottawa</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/kinaxis_2026-35376.html" data-id="kinaxis_2026-35376" data-index="91" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Kinaxis">Kinaxis</td>
+            <td class="col-title" title="Co-op/Intern Campus Operations Coordinator">Co-op/Intern Campus Operations Coordinator</td>
+            <td class="col-location" title="CA-ON-Ottawa">CA-ON-Ottawa</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/kinaxis_2026-35352.html" data-id="kinaxis_2026-35352" data-index="92" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Kinaxis">Kinaxis</td>
+            <td class="col-title" title="Co-op/Intern IT Support Technician">Co-op/Intern IT Support Technician</td>
+            <td class="col-location" title="CA-ON-Ottawa">CA-ON-Ottawa</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/kinaxis_2026-35351.html" data-id="kinaxis_2026-35351" data-index="93" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Kinaxis">Kinaxis</td>
+            <td class="col-title" title="Co-op/Intern Sales Operations">Co-op/Intern Sales Operations</td>
+            <td class="col-location" title="CA-ON-Ottawa">CA-ON-Ottawa</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/kinaxis_2026-35349.html" data-id="kinaxis_2026-35349" data-index="94" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Kinaxis">Kinaxis</td>
+            <td class="col-title" title="Co-op/Intern Software Engineer, Data Modeling &amp; Integration">Co-op/Intern Software Engineer, Data Modeling &amp; Integration</td>
+            <td class="col-location" title="CA-ON-Ottawa">CA-ON-Ottawa</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/kinaxis_2026-35344.html" data-id="kinaxis_2026-35344" data-index="95" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Kinaxis">Kinaxis</td>
+            <td class="col-title" title="Intern Site Reliability Engineer- Infrastructure">Intern Site Reliability Engineer- Infrastructure</td>
+            <td class="col-location" title="CA-ON-Ottawa">CA-ON-Ottawa</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/kinaxis_2026-35343.html" data-id="kinaxis_2026-35343" data-index="96" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Kinaxis">Kinaxis</td>
+            <td class="col-title" title="Intern Developer, AI Solutions">Intern Developer, AI Solutions</td>
+            <td class="col-location" title="CA-ON-Ottawa">CA-ON-Ottawa</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/kinaxis_2026-35340.html" data-id="kinaxis_2026-35340" data-index="97" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Kinaxis">Kinaxis</td>
+            <td class="col-title" title="Intern Revenue Enablement">Intern Revenue Enablement</td>
+            <td class="col-location" title="CA-ON-Ottawa">CA-ON-Ottawa</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/kinaxis_2026-35334.html" data-id="kinaxis_2026-35334" data-index="98" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Kinaxis">Kinaxis</td>
+            <td class="col-title" title="Co-op/Intern Application Lifecycle Management">Co-op/Intern Application Lifecycle Management</td>
+            <td class="col-location" title="CA-ON-Ottawa">CA-ON-Ottawa</td>
+          </tr>
+          
+          <tr class="job-row" data-url="jobs/kinaxis_2026-35330.html" data-id="kinaxis_2026-35330" data-index="99" tabindex="0">
+            <td class="col-date">-</td>
+            <td class="col-company" title="Kinaxis">Kinaxis</td>
+            <td class="col-title" title="Co-op/Intern Product Marketing">Co-op/Intern Product Marketing</td>
+            <td class="col-location" title="CA-ON-Ottawa">CA-ON-Ottawa</td>
           </tr>
           
         </tbody>
@@ -2184,11 +1727,11 @@
   <!-- Right Column: Detail Reader -->
   <main class="col-detail" id="detail-pane">
     <div id="detail-header" class="detail-pane-header" style="">
-      <h1 id="detail-title" class="detail-pane-title">Students and New Grads Opportunities</h1>
+      <h1 id="detail-title" class="detail-pane-title">System Validation Engineer Intern</h1>
       <div id="detail-meta" class="detail-pane-meta">
         
-        <strong>SUBNET Solutions</strong> &bull;
-        <span>Calgary, Alberta, Canada</span>
+        <strong>Astera Labs</strong> &bull;
+        <span>Vancouver, BC, Canada</span>
         
         &bull; <span class="pill pill-onsite">On-site</span>
         
@@ -2196,11 +1739,11 @@
         
       </div>
       <div class="detail-pane-actions">
-        <a id="detail-apply-btn" href="https://subnet.com/careers#students-and-new-grads-opportunities" target="_blank" rel="noopener noreferrer" class="btn-apply">
-          Apply on SUBNET Solutions &nearr;
+        <a id="detail-apply-btn" href="https://campusbridge.ualberta.ca/myAccount/eng/postings.htm?postingId=146708" target="_blank" rel="noopener noreferrer" class="btn-apply">
+          Apply on Astera Labs
         </a>
-        <a id="detail-newtab-btn" href="jobs/subnetsolutions_students-and-new-grads-opportunities.html" target="_blank" rel="noopener noreferrer" class="btn-newtab">
-          Open in new tab &nearr;
+        <a id="detail-newtab-btn" href="jobs/campusbridge_engg_146708.html" target="_blank" rel="noopener noreferrer" class="btn-newtab">
+          Open in new tab
         </a>
       </div>
     </div>
@@ -2212,7 +1755,7 @@
 </div>
 
 <footer class="app-statusbar">
-  <span id="results-count" style="font-variant-numeric: tabular-nums;">66,576 / 66,576 positions</span>
+  <span id="results-count" style="font-variant-numeric: tabular-nums;">58,654 / 58,654 positions</span>
 </footer>
 
 

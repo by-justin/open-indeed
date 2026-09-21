@@ -3,10 +3,90 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
   <title>Staff Software Engineer, Inference / Compute Infrastructure Engineering &mdash; Together AI | Open Indeed</title>
-  <meta name="description" content="Staff Software Engineer, Inference / Compute Infrastructure Engineering at Together AI in London &amp; Amsterdam.">
+  <meta name="description" content="Staff Software Engineer, Inference / Compute Infrastructure Engineering at Together AI in London &amp; Amsterdam. Canadian engineering &amp; tech opportunities on Open Indeed.">
+  <link rel="canonical" href="https://jobs.justin.by/jobs/togetherai_5214645007.html">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:site_name" content="Open Indeed">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Staff Software Engineer, Inference / Compute Infrastructure Engineering &mdash; Together AI | Open Indeed">
+  <meta property="og:description" content="Staff Software Engineer, Inference / Compute Infrastructure Engineering at Together AI in London &amp; Amsterdam. Canadian engineering &amp; tech opportunities on Open Indeed.">
+  <meta property="og:url" content="https://jobs.justin.by/jobs/togetherai_5214645007.html">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Staff Software Engineer, Inference / Compute Infrastructure Engineering &mdash; Together AI | Open Indeed">
+  <meta name="twitter:description" content="Staff Software Engineer, Inference / Compute Infrastructure Engineering at Together AI in London &amp; Amsterdam. Canadian engineering &amp; tech opportunities on Open Indeed.">
+
+  <!-- Structured Data JSON-LD -->
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "JobPosting",
+  "datePosted": "2026-08-20",
+  "description": "\u003ch1\u003eStaff Software Engineer, Inference / Compute Infrastructure Engineering\u003c/h1\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eCompany\u003c/strong\u003e: Together AI\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eRequisition ID\u003c/strong\u003e: \u003ccode\u003e5214645007\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eLocation\u003c/strong\u003e: London \u0026amp; Amsterdam\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eOfficial Posting\u003c/strong\u003e: \u003ca href=\"https://job-boards.greenhouse.io/togetherai/jobs/5214645007\"\u003eApply on Together AI Careers\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2\u003eJob Description\u003c/h2\u003e\n\u003ch3\u003e\u003cstrong\u003eAbout the Role\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003eWe\u0027re looking for a software engineer to build the Kubernetes-native control plane that provisions and runs our GPU inference fleet. You\u0027ll design a manifest-driven API where the inference team declares what they need, whether that\u0027s a cluster, a model deployment, or a capacity change, and our controllers handle the reconciliation, provider/runtime selection, and lifecycle management underneath, so the inference team never has to know or care which specific serving stack, scheduler, or hardware pool is doing the work. You\u0027ll also build the systems that keep the fleet efficient, not just running, including defragmentation and rebalancing logic that consolidates scattered workloads back into contiguous capacity, and scheduling/bin-packing improvements that push GPU utilization up without hurting latency. The core value we\u0027re after is decoupling the people building on top of the platform from the operational and runtime complexity underneath, while squeezing more usable capacity out of the same hardware. You\u0027ll build the controllers, reconciliation loops, and self-service surface (API/CLI, not tickets) that make that decoupling real, plus the event-driven health, remediation, and utilization systems that keep it running and efficient without a human in the loop. Strong candidates have hands-on experience with Kubernetes controller/CRD patterns, have built or operated a platform API that abstracts multiple backends behind one interface, understand GPU scheduling and capacity efficiency (fragmentation, bin-packing, right-sizing), and think about GPU infrastructure as software to be engineered.\u003c/p\u003e\n\u003cp\u003eA product mindset - you\u0027ve built internal platforms or APIs consumed by other engineering teams and care about the developer experience of what you ship.\u003cstrong\u003eYou build it, you own it.\u003c/strong\u003e You are not only responsible for delivering the software but also for operating and supporting it in production.\u003c/p\u003e\n\u003ch3\u003e\u003cstrong\u003eResponsibilities\u003c/strong\u003e\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cp\u003e**Build the provisioning state machine:**design and implement the software that models the full lifecycle of a physical host from discovery, inference bring-up to GPU driver/CUDA stack, health validation, and decommission/RMA \u2014 as explicit, versioned states and transitions.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003e**Build the self-service API:**design declarative APIs and a control plane so the inference team can request, scale, and tear down inference clusters with one API call \u2014 no ticket, no human in the loop.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003e**Automate self-healing:**detect degraded or failed nodes, drain them safely, trigger repair or replacement, and reintroduce healthy capacity into the pool automatically.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003e**Own reliability of the pipeline:**idempotency, retries, rollback, and drift detection so the provisioning system is as dependable as any other production service.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003e**Partner with the inference/ML platform team:**understand the cluster shapes they need \u2014 topology, interconnect, scheduling constraints \u2014 and encode them as first-class abstractions in the platform.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003e**Engineer it like software:**strong typing, automated tests, code review, versioning, and CI/CD for infrastructure code \u2014 this is a product, not a collection of Ansible playbooks.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003e\u003cstrong\u003eRequirements\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003eCore requirements (all levels):\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cp\u003eStrong software engineering background in Go, Python, Rust, or similar \u2014 you write and test real software for a living.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eExperience with durable workflow orchestration tools such as Temporal, Cadence, or equivalent to run long-lived, manifest-driven workflows that survive failures and resume mid-execution.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eExperience building software control planes or orchestration systems that model state and reconcile it over time (e.g., Kubernetes controllers/operators, custom reconciliation loops, workflow engines).\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eExperience with event-driven systems \u2014 designing and building software around message queues, event streams, or pub/sub (e.g., Kafka, NATS, SQS) rather than polling or cron-driven scripts.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eA product mindset. You\u2019ve built internal platforms or APIs consumed by other engineering teams and care about the developer experience of what you ship.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eNice to have:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cp\u003eExposure to bare-metal provisioning (PXE/iPXE, Redfish/IPMI, BMC) and/or networking fundamentals (VLANs, BGP, fabric design), or GPU/accelerator infrastructure.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eExperience with GPU cluster software stacks (NCCL, CUDA, InfiniBand/RoCE).\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003ePrior work at a hyperscaler, GPU cloud, or datacenter-scale infrastructure organization.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eSystems programming in Rust or Go.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003e\u003cstrong\u003eAbout Together AI\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003eTogether AI, the AI Native Cloud, is purpose-built for AI engineers. AI application developers get high-performance inference that scales reliably, fine-tuning and reinforcement learning for creating frontier-level specialized models, and pre-training at massive scale for fully custom intelligence, all around a marketplace of leading open models that teams can run, adapt, and own. Trusted by Cursor, Decagon, ElevenLabs, Salesforce, and Zoom, Together serves 400+ trillion tokens a month.\u003c/p\u003e\n\u003ch3\u003e\u003cstrong\u003eEqual Opportunity\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003eTogether AI is an Equal Opportunity Employer and is proud to offer equal employment opportunity to everyone regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity, veteran status, and more.\u003c/p\u003e\n\u003cp\u003ePlease see our privacy policy at\u003ca href=\"https://www.together.ai/privacy\"\u003ehttps://www.together.ai/privacy\u003c/a\u003e.\u003c/p\u003e\n",
+  "directApply": true,
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "Together AI"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Together AI",
+    "value": "togetherai:5214645007"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "United Kingdom",
+      "addressLocality": "London",
+      "streetAddress": "London \u0026 Amsterdam"
+    }
+  },
+  "title": "Staff Software Engineer, Inference / Compute Infrastructure Engineering"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jobs.justin.by/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Staff Software Engineer, Inference / Compute Infrastructure Engineering",
+      "item": "https://jobs.justin.by/jobs/togetherai_5214645007.html"
+    }
+  ]
+}
+</script>
+
+
   <link rel="stylesheet" href="../static/pico.min.css">
   <style>
+    /* Screen reader accessible text for search crawlers & a11y */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
     /* ==========================================================================
        1. Design Tokens & Theme Variables
        ========================================================================== */
@@ -473,31 +553,21 @@
       line-height: 1.25;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-    .col-title a {
-      text-decoration: none;
       color: var(--pico-color);
+      transition: color 0.12s ease;
     }
-    .col-title a:hover {
+    .jobs-table tr.job-row:hover .col-title,
+    .jobs-table tr.job-row.active .col-title {
       color: var(--pico-primary);
-      text-decoration: underline;
     }
     .col-location {
       color: var(--pico-muted-color);
       font-size: 0.74rem;
       white-space: nowrap;
-      width: 85px;
-      max-width: 85px;
+      width: 170px;
+      max-width: 170px;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-    .col-mode {
-      width: 70px;
-      text-align: right;
-      white-space: nowrap;
-    }
-    th.col-mode {
-      text-align: right !important;
     }
     .jobs-table thead th[style*="cursor: pointer"]:hover {
       color: var(--pico-color);
@@ -783,7 +853,8 @@
         min-width: 360px;
       }
       .col-location {
-        width: 75px;
+        width: 130px;
+        max-width: 130px;
       }
     }
 
@@ -845,13 +916,10 @@
         flex-shrink: 0 !important;
       }
 
-      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      /* On narrow mobile screens, hide Location from list table to give full room to Title & Company */
       .jobs-table th:nth-child(4),
       .jobs-table td:nth-child(4),
-      .jobs-table th:nth-child(5),
-      .jobs-table td:nth-child(5),
-      colgroup col:nth-child(4),
-      colgroup col:nth-child(5) {
+      colgroup col:nth-child(4) {
         display: none !important;
       }
     }
@@ -867,7 +935,7 @@
         <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
       </div>
       <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
-        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <small>Updated 2026-09-21 05:12 UTC</small> &bull;
         <a href="#about" class="about-link" title="About Open Indeed">? About</a>
       </div>
     </div>
@@ -876,7 +944,7 @@
   <main class="container">
     
 <div style="margin-bottom: 1.25rem;">
-  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+  <a href="../index.html" class="btn-back">Back to all listings</a>
 </div>
 
 <article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
@@ -898,7 +966,7 @@
           rel="noopener noreferrer"
           class="btn-apply"
         >
-          Apply on Together AI &nearr;
+          Apply on Together AI
         </a>
       </div>
     </div>
@@ -965,14 +1033,14 @@
   </div>
 
   <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a href="../index.html" class="btn-back">Back to all listings</a>
     <a
       href="https://job-boards.greenhouse.io/togetherai/jobs/5214645007"
       target="_blank"
       rel="noopener noreferrer"
       class="btn-apply"
     >
-      Apply on Together AI &nearr;
+      Apply on Together AI
     </a>
   </div>
 </article>

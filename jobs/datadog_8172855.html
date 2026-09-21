@@ -3,10 +3,90 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
   <title>Senior Applied Scientist - AI Platform &mdash; Datadog | Open Indeed</title>
-  <meta name="description" content="Senior Applied Scientist - AI Platform at Datadog in Paris, France.">
+  <meta name="description" content="Senior Applied Scientist - AI Platform at Datadog in Paris, France. Canadian engineering &amp; tech opportunities on Open Indeed.">
+  <link rel="canonical" href="https://jobs.justin.by/jobs/datadog_8172855.html">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:site_name" content="Open Indeed">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Senior Applied Scientist - AI Platform &mdash; Datadog | Open Indeed">
+  <meta property="og:description" content="Senior Applied Scientist - AI Platform at Datadog in Paris, France. Canadian engineering &amp; tech opportunities on Open Indeed.">
+  <meta property="og:url" content="https://jobs.justin.by/jobs/datadog_8172855.html">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Senior Applied Scientist - AI Platform &mdash; Datadog | Open Indeed">
+  <meta name="twitter:description" content="Senior Applied Scientist - AI Platform at Datadog in Paris, France. Canadian engineering &amp; tech opportunities on Open Indeed.">
+
+  <!-- Structured Data JSON-LD -->
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "JobPosting",
+  "datePosted": "2026-09-02",
+  "description": "\u003ch1\u003eSenior Applied Scientist - AI Platform\u003c/h1\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eCompany\u003c/strong\u003e: Datadog\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eRequisition ID\u003c/strong\u003e: \u003ccode\u003e8172855\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eLocation\u003c/strong\u003e: Paris, France\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eEmployment Type\u003c/strong\u003e: Full Time\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eOfficial Posting\u003c/strong\u003e: \u003ca href=\"https://careers.datadoghq.com/detail/8172855/?gh_jid=8172855\"\u003eApply on Datadog Careers\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2\u003eJob Description\u003c/h2\u003e\n\u003cp\u003eAI Platform builds the foundations of Datadog\u0027s AI efforts. The org is 70+ people organised in three pillars: training and serving (GPU clusters, distributed training, low-level infrastructure), agents (agent harnesses, memory systems, the internal AI gateway that routes every LLM request at Datadog), and evaluation and experimentation. This role sits in the evaluation and experimentation pillar, which owns Datadog\u0027s shared annotation and evaluation infrastructure \u2014 including the evaluation scenario store and the telemetry archival systems used across the Bits org. Together they let an agent travel back in time and query what Datadog looked like at the exact moment an incident happened, so scenarios can be replayed and agent performance tracked over time.\u003c/p\u003e\n\u003cp\u003eSpecifically, you\u0027ll be the first applied scientist on GenSim (Generative Simulations), the team that builds the environments Datadog\u0027s agents learn in. GenSim doesn\u0027t replay sampled telemetry \u2014 it stands up real, fully instrumented applications that talk to Datadog, drives them with representative traffic, injects controlled failures, and records what happens. Because GenSim injected the failure, it knows the ground truth. That corpus \u2014 hundreds of postmortem-derived scenarios and thousands of runnable applications \u2014 is today the primary source of post-training data for Datadog\u0027s own SRE model, and the substrate that Bits AI SRE and our other agents are trained and evaluated against.\u003c/p\u003e\n\u003cp\u003eThe team has no applied science support today and is learning post-training data methodology on the fly. That\u0027s the gap this role fills, and the open questions are the interesting part. How do you tell whether a generated environment is actually representative of the messy, incomplete telemetry real customers run \u2014 rather than a suspiciously clean one where every monitor exists and every service emits complete logs? How do you make injected problems genuinely hard, and how do you even measure difficulty? How do you define and control the quality of post-training data when correctness, representativeness and difficulty pull in different directions? How do you evaluate an agent end to end when the trajectory is non-deterministic? Creating simulated agent environments for monitoring and SRE work is not well solved in open source or in published research, and Datadog is the leading company in this field. If those are the problems you want to spend your time on, come build this with us.\u003c/p\u003e\n\u003ch2\u003e\u003cstrong\u003eWhat You\u0027ll Do:\u003c/strong\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cp\u003eOwn the applied science direction for GenSim: set the methodology and the forward-looking technical calls on how simulated environments and post-training data should be built, on a team where that decision-making does not exist yet.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eDefine, measure and raise the quality of post-training data \u2014 basic correctness, representativeness against the real distribution of customer systems and production telemetry, and difficulty \u2014 and make those measures something the team can act on release over release.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eClose the realism gap. Simulated environments today are too clean and the injected problems are not yet hard enough; you\u0027ll drive the research and the engineering that make them look like real, imperfect production systems.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eBuild scalable, production-grade systems rather than research scripts. The output is not just a dataset \u2014 it is a system of synthetic environments that must be reliable and invokable inside a training loop.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eDetermine how this data is best applied, in LLM post-training and in evaluation, and own the agent and LLM application evaluation approaches for these environments.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eWork cross-functionally with the engineers and applied scientists on adjacent teams \u2014 Bits AI SRE, the model training effort, and the wider evaluation and experimentation pillar \u2014 so that what you learn moves freely in both directions.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2\u003e\u003cstrong\u003eWho You Are:\u003c/strong\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cp\u003eYou have a PhD, MS or equivalent research experience in a scientific field, with strong applied mathematics grounding.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003e6+ years of relevant applied science or ML engineering experience, including setting technical direction for others.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eYou have hands-on experience with LLM and agent post-training data: how it is created, managed, and how training-data quality is controlled. This is the requirement that matters most.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eYou have real domain expertise in LLMs and agentic applications \u2014 not classical ML fine-tuning. Fine-tuning classifiers or traditional models is a different problem from the one this team is solving.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eYou have evaluated agents or LLM applications, and can define what \u0027good\u0027 means before you measure it.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eYou are a strong programmer and production software engineer. Python at minimum, plus the ability to ship scalable production systems and work with distributed systems.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eYou collaborate well across engineering and science teams, and you\u0027re comfortable being the domain expert who decides what comes next.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eYou thrive in ambiguity and can make sound technical calls when the path isn\u0027t yet defined.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2\u003e\u003cstrong\u003eBonus Points:\u003c/strong\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cp\u003eHands-on LLM fine-tuning, post-training or model training experience.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eBackground in statistics, experiment design and data analysis.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eExperience deploying production-level ML infrastructure.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eObservability or monitoring systems background.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eArchitecture-level understanding of LLMs.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2\u003e\u003cstrong\u003eBenefits \u0026amp; Growth:\u003c/strong\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cp\u003eNew hire stock equity (RSUs) and employee stock purchase plan (ESPP)\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eContinuous professional development, product training, and career pathing\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eIntra-departmental mentor and buddy program for in-house networking\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eAn inclusive company culture and the ability to join our Community Guilds\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eAccess to Inclusion Talks, our internal panel discussions\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eFree, global Spring Health benefits for employees and dependents age 6+\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eCompetitive global benefits\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cem\u003eBenefits and Growth listed above may vary based on the country of your employment and the nature of your employment with Datadog.\u003c/em\u003e\u003c/p\u003e\n\u003cp\u003e#LI-Hybrid\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eAbout Datadog:\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eDatadog is the leading observability and security platform for the AI era, providing businesses with unified visibility across the technology stack to manage complexity at scale. It brings applications, infrastructure, data, models, and security into one place, using AI to detect and resolve issues before they impact customers. Trusted globally by Fortune 500 companies and high-growth AI leaders, Datadog enables businesses to move faster with clarity and confidence. Learn more about #DatadogLife on \u003ca href=\"https://www.instagram.com/datadoghq/?hl=en\"\u003eInstagram\u003c/a\u003e, \u003ca href=\"https://www.linkedin.com/company/datadog\"\u003eLinkedIn,\u003c/a\u003e and \u003ca href=\"https://learn.datadoghq.com/\"\u003eDatadog Learning Center.\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eEqual Opportunity at Datadog:\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eDatadog is proud to offer \u003ca href=\"https://www.eeoc.gov/sites/default/files/2023-06/22-088_EEOC_KnowYourRights6.12ScreenRdr.pdf\"\u003eequal employment opportunity\u003c/a\u003e to everyone regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity, veteran status, and other characteristics protected by law. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. Here are our \u003ca href=\"https://www.datadoghq.com/legal/candidate-legal-notices/\"\u003eCandidate Legal Notices\u003c/a\u003e for your reference.\u003c/p\u003e\n\u003cp\u003eDatadog endeavors to make our Careers Page accessible to all users. If you would like to contact us regarding the accessibility of our website or need assistance completing the application process, please complete \u003ca href=\"https://docs.google.com/forms/d/e/1FAIpQLSeoJeduEZ2NdZF_65uZmWUrCM-zee7yADXX1s6Xr9zAGq8iKA/viewform\"\u003ethis form\u003c/a\u003e. This form is for accommodation requests only and cannot be used to inquire about the status of applications.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003ePrivacy and AI Guidelines:\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eAny information you submit to Datadog as part of your application will be processed in accordance with Datadog\u2019s \u003ca href=\"https://www.datadoghq.com/legal/applicant-candidate-privacy/\"\u003eApplicant and Candidate Privacy Notice\u003c/a\u003e. For information on our AI policy, please visit \u003ca href=\"https://www.datadoghq.com/legal/interviewing-at-datadog-ai-guidelines/\"\u003eInterviewing at Datadog AI Guidelines\u003c/a\u003e.\u003c/p\u003e\n",
+  "directApply": true,
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "Datadog"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Datadog",
+    "value": "datadog:8172855"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "France",
+      "addressLocality": "Paris",
+      "streetAddress": "Paris, France"
+    }
+  },
+  "title": "Senior Applied Scientist - AI Platform"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jobs.justin.by/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Senior Applied Scientist - AI Platform",
+      "item": "https://jobs.justin.by/jobs/datadog_8172855.html"
+    }
+  ]
+}
+</script>
+
+
   <link rel="stylesheet" href="../static/pico.min.css">
   <style>
+    /* Screen reader accessible text for search crawlers & a11y */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
     /* ==========================================================================
        1. Design Tokens & Theme Variables
        ========================================================================== */
@@ -473,31 +553,21 @@
       line-height: 1.25;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-    .col-title a {
-      text-decoration: none;
       color: var(--pico-color);
+      transition: color 0.12s ease;
     }
-    .col-title a:hover {
+    .jobs-table tr.job-row:hover .col-title,
+    .jobs-table tr.job-row.active .col-title {
       color: var(--pico-primary);
-      text-decoration: underline;
     }
     .col-location {
       color: var(--pico-muted-color);
       font-size: 0.74rem;
       white-space: nowrap;
-      width: 85px;
-      max-width: 85px;
+      width: 170px;
+      max-width: 170px;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-    .col-mode {
-      width: 70px;
-      text-align: right;
-      white-space: nowrap;
-    }
-    th.col-mode {
-      text-align: right !important;
     }
     .jobs-table thead th[style*="cursor: pointer"]:hover {
       color: var(--pico-color);
@@ -783,7 +853,8 @@
         min-width: 360px;
       }
       .col-location {
-        width: 75px;
+        width: 130px;
+        max-width: 130px;
       }
     }
 
@@ -845,13 +916,10 @@
         flex-shrink: 0 !important;
       }
 
-      /* On narrow mobile screens, hide Location and Mode from list table to give full room to Title & Company */
+      /* On narrow mobile screens, hide Location from list table to give full room to Title & Company */
       .jobs-table th:nth-child(4),
       .jobs-table td:nth-child(4),
-      .jobs-table th:nth-child(5),
-      .jobs-table td:nth-child(5),
-      colgroup col:nth-child(4),
-      colgroup col:nth-child(5) {
+      colgroup col:nth-child(4) {
         display: none !important;
       }
     }
@@ -867,7 +935,7 @@
         <span class="brand-sub">🇨🇦 Engineering &amp; Software Co-op Roles</span>
       </div>
       <div style="font-size: 0.75rem; color: var(--pico-muted-color); display: flex; align-items: center; gap: 0.4rem;">
-        <small>Updated 2026-09-20 18:32 UTC</small> &bull;
+        <small>Updated 2026-09-21 05:12 UTC</small> &bull;
         <a href="#about" class="about-link" title="About Open Indeed">? About</a>
       </div>
     </div>
@@ -876,7 +944,7 @@
   <main class="container">
     
 <div style="margin-bottom: 1.25rem;">
-  <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+  <a href="../index.html" class="btn-back">Back to all listings</a>
 </div>
 
 <article id="job-article" style="padding: 0; background: transparent; border: none; box-shadow: none;">
@@ -898,7 +966,7 @@
           rel="noopener noreferrer"
           class="btn-apply"
         >
-          Apply on Datadog &nearr;
+          Apply on Datadog
         </a>
       </div>
     </div>
@@ -994,14 +1062,14 @@
   </div>
 
   <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--pico-muted-border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-    <a href="../index.html" class="btn-back">&larr; Back to all listings</a>
+    <a href="../index.html" class="btn-back">Back to all listings</a>
     <a
       href="https://careers.datadoghq.com/detail/8172855/?gh_jid=8172855"
       target="_blank"
       rel="noopener noreferrer"
       class="btn-apply"
     >
-      Apply on Datadog &nearr;
+      Apply on Datadog
     </a>
   </div>
 </article>

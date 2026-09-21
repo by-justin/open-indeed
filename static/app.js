@@ -87,8 +87,31 @@
         console.warn('Web Worker initialization failed', e);
       }
 
-      // Initial render with default filters (internship_coop + Canada)
-      triggerSearch();
+      // Deep linking via URL parameters (supports Google Sitelinks Searchbox: ?q=...)
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const qParam = urlParams.get('q') || urlParams.get('search');
+        const typeParam = urlParams.get('type');
+        const wpParam = urlParams.get('workplace');
+        const countryParam = urlParams.get('country');
+        const jobParam = urlParams.get('job');
+
+        if (qParam && searchInput) searchInput.value = qParam;
+        if (typeParam && filterType) filterType.value = typeParam;
+        if (wpParam && filterWorkplace) filterWorkplace.value = wpParam;
+        if (countryParam && filterCountry) filterCountry.value = countryParam;
+
+        triggerSearch();
+
+        if (jobParam && colData && colData.i) {
+          const jobIdx = colData.i.indexOf(jobParam);
+          if (jobIdx !== -1) {
+            showDetail(colData.i[jobIdx], colData.u[jobIdx], jobIdx);
+          }
+        }
+      } catch (e) {
+        triggerSearch();
+      }
     } catch (err) {
       console.error('Failed to load jobs catalog:', err);
       if (resultsCount) resultsCount.textContent = 'Failed to load catalog';
@@ -126,9 +149,6 @@
     const t = escapeHtml(colData.t[idx] || '');
     const sl = escapeHtml(colData.l[idx] || '');
     const fl = escapeHtml(colData.fl[idx] || '');
-    const m = (colData.m[idx] || '').toLowerCase().replace(/[-_]/g, '');
-    const ml = colData.ml[idx] || (m === 'remote' ? 'Remote' : (m === 'hybrid' ? 'Hybrid' : (m === 'onsite' ? 'On-site' : '')));
-    const pill = (m && m !== 'unspecified' && ml) ? `<span class="pill pill-${m}">${ml}</span>` : '';
     const u = colData.u[idx];
     const safeId = colData.i[idx];
     const isActive = (safeId === activeSafeId) ? ' active' : '';
@@ -136,9 +156,8 @@
     return `<tr class="job-row${isActive}" data-url="${u}" data-id="${safeId}" data-index="${idx}" tabindex="0">` +
       `<td class="col-date">${d}</td>` +
       `<td class="col-company" title="${c}">${c}</td>` +
-      `<td class="col-title"><a href="${u}" class="job-link" target="_blank" rel="noopener noreferrer">${t}</a></td>` +
+      `<td class="col-title" title="${t}">${t}</td>` +
       `<td class="col-location" title="${fl}">${sl}</td>` +
-      `<td class="col-mode">${pill}</td>` +
     `</tr>`;
   }
 
@@ -159,6 +178,14 @@
     activeSafeId = safeId;
     highlightActiveRow(safeId);
 
+    try {
+      if (window.history && window.history.replaceState) {
+        const u = new URL(window.location.href);
+        u.searchParams.set('job', safeId);
+        window.history.replaceState(null, '', u.pathname + u.search + u.hash);
+      }
+    } catch (e) {}
+
     let idx = targetIndex;
     if ((idx === undefined || idx === null || idx < 0) && colData) {
       idx = colData.i.indexOf(safeId);
@@ -177,8 +204,10 @@
       detailTitle.textContent = title;
       detailMeta.innerHTML = `<strong>${escapeHtml(comp)}</strong> &bull; <span>${escapeHtml(loc)}</span> ${pill ? '&bull; ' + pill : ''} &bull; <span>${date || 'Recent'}</span>`;
       if (detailApplyBtn) {
-        detailApplyBtn.href = applyUrl;
-        detailApplyBtn.textContent = `Apply on ${comp} ↗`;
+        const isExternal = applyUrl && (applyUrl.startsWith('http://') || applyUrl.startsWith('https://'));
+        detailApplyBtn.href = isExternal ? applyUrl : '#';
+        detailApplyBtn.style.display = isExternal ? '' : 'none';
+        detailApplyBtn.textContent = `Apply on ${comp}`;
       }
       if (detailNewtabBtn) {
         detailNewtabBtn.href = url;
@@ -219,7 +248,7 @@
       }
     } catch (e) {
       if (activeSafeId === safeId) {
-        detailBody.innerHTML = `<p style="color: var(--pico-muted-color); text-align: center; padding: 2rem;">Failed to load description. <a href="${url}" target="_blank" rel="noopener noreferrer">Open page directly &nearr;</a></p>`;
+        detailBody.innerHTML = `<p style="color: var(--pico-muted-color); text-align: center; padding: 2rem;">Failed to load description. <a href="${url}" target="_blank" rel="noopener noreferrer">Open page directly</a></p>`;
       }
     }
   }
@@ -306,6 +335,15 @@
     const countryVal = filterCountry ? filterCountry.value : 'all';
     const recencyVal = filterRecency ? filterRecency.value : 'all';
     const sortVal = filterSort ? filterSort.value : 'date-desc';
+
+    try {
+      if (window.history && window.history.replaceState) {
+        const u = new URL(window.location.href);
+        if (query) u.searchParams.set('q', query);
+        else u.searchParams.delete('q');
+        window.history.replaceState(null, '', u.pathname + u.search + u.hash);
+      }
+    } catch (e) {}
 
     const queryId = ++currentQueryId;
 
