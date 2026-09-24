@@ -21,6 +21,9 @@ let locationsLower = [];
 let modesClean = [];
 let typesClean = [];
 let sourcesLower = [];
+let countriesLower = [];
+let citiesLower = [];
+let statesLower = [];
 
 // Parse search string into structured criteria
 function parseQuery(raw) {
@@ -47,23 +50,15 @@ function parseQuery(raw) {
     return ' ';
   });
 
-  // 2. Extract field selectors: company:Apple, c:NVIDIA, title:firmware, t:hardware,
-  // mode:remote, m:hybrid, type:coop, e:intern, loc:Toronto, city:Calgary, country:CA, posted:<=7d, source:greenhouse
-  const fieldRegex = /\b(c|company|t|title|role|m|mode|workplace|e|type|loc|location|city|country|s|source|posted|d):(\S+)/gi;
-  text = text.replace(fieldRegex, (match, field, val) => {
-    const f = field.toLowerCase();
-    const v = val.toLowerCase();
-
-    let canonField = f;
-    if (f === 'c' || f === 'company') canonField = 'company';
-    else if (f === 't' || f === 'title' || f === 'role') canonField = 'title';
-    else if (f === 'm' || f === 'mode' || f === 'workplace') canonField = 'mode';
-    else if (f === 'e' || f === 'type') canonField = 'type';
-    else if (f === 'loc' || f === 'location' || f === 'city' || f === 'country') canonField = 'location';
-    else if (f === 's' || f === 'source') canonField = 'source';
-    else if (f === 'posted' || f === 'd') canonField = 'posted';
-
-    fieldFilters.push({ field: canonField, val: v });
+  // 2. Extract field selectors: workplace, type, country, state, city, location, geo, posted, source, company, title, req_id, id
+  // Zero alias policy: exactly matches canonical keys. Supports both quoted "..." and unquoted values.
+  const fieldRegex = /\b(workplace|type|country|state|city|location|geo|posted|source|company|title|req_id|id):(?:"([^"]+)"|(\S+))/gi;
+  text = text.replace(fieldRegex, (match, field, quotedVal, unquotedVal) => {
+    const canonField = field.toLowerCase();
+    const val = (quotedVal !== undefined ? quotedVal : unquotedVal).toLowerCase().trim();
+    if (val) {
+      fieldFilters.push({ field: canonField, val: val });
+    }
     return ' ';
   });
 
@@ -132,6 +127,9 @@ self.onmessage = function(e) {
     modesClean = new Array(count);
     typesClean = new Array(count);
     sourcesLower = new Array(count);
+    countriesLower = new Array(count);
+    citiesLower = new Array(count);
+    statesLower = new Array(count);
 
     for (let i = 0; i < count; i++) {
       const c = (data.c[i] || '').toLowerCase();
@@ -141,6 +139,9 @@ self.onmessage = function(e) {
       const m = (data.m[i] || '').toLowerCase().replace(/[-_]/g, '');
       const emp = (data.e && data.e[i] ? data.e[i] : '').toLowerCase();
       const s = (data.so && data.so[i] ? data.so[i] : '').toLowerCase();
+      const co = (data.co && data.co[i] ? data.co[i] : '').toLowerCase();
+      const ci = (data.ci && data.ci[i] ? data.ci[i] : '').toLowerCase();
+      const st = (data.st && data.st[i] ? data.st[i] : '').toLowerCase();
 
       companiesLower[i] = c;
       titlesLower[i] = t;
@@ -148,8 +149,11 @@ self.onmessage = function(e) {
       modesClean[i] = m;
       typesClean[i] = emp;
       sourcesLower[i] = s;
+      countriesLower[i] = co;
+      citiesLower[i] = ci;
+      statesLower[i] = st;
 
-      haystacks[i] = c + ' ' + t + ' ' + l + ' ' + fl + ' ' + m + ' ' + emp + ' ' + s;
+      haystacks[i] = c + ' ' + t + ' ' + l + ' ' + fl + ' ' + m + ' ' + emp + ' ' + s + ' ' + co + ' ' + ci + ' ' + st;
     }
 
     self.postMessage({ type: 'ready', total: count });
@@ -235,15 +239,20 @@ self.onmessage = function(e) {
       }
 
       // --- 2. In-Input Query Syntax Filters ---
-      // Field Filters: company, title, mode, type, location, source, posted
+      // Canonical Field Filters: company, title, workplace, type, country, state, city, location, geo, source, posted, id, req_id
       let passFieldFilters = true;
       for (const ff of parsed.fieldFilters) {
         if (ff.field === 'company') {
           if (!companiesLower[idx].includes(ff.val)) { passFieldFilters = false; break; }
         } else if (ff.field === 'title') {
           if (!titlesLower[idx].includes(ff.val)) { passFieldFilters = false; break; }
-        } else if (ff.field === 'mode') {
-          if (!modesClean[idx].includes(ff.val)) { passFieldFilters = false; break; }
+        } else if (ff.field === 'workplace') {
+          let wMatch = false;
+          if (ff.val === 'remote') wMatch = modesClean[idx] === 'remote';
+          else if (ff.val === 'hybrid') wMatch = modesClean[idx] === 'hybrid';
+          else if (ff.val === 'onsite') wMatch = modesClean[idx] === 'onsite';
+          else wMatch = modesClean[idx].includes(ff.val);
+          if (!wMatch) { passFieldFilters = false; break; }
         } else if (ff.field === 'type') {
           let tMatch = false;
           if (ff.val === 'coop' || ff.val === 'intern' || ff.val === 'internship') {
@@ -253,13 +262,26 @@ self.onmessage = function(e) {
             tMatch = typesClean[idx].includes(ff.val);
           }
           if (!tMatch) { passFieldFilters = false; break; }
-        } else if (ff.field === 'location') {
+        } else if (ff.field === 'country') {
+          const cMatch = countriesLower[idx] === ff.val || locationsLower[idx].includes(ff.val);
+          if (!cMatch) { passFieldFilters = false; break; }
+        } else if (ff.field === 'state') {
+          const sMatch = statesLower[idx].includes(ff.val) || locationsLower[idx].includes(ff.val);
+          if (!sMatch) { passFieldFilters = false; break; }
+        } else if (ff.field === 'city') {
+          const ciMatch = citiesLower[idx].includes(ff.val) || locationsLower[idx].includes(ff.val);
+          if (!ciMatch) { passFieldFilters = false; break; }
+        } else if (ff.field === 'location' || ff.field === 'geo') {
           if (!locationsLower[idx].includes(ff.val)) { passFieldFilters = false; break; }
         } else if (ff.field === 'source') {
           if (!sourcesLower[idx].includes(ff.val)) { passFieldFilters = false; break; }
         } else if (ff.field === 'posted') {
           const cutoff = getRecencyCutoff(ff.val);
           if (cutoff && (!data.d[idx] || data.d[idx] < cutoff)) { passFieldFilters = false; break; }
+        } else if (ff.field === 'id' || ff.field === 'req_id') {
+          const idMatch = (data.i[idx] || '').toLowerCase().includes(ff.val) ||
+                          (data.a && data.a[idx] && data.a[idx].toLowerCase().includes(ff.val));
+          if (!idMatch) { passFieldFilters = false; break; }
         }
       }
       if (!passFieldFilters) continue;
